@@ -1,0 +1,2264 @@
+[
+    {
+        "question": "¿Qué es la inteligencia artificial débil?",
+        "answers": [
+            [
+                "Un tipo de inteligencia artificial capaz de realizar una tarea concreta dentro de un campo de especialización.",
+                true
+            ],
+            [
+                "Un tipo de inteligencia artificial que emula las capacidades o comportamientos humanos.",
+                false
+            ],
+            [
+                "Un tipo de inteligencia artificial general, similar a la mente de los seres humanos.",
+                false
+            ],
+            [
+                "Un tipo de inteligencia artificial limitada y obsoleta.",
+                false
+            ]
+        ]
+    },
+    {
+        "question": "¿Qué tipo de tareas puede realizar la inteligencia artificial débil?",
+        "answers": [
+            [
+                "Tareas específicas dentro de un campo de especialización.",
+                true
+            ],
+            [
+                "Cualquier tarea que se le asigne, independientemente del campo de especialización.",
+                false
+            ],
+            [
+                "Tareas que requieren emular las capacidades o comportamientos humanos.",
+                false
+            ],
+            [
+                "Tareas generales que requieren un alto nivel de inteligencia artificial.",
+                false
+            ]
+        ]
+    },
+    {
+        "question": "¿Cuál es la principal ventaja de la inteligencia artificial débil?",
+        "answers": [
+            [
+                "Es relativamente sencilla de conseguir y desarrollar.",
+                true
+            ],
+            [
+                "Ofrece una experiencia de usuario cercana y personalizada como la de un ser humano.",
+                false
+            ],
+            [
+                "Es un sistema que cuenta con todo el contexto de la situación.",
+                false
+            ],
+            [
+                "Permite realizar cualquier tarea, independientemente del campo de especialización.",
+                false
+            ]
+        ]
+    },
+    {
+        "question": "¿Cuál es el objetivo de la evolución y avance de la automatización en el campo de la inteligencia artificial?",
+        "answers": [
+            [
+                "Mejorar la eficiencia y precisión en la realización de tareas específicas.",
+                true
+            ],
+            [
+                "Emular las capacidades y comportamientos humanos en la inteligencia artificial.",
+                false
+            ],
+            [
+                "Desarrollar una inteligencia artificial general similar a la mente de los seres humanos.",
+                false
+            ],
+            [
+                "Crear sistemas expertos que puedan realizar cualquier tarea, independientemente del campo de especialización.",
+                false
+            ]
+        ]
+    },
+    {
+        "question": "¿Cuáles son algunas de las ventajas de la inteligencia artificial débil?",
+        "answers": [
+            [
+                "Es relativamente sencilla de conseguir y desarrollar.",
+                true
+            ],
+            [
+                "Ofrece una experiencia de usuario cercana y personalizada.",
+                false
+            ],
+            [
+                "Cuenta con todo el contexto de la situación.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Es relativamente sencilla de conseguir y desarrollar."
+    },
+    {
+        "question": "¿Cuáles son algunos de los inconvenientes de la inteligencia artificial débil?",
+        "answers": [
+            [
+                "Es un sistema ciego que puede malinterpretar entradas inusuales.",
+                true
+            ],
+            [
+                "Se controla más fácilmente y no presenta comportamientos demasiado inesperados.",
+                false
+            ],
+            [
+                "Suele ser un sistema que ofrece una experiencia de usuario cercana y personalizada.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un sistema ciego que puede malinterpretar entradas inusuales."
+    },
+    {
+        "question": "¿Por qué la inteligencia artificial débil es limitada?",
+        "answers": [
+            [
+                "Porque es un sistema ciego que no cuenta con todo el contexto de la situación.",
+                false
+            ],
+            [
+                "Porque se controla más fácilmente y no presenta comportamientos demasiado inesperados.",
+                false
+            ],
+            [
+                "Porque solo sirve para aplicaciones muy concretas.",
+                true
+            ],
+            [
+                "Porque ofrece una experiencia de usuario cercana y personalizada.",
+                false
+            ]
+        ],
+        "correct_answer": "Porque solo sirve para aplicaciones muy concretas."
+    },
+    {
+        "question": "¿Qué es la conciencia artificial?",
+        "answers": [
+            [
+                "Es la capacidad de los sistemas de IA para crear representaciones sobre sí mismos.",
+                true
+            ],
+            [
+                "Es la capacidad de los sistemas de IA para imitar el comportamiento humano.",
+                false
+            ],
+            [
+                "Es la capacidad de los sistemas de IA para realizar múltiples tareas en diferentes contextos.",
+                false
+            ],
+            [
+                "Es la capacidad de los sistemas de IA para actuar de forma autónoma sin intervención humana.",
+                false
+            ]
+        ],
+        "correct_answer": "Es la capacidad de los sistemas de IA para crear representaciones sobre sí mismos."
+    },
+    {
+        "question": "¿Qué es Gato de DeepMind?",
+        "answers": [
+            [
+                "Es un modelo de inteligencia artificial capaz de realizar varias tareas en diferentes contextos.",
+                true
+            ],
+            [
+                "Es un sistema cognitivo que da información precisa en lenguaje natural.",
+                false
+            ],
+            [
+                "Es un asistente conversacional como Alexa, Siri o Google Assistant.",
+                false
+            ],
+            [
+                "Es un algoritmo de recomendación.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un modelo de inteligencia artificial capaz de realizar varias tareas en diferentes contextos."
+    },
+    {
+        "question": "¿En qué se basa el Machine Learning?",
+        "answers": [
+            [
+                "En las estadísticas y el desarrollo de la informática.",
+                true
+            ],
+            [
+                "En la emulación del comportamiento humano.",
+                false
+            ],
+            [
+                "En la creación de representaciones sobre sí mismos por parte de los sistemas de IA.",
+                false
+            ],
+            [
+                "En la imitación del comportamiento humano para realizar múltiples tareas.",
+                false
+            ]
+        ],
+        "correct_answer": "En las estadísticas y el desarrollo de la informática."
+    },
+    {
+        "question": "¿Qué es la conciencia artificial?",
+        "answers": [
+            [
+                "Es la capacidad de los sistemas de IA para crear representaciones sobre sí mismos.",
+                true
+            ],
+            [
+                "Es la capacidad de los sistemas de IA para imitar el comportamiento humano.",
+                false
+            ],
+            [
+                "Es la capacidad de los sistemas de IA para realizar múltiples tareas en diferentes contextos.",
+                false
+            ],
+            [
+                "Es la capacidad de los sistemas de IA para actuar de forma autónoma sin intervención humana.",
+                false
+            ]
+        ],
+        "correct_answer": "Es la capacidad de los sistemas de IA para crear representaciones sobre sí mismos."
+    },
+    {
+        "question": "¿Qué es Gato de DeepMind?",
+        "answers": [
+            [
+                "Es un modelo de inteligencia artificial capaz de realizar varias tareas en diferentes contextos.",
+                true
+            ],
+            [
+                "Es un sistema cognitivo que da información precisa en lenguaje natural.",
+                false
+            ],
+            [
+                "Es un asistente conversacional como Alexa, Siri o Google Assistant.",
+                false
+            ],
+            [
+                "Es un algoritmo de recomendación.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un modelo de inteligencia artificial capaz de realizar varias tareas en diferentes contextos."
+    },
+    {
+        "question": "¿En qué se basa el Machine Learning?",
+        "answers": [
+            [
+                "En las estadísticas y el desarrollo de la informática.",
+                true
+            ],
+            [
+                "En la emulación del comportamiento humano.",
+                false
+            ],
+            [
+                "En la creación de representaciones sobre sí mismos por parte de los sistemas de IA.",
+                false
+            ],
+            [
+                "En la imitación del comportamiento humano para realizar múltiples tareas.",
+                false
+            ]
+        ],
+        "correct_answer": "En las estadísticas y el desarrollo de la informática."
+    },
+    {
+        "question": "¿Qué es el teorema de Bayes?",
+        "answers": [
+            [
+                "Un sistema de cálculo de probabilidades que permite calcular la probabilidad de una hipótesis basada en su probabilidad previa, las probabilidades de observar diversos datos dada la hipótesis y los datos observados en sí maximizando la probabilidad de que un modelo se ajuste al conjunto de datos conocido como MAP.",
+                true
+            ],
+            [
+                "Un método para hacer cálculos al azar.",
+                false
+            ],
+            [
+                "Un algoritmo de aprendizaje automático.",
+                false
+            ],
+            [
+                "Un sistema de inteligencia artificial para la toma de decisiones.",
+                false
+            ]
+        ],
+        "correct_answer": "Un sistema de cálculo de probabilidades que permite calcular la probabilidad de una hipótesis basada en su probabilidad previa, las probabilidades de observar diversos datos dada la hipótesis y los datos observados en sí maximizando la probabilidad de que un modelo se ajuste al conjunto de datos conocido como MAP."
+    },
+    {
+        "question": "¿Qué significa que los modelos bayesianos son un sistema de cálculo de probabilidades hecho al revés?",
+        "answers": [
+            [
+                "Significa que, en lugar de calcular la probabilidad de una causa dado un efecto, se calcula la probabilidad de un efecto dado una causa.",
+                true
+            ],
+            [
+                "Significa que los modelos bayesianos no se basan en cálculos de probabilidades.",
+                false
+            ],
+            [
+                "Significa que los modelos bayesianos son un tipo de sistema de aprendizaje automático.",
+                false
+            ],
+            [
+                "Significa que los modelos bayesianos son un sistema de inteligencia artificial para la toma de decisiones.",
+                false
+            ]
+        ],
+        "correct_answer": "Significa que, en lugar de calcular la probabilidad de una causa dado un efecto, se calcula la probabilidad de un efecto dado una causa."
+    },
+    {
+        "question": "¿Cuál es la fórmula del teorema de Bayes?",
+        "answers": [
+            [
+                "P(A|B) = P(B|A) P(A) / P(B)",
+                true
+            ],
+            [
+                "P(A&B) = P(A) P(B)",
+                false
+            ],
+            [
+                "P(A|B) = P(B|A)",
+                false
+            ],
+            [
+                "P(A|B) = P(A) / P(B)",
+                false
+            ]
+        ],
+        "correct_answer": "P(A|B) = P(B|A) P(A) / P(B)"
+    },
+    {
+        "question": "¿Cómo se puede utilizar el teorema de Bayes en la detección temprana de enfermedades?",
+        "answers": [
+            [
+                "Calculando la probabilidad de que un paciente tenga una enfermedad en base a sus síntomas y antecedentes médicos.",
+                true
+            ],
+            [
+                "Utilizando modelos probabilísticos para predecir qué enfermedades son más comunes en una determinada población.",
+                false
+            ],
+            [
+                "Utilizando algoritmos de aprendizaje automático para detectar patrones en grandes conjuntos de datos médicos.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores es correcta.",
+                false
+            ]
+        ],
+        "correct_answer": "Calculando la probabilidad de que un paciente tenga una enfermedad en base a sus síntomas y antecedentes médicos."
+    },
+    {
+        "question": "¿Cómo se puede aplicar el teorema de Bayes en el descubrimiento de medicamentos?",
+        "answers": [
+            [
+                "Calculando la probabilidad de que un compuesto tenga propiedades terapéuticas en base a su estructura molecular y datos previos de estudios similares.",
+                true
+            ],
+            [
+                "Utilizando algoritmos de aprendizaje automático para analizar grandes conjuntos de datos de ensayos clínicos.",
+                false
+            ],
+            [
+                "Seleccionando los compuestos con mayor presencia en la naturaleza para minimizar los efectos secundarios.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores es correcta.",
+                false
+            ]
+        ],
+        "correct_answer": "Calculando la probabilidad de que un compuesto tenga propiedades terapéuticas en base a su estructura molecular y datos previos de estudios similares."
+    },
+    {
+        "question": "¿Cómo se puede aplicar el teorema de Bayes en la publicidad enfocada en pacientes?",
+        "answers": [
+            [
+                "Calculando la probabilidad de que un paciente esté interesado en un producto en base a sus características demográficas y comportamientos de navegación en línea.",
+                true
+            ],
+            [
+                "Utilizando modelos probabilísticos para predecir qué productos son más populares entre los pacientes en general.",
+                false
+            ],
+            [
+                "Creando anuncios que apelen a las emociones universales para maximizar su impacto.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores es correcta.",
+                false
+            ]
+        ],
+        "correct_answer": "Calculando la probabilidad de que un paciente esté interesado en un producto en base a sus características demográficas y comportamientos de navegación en línea."
+    },
+    {
+        "question": "¿Qué es un árbol de decisión?",
+        "answers": [
+            [
+                "Un modelo de decisiones basadas en los atributos que presentan los datos que entran en el modelo.",
+                true
+            ],
+            [
+                "Un conjunto de datos del tipo de regresión o clasificación.",
+                false
+            ],
+            [
+                "Un algoritmo que funciona mediante la creación de bifurcaciones en los datos.",
+                false
+            ],
+            [
+                "Un método de aprendizaje automático basado en la estadística.",
+                false
+            ]
+        ],
+        "correct_answer": "Un modelo de decisiones basadas en los atributos que presentan los datos que entran en el modelo."
+    },
+    {
+        "question": "¿Cómo funcionan los algoritmos de árbol de decisión?",
+        "answers": [
+            [
+                "Creando bifurcaciones y separando los datos en función de diferentes atributos hasta llegar a una decisión concluyente.",
+                true
+            ],
+            [
+                "Usando métodos de aprendizaje profundo para analizar los datos.",
+                false
+            ],
+            [
+                "Aplicando reglas de asociación para encontrar patrones en los datos.",
+                false
+            ],
+            [
+                "Utilizando redes neuronales para clasificar los datos.",
+                false
+            ]
+        ],
+        "correct_answer": "Creando bifurcaciones y separando los datos en función de diferentes atributos hasta llegar a una decisión concluyente."
+    },
+    {
+        "question": "¿En qué tipos de datos funcionan bien los árboles de decisión?",
+        "answers": [
+            [
+                "Tanto en datos del tipo de regresión como de clasificación.",
+                true
+            ],
+            [
+                "Solo en datos del tipo de regresión.",
+                false
+            ],
+            [
+                "Solo en datos del tipo de clasificación.",
+                false
+            ],
+            [
+                "Solo en datos numéricos.",
+                false
+            ]
+        ],
+        "correct_answer": "Tanto en datos del tipo de regresión como de clasificación."
+    },
+    {
+        "question": "¿Cuál es el algoritmo de árbol de decisión más popular?",
+        "answers": [
+            [
+                "Classification and Regression Tree (CART).",
+                true
+            ],
+            [
+                "Iterative Dichotomiser 3 (ID3).",
+                false
+            ],
+            [
+                "C4.5 and C5.0.",
+                false
+            ],
+            [
+                "Chi-squared Automatic Interaction Detection (CHAID).",
+                false
+            ]
+        ],
+        "correct_answer": "Classification and Regression Tree (CART)."
+    },
+    {
+        "question": "¿Qué son las Máquinas de Vector Soporte?",
+        "answers": [
+            "Un método de Aprendizaje Automático Supervisado que se aplica a problemas de clasificación",
+            "Un método de Aprendizaje Automático No Supervisado que se aplica a problemas de regresión",
+            "Un método de Aprendizaje Automático que se aplica a problemas de clasificación y regresión",
+            "Un método de Aprendizaje Automático que se aplica solo a problemas de regresión"
+        ],
+        "correct_option": 0
+    },
+    {
+        "question": "¿Cómo se representa cada instancia o caso en las Máquinas de Vector Soporte?",
+        "answers": [
+            "Como un punto en un espacio n-dimensional",
+            "Como una línea en un espacio bidimensional",
+            "Como una figura geométrica en un espacio tridimensional",
+            "Como un vector en un espacio unidimensional"
+        ],
+        "correct_option": 0
+    },
+    {
+        "question": "¿Para qué se utiliza principalmente las Máquinas de Vector Soporte?",
+        "answers": [
+            "Para resolver problemas de clasificación y regresión",
+            "Para resolver problemas de clasificación",
+            "Para resolver problemas de regresión",
+            "Para resolver problemas de agrupamiento"
+        ],
+        "correct_option": 0
+    },
+    {
+        "question": "¿En qué consiste la técnica de las Máquinas de Vector Soporte?",
+        "answers": [
+            "Calcular la recta que separa ambos grupos de forma que esté equidistante de los dos puntos más cercanos",
+            "Calcular la recta que une los puntos más cercanos de ambos grupos",
+            "Calcular la recta que separa ambos grupos de forma que esté más cerca del grupo más grande",
+            "Calcular la recta que une los puntos medios de ambos grupos"
+        ],
+        "correct_option": 0
+    },
+    {
+        "question": "¿Cuáles son algunos campos de aplicación exitosos de las Máquinas de Vector Soporte?",
+        "answers": [
+            [
+                "Reconocimiento óptico de caracteres, detección de caras, filtros de spam para correo electrónico y reconocimiento de imágenes a bordo de satélites.",
+                true
+            ],
+            [
+                "Análisis de sentimientos y publicidad enfocada en pacientes.",
+                false
+            ],
+            [
+                "Robótica y automatización en cirugía.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Reconocimiento óptico de caracteres, detección de caras, filtros de spam para correo electrónico y reconocimiento de imágenes a bordo de satélites."
+    },
+    {
+        "question": "¿Qué son los algoritmos de clustering?",
+        "answers": [
+            [
+                "Son algoritmos de Aprendizaje Automático Supervisado que agrupan datos existentes en categorías predefinidas.",
+                false
+            ],
+            [
+                "Son algoritmos de Aprendizaje Automático No Supervisado que agrupan datos existentes sin una categoría predefinida.",
+                true
+            ],
+            [
+                "Son algoritmos de Aprendizaje Automático que no se utilizan en el análisis de datos.",
+                false
+            ],
+            [
+                "Son algoritmos de Aprendizaje Automático que solo se utilizan en el análisis de texto.",
+                false
+            ]
+        ],
+        "correct_answer": "Son algoritmos de Aprendizaje Automático No Supervisado que agrupan datos existentes sin una categoría predefinida."
+    },
+    {
+        "question": "¿Cómo funcionan los algoritmos de clustering?",
+        "answers": [
+            [
+                "Creando puntos centrales o centroides y jerarquías para agrupar los datos por similitud.",
+                true
+            ],
+            [
+                "Determinando una categoría predefinida para cada dato existente.",
+                false
+            ],
+            [
+                "Clasificando los datos por etiquetas preestablecidas.",
+                false
+            ],
+            [
+                "Ordenando los datos por fechas.",
+                false
+            ]
+        ],
+        "correct_answer": "Creando puntos centrales o centroides y jerarquías para agrupar los datos por similitud."
+    },
+    {
+        "question": "¿Para qué se utilizan comúnmente los algoritmos de clustering?",
+        "answers": [
+            [
+                "Para determinar una categoría predefinida para cada dato existente.",
+                false
+            ],
+            [
+                "Para clasificar los datos por etiquetas preestablecidas.",
+                false
+            ],
+            [
+                "Para ordenar los datos por fechas.",
+                false
+            ],
+            [
+                "Para recomendar productos o servicios a clientes con características y comportamientos similares.",
+                true
+            ]
+        ],
+        "correct_answer": "Para recomendar productos o servicios a clientes con características y comportamientos similares."
+    },
+    {
+        "question": "¿Qué es el algoritmo k-Means?",
+        "answers": [
+            [
+                "Es un algoritmo de Aprendizaje Automático Supervisado.",
+                false
+            ],
+            [
+                "Es un algoritmo de Aprendizaje Automático No Supervisado.",
+                true
+            ],
+            [
+                "Es un algoritmo de Aprendizaje Automático que solo se utiliza en la detección temprana de enfermedades.",
+                false
+            ],
+            [
+                "Es un algoritmo de Aprendizaje Automático que solo se utiliza en la automatización de procesos de negocio.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un algoritmo de Aprendizaje Automático No Supervisado."
+    },
+    {
+        "question": "¿Para qué se utiliza el valor 'k' en el algoritmo k-Means?",
+        "answers": [
+            [
+                "Para determinar una categoría predefinida para cada dato existente.",
+                false
+            ],
+            [
+                "Para clasificar los datos por etiquetas preestablecidas.",
+                false
+            ],
+            [
+                "Para ordenar los datos por fechas.",
+                false
+            ],
+            [
+                "Para decidir el número de grupos que se quieren crear entre los datos con características similares.",
+                true
+            ]
+        ],
+        "correct_answer": "Para decidir el número de grupos que se quieren crear entre los datos con características similares."
+    },
+    {
+        "question": "¿Qué es el clustering?",
+        "answers": [
+            [
+                "Un tipo de algoritmo de Aprendizaje Automático Supervisado.",
+                false
+            ],
+            [
+                "Un tipo de algoritmo de Aprendizaje Automático No Supervisado.",
+                true
+            ],
+            [
+                "Un tipo de algoritmo de Aprendizaje Automático Semi-Supervisado.",
+                false
+            ],
+            [
+                "Un tipo de algoritmo de Regresión.",
+                false
+            ]
+        ],
+        "correct_answer": "Un tipo de algoritmo de Aprendizaje Automático No Supervisado."
+    },
+    {
+        "question": "¿Para qué se utiliza comúnmente el clustering?",
+        "answers": [
+            [
+                "Para detectar datos anormales.",
+                true
+            ],
+            [
+                "Para realizar análisis de sentimientos.",
+                false
+            ],
+            [
+                "Para la robótica y automatización en cirugía.",
+                false
+            ],
+            [
+                "Para el reconocimiento óptico de caracteres.",
+                false
+            ]
+        ],
+        "correct_answer": "Para detectar datos anormales."
+    },
+    {
+        "question": "¿Cuál es el objetivo del algoritmo G-Means?",
+        "answers": [
+            [
+                "Dividir los datos en dos grupos mientras adquieren una distribución gaussiana.",
+                false
+            ],
+            [
+                "Determinar por sí mismo la cantidad óptima de clústeres en un problema de Aprendizaje Automático No Supervisado.",
+                true
+            ],
+            [
+                "Agrupar documentos de texto en clústeres.",
+                false
+            ],
+            [
+                "Analizar conjuntos de datos antes de utilizar otros métodos de clasificación o Regresión.",
+                false
+            ]
+        ],
+        "correct_answer": "Determinar por sí mismo la cantidad óptima de clústeres en un problema de Aprendizaje Automático No Supervisado."
+    },
+    {
+        "question": "¿Qué son las redes neuronales?",
+        "answers": [
+            [
+                "Son procesadores distribuidos en paralelo de forma masiva que imitan el funcionamiento de las neuronas biológicas para almacenar conocimiento experimental y convertirlo en disponible para su uso.",
+                true
+            ],
+            [
+                "Son programas de software que realizan cálculos para detectar capacidades de datos de entrada.",
+                false
+            ],
+            [
+                "Son máquinas que imitan el funcionamiento del cerebro humano para detectar capacidades de datos de entrada.",
+                false
+            ],
+            [
+                "Son una serie de algoritmos que se utilizan para analizar grandes cantidades de datos y encontrar patrones en ellos.",
+                false
+            ]
+        ],
+        "correct_answer": "Son procesadores distribuidos en paralelo de forma masiva que imitan el funcionamiento de las neuronas biológicas para almacenar conocimiento experimental y convertirlo en disponible para su uso."
+    },
+    {
+        "question": "¿En qué se asemejan las redes neuronales al cerebro humano?",
+        "answers": [
+            [
+                "En que el conocimiento se adquiere por la red mediante un proceso de aprendizaje y las fuerzas de conexión interneuronal, conocidas como ponderaciones sinápticas, se utilizan para almacenar el conocimiento.",
+                true
+            ],
+            [
+                "En que son procesadores distribuidos en paralelo de forma masiva que imitan el funcionamiento de las neuronas biológicas para almacenar conocimiento experimental y convertirlo en disponible para su uso.",
+                false
+            ],
+            [
+                "En que realizan cálculos para detectar capacidades de datos de entrada.",
+                false
+            ],
+            [
+                "En que se utilizan para analizar grandes cantidades de datos y encontrar patrones en ellos.",
+                false
+            ]
+        ],
+        "correct_answer": "En que el conocimiento se adquiere por la red mediante un proceso de aprendizaje y las fuerzas de conexión interneuronal, conocidas como ponderaciones sinápticas, se utilizan para almacenar el conocimiento."
+    },
+    {
+        "question": "¿Qué es el perceptrón?",
+        "answers": [
+            [
+                "Es una neurona artificial que realiza ciertos cálculos para detectar capacidades de datos de entrada.",
+                true
+            ],
+            [
+                "Es un procesador distribuido en paralelo de forma masiva con una propensión natural a almacenar conocimiento experimental y convertirlo en disponible para su uso.",
+                false
+            ],
+            [
+                "Es un algoritmo que se utiliza para analizar grandes cantidades de datos y encontrar patrones en ellos.",
+                false
+            ],
+            [
+                "Es un tipo de red neuronal que utiliza la propagación hacia atrás para entrenar y mejorar su capacidad de predicción.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una neurona artificial que realiza ciertos cálculos para detectar capacidades de datos de entrada."
+    },
+    {
+        "question": "¿Qué aplicaciones tienen las redes neuronales de tipo Feed Forward (FF)?",
+        "answers": [
+            [
+                "Compresión de datos, reconocimiento de patrones, visión por computador, reconocimiento de objetivo de sonda, reconocimiento de voz y reconocimiento de caracteres manuscritos.",
+                true
+            ],
+            [
+                "Aproximación de funciones, predicción de series temporales, clasificación y control de sistema.",
+                false
+            ],
+            [
+                "Compresión de datos, reconocimiento de patrones, visión por computador, filtrado de ruido de ECG y predicción financiera.",
+                false
+            ],
+            [
+                "Modelado de música polifónica, modelado de señales de voz y procesamiento natural del lenguaje.",
+                false
+            ]
+        ],
+        "correct_answer": "Compresión de datos, reconocimiento de patrones, visión por computador, reconocimiento de objetivo de sonda, reconocimiento de voz y reconocimiento de caracteres manuscritos."
+    },
+    {
+        "question": "¿En qué aplicaciones se utilizan las redes neuronales de tipo Radial Basis Network (RBN)?",
+        "answers": [
+            [
+                "Aproximación de funciones, predicción de series temporales, clasificación y control de sistema.",
+                true
+            ],
+            [
+                "Compresión de datos, reconocimiento de patrones, visión por computador, reconocimiento de objetivo de sonda, reconocimiento de voz y reconocimiento de caracteres manuscritos.",
+                false
+            ],
+            [
+                "Compresión de datos, reconocimiento de patrones, visión por computador, filtrado de ruido de ECG y predicción financiera.",
+                false
+            ],
+            [
+                "Modelado de música polifónica, modelado de señales de voz y procesamiento natural del lenguaje.",
+                false
+            ]
+        ],
+        "correct_answer": "Aproximación de funciones, predicción de series temporales, clasificación y control de sistema."
+    },
+    {
+        "question": "¿Para qué se utilizan las redes neuronales de tipo Deep Feed Forward (DFF)?",
+        "answers": [
+            [
+                "Compresión de datos, reconocimiento de patrones, visión por computador, filtrado de ruido de ECG y predicción financiera.",
+                true
+            ],
+            [
+                "Aproximación de funciones, predicción de series temporales, clasificación y control de sistema.",
+                false
+            ],
+            [
+                "Compresión de datos, reconocimiento de patrones, visión por computador, reconocimiento de objetivo de sonda, reconocimiento de voz y reconocimiento de caracteres manuscritos.",
+                false
+            ],
+            [
+                "Modelado de música polifónica, modelado de señales de voz y procesamiento natural del lenguaje.",
+                false
+            ]
+        ],
+        "correct_answer": "Compresión de datos, reconocimiento de patrones, visión por computador, filtrado de ruido de ECG y predicción financiera."
+    },
+    {
+        "question": "¿Cuáles son algunas de las aplicaciones de la Red Neuronal de Avance - Feed Forward (FF)?",
+        "answers": [
+            [
+                "Compresión de datos, reconocimiento de patrones, visión por computador, reconocimiento de objetivo de sonda, reconocimiento de voz y reconocimiento de caracteres manuscritos.",
+                true
+            ],
+            [
+                "Aproximación de funciones, predicción de series temporales, clasificación y control de sistema.",
+                false
+            ],
+            [
+                "Codificación automática, agrupación y compresión de funciones.",
+                false
+            ],
+            [
+                "Interpolación de oraciones y generación automática de imágenes.",
+                false
+            ]
+        ],
+        "correct_answer": "Compresión de datos, reconocimiento de patrones, visión por computador, reconocimiento de objetivo de sonda, reconocimiento de voz y reconocimiento de caracteres manuscritos."
+    },
+    {
+        "question": "¿En qué áreas se utiliza la Red de Base Radial - Radial Basis Network (RBN)?",
+        "answers": [
+            [
+                "Aproximación de funciones, predicción de series temporales, clasificación y control de sistema.",
+                true
+            ],
+            [
+                "Compresión de datos, reconocimiento de patrones, visión por computador, reconocimiento de objetivo de sonda, reconocimiento de voz y reconocimiento de caracteres manuscritos.",
+                false
+            ],
+            [
+                "Codificación automática, agrupación y compresión de funciones.",
+                false
+            ],
+            [
+                "Interpolación de oraciones y generación automática de imágenes.",
+                false
+            ]
+        ],
+        "correct_answer": "Aproximación de funciones, predicción de series temporales, clasificación y control de sistema."
+    },
+    {
+        "question": "¿En qué áreas se utiliza la Red Neuronal Recurrente - Recurrent Neural Network (RNN)?",
+        "answers": [
+            [
+                "Máquina traductora, control de robot, predicción de series temporales, reconocimiento de voz, síntesis de voz, detección de anomalías de series temporales, aprendizaje del ritmo, composición musical.",
+                true
+            ],
+            [
+                "Compresión de datos, reconocimiento de patrones, visión por computador, reconocimiento de objetivo de sonda, reconocimiento de voz y reconocimiento de caracteres manuscritos.",
+                false
+            ],
+            [
+                "Codificación automática, agrupación y compresión de funciones.",
+                false
+            ],
+            [
+                "Interpolación de oraciones y generación automática de imágenes.",
+                false
+            ]
+        ],
+        "correct_answer": "Máquina traductora, control de robot, predicción de series temporales, reconocimiento de voz, síntesis de voz, detección de anomalías de series temporales, aprendizaje del ritmo, composición musical."
+    },
+    {
+        "question": "¿En qué áreas se utiliza la Red con Memoria a Corto y Largo Plazo - Long / Short Term Memory (LSTM)?",
+        "answers": [
+            [
+                "Reconocimiento de voz y reconocimiento de escritura.",
+                true
+            ],
+            [
+                "Compresión de datos, reconocimiento de patrones, visión por computador, reconocimiento de objetivo de sonda, reconocimiento de voz y reconocimiento de caracteres manuscritos.",
+                false
+            ],
+            [
+                "Codificación automática, agrupación y compresión de funciones.",
+                false
+            ],
+            [
+                "Interpolación de oraciones y generación automática de imágenes.",
+                false
+            ]
+        ],
+        "correct_answer": "Reconocimiento de voz y reconocimiento de escritura."
+    },
+    {
+        "question": "¿Qué es una red neuronal de avance? ¿Para qué se utiliza?",
+        "answers": [
+            [
+                "Es una red neuronal en la que la información fluye en una sola dirección, sin ciclos ni bucles. Se utiliza para problemas de clasificación y regresión.",
+                true
+            ],
+            [
+                "Es una red neuronal que utiliza una función de base radial para calcular la salida. Se utiliza para problemas de clustering y aproximación de funciones.",
+                false
+            ],
+            [
+                "Es una red neuronal en la que la información fluye en ambas direcciones, hacia adelante y hacia atrás. Se utiliza para problemas de procesamiento del lenguaje natural y series temporales.",
+                false
+            ],
+            [
+                "Es una red neuronal que utiliza capas convolucionales para extraer características de imágenes. Se utiliza para problemas de visión por computadora.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una red neuronal en la que la información fluye en una sola dirección, sin ciclos ni bucles. Se utiliza para problemas de clasificación y regresión."
+    },
+    {
+        "question": "¿Qué es una red neuronal recurrente? ¿Para qué se utiliza?",
+        "answers": [
+            [
+                "Es una red neuronal en la que las neuronas están conectadas formando ciclos, lo que permite procesar datos secuenciales como texto y audio. Se utiliza para problemas de procesamiento del lenguaje natural y series temporales.",
+                true
+            ],
+            [
+                "Es una red neuronal que utiliza capas convolucionales para extraer características de imágenes. Se utiliza para problemas de visión por computadora.",
+                false
+            ],
+            [
+                "Es una red neuronal que utiliza una función de base radial para calcular la salida. Se utiliza para problemas de clustering y aproximación de funciones.",
+                false
+            ],
+            [
+                "Es una red neuronal en la que la información fluye en una sola dirección, sin ciclos ni bucles. Se utiliza para problemas de clasificación y regresión.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una red neuronal en la que las neuronas están conectadas formando ciclos, lo que permite procesar datos secuenciales como texto y audio. Se utiliza para problemas de procesamiento del lenguaje natural y series temporales."
+    },
+    {
+        "question": "¿Qué es una red neuronal convolucional? ¿Para qué se utiliza?",
+        "answers": [
+            [
+                "Es una red neuronal que utiliza capas convolucionales para extraer características de imágenes. Se utiliza para problemas de visión por computadora.",
+                true
+            ],
+            [
+                "Es una red neuronal en la que la información fluye en una sola dirección, sin ciclos ni bucles. Se utiliza para problemas de clasificación y regresión.",
+                false
+            ],
+            [
+                "Es una red neuronal en la que las neuronas están conectadas formando ciclos, lo que permite procesar datos secuenciales como texto y audio. Se utiliza para problemas de procesamiento del lenguaje natural y series temporales.",
+                false
+            ],
+            [
+                "Es una red neuronal que utiliza una función de base radial para calcular la salida. Se utiliza para problemas de clustering y aproximación de funciones.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una red neuronal que utiliza capas convolucionales para extraer características de imágenes. Se utiliza para problemas de visión por computadora."
+    },
+    {
+        "question": "¿Qué es una Red Neuronal Convolucional Profunda y para qué se utiliza?",
+        "answers": [
+            [
+                "Es una red neuronal que utiliza filtros convolucionales para procesar imágenes y es utilizada para aplicaciones de visión artificial como reconocimiento de objetos y clasificación de imágenes.",
+                true
+            ],
+            [
+                "Es una red neuronal que utiliza capas recurrentes para procesar secuencias de datos y es utilizada para aplicaciones de procesamiento de lenguaje natural como traducción automática y generación de texto.",
+                false
+            ],
+            [
+                "Es una red neuronal que utiliza capas de retroalimentación para procesar señales de entrada y es utilizada para aplicaciones de procesamiento de señales como reconocimiento de voz y análisis de audio.",
+                false
+            ],
+            [
+                "Es una red neuronal que utiliza capas de atención para enfocarse en partes relevantes de la entrada y es utilizada para aplicaciones de procesamiento de lenguaje natural como sumarización de texto y respuesta a preguntas.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una red neuronal que utiliza filtros convolucionales para procesar imágenes y es utilizada para aplicaciones de visión artificial como reconocimiento de objetos y clasificación de imágenes."
+    },
+    {
+        "question": "¿Cuáles son las fases del entrenamiento de una Red Neuronal Profunda?",
+        "answers": [
+            [
+                "Fase 1 - Forward Pass, Fase 2 - Función de coste, Fase 3 - Backward Pass, Fase 4 - Descenso del Gradiente.",
+                true
+            ],
+            [
+                "Fase 1 - Backward Pass, Fase 2 - Forward Pass, Fase 3 - Función de coste, Fase 4 - Descenso del Gradiente.",
+                false
+            ],
+            [
+                "Fase 1 - Descenso del Gradiente, Fase 2 - Backward Pass, Fase 3 - Forward Pass, Fase 4 - Función de coste.",
+                false
+            ],
+            [
+                "Fase 1 - Función de coste, Fase 2 - Forward Pass, Fase 3 - Backward Pass, Fase 4 - Descenso del Gradiente.",
+                false
+            ]
+        ],
+        "correct_answer": "Fase 1 - Forward Pass, Fase 2 - Función de coste, Fase 3 - Backward Pass, Fase 4 - Descenso del Gradiente."
+    },
+    {
+        "question": "¿Qué es BigML?",
+        "answers": [
+            [
+                "Una plataforma online para plantear y resolver problemas de aprendizaje automático.",
+                true
+            ],
+            [
+                "Un lenguaje de programación para el desarrollo de aplicaciones web.",
+                false
+            ],
+            [
+                "Una herramienta para el análisis de datos financieros.",
+                false
+            ],
+            [
+                "Un programa para la edición de imágenes y vídeos.",
+                false
+            ]
+        ],
+        "correct_answer": "Una plataforma online para plantear y resolver problemas de aprendizaje automático."
+    },
+    {
+        "question": "¿Cuál es la versión gratuita de BigML?",
+        "answers": [
+            [
+                "Una versión en la que se puede trabajar con una base de datos de hasta 16MB.",
+                true
+            ],
+            [
+                "Una versión con todas las funciones de la plataforma sin restricciones.",
+                false
+            ],
+            [
+                "Una versión en la que solo se pueden cargar datasets proporcionados por la plataforma.",
+                false
+            ],
+            [
+                "No hay versión gratuita de BigML.",
+                false
+            ]
+        ],
+        "correct_answer": "Una versión en la que se puede trabajar con una base de datos de hasta 16MB."
+    },
+    {
+        "question": "¿Con qué cuentas puedo crear una cuenta en BigML?",
+        "answers": [
+            [
+                "Google, GitHub o Amazon.",
+                true
+            ],
+            [
+                "Facebook, LinkedIn o Twitter.",
+                false
+            ],
+            [
+                "Yahoo, Hotmail o AOL.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Google, GitHub o Amazon."
+    },
+    {
+        "question": "¿Qué información podemos previsualizar de un dataset en BigML?",
+        "answers": [
+            [
+                "Nombre, tipología, cantidad, datos perdidos, datos erróneos y un histograma de distribución.",
+                true
+            ],
+            [
+                "Nombre, fecha de creación, tamaño y propietario.",
+                false
+            ],
+            [
+                "Nombre, número de campos, cantidad de registros y descripción.",
+                false
+            ],
+            [
+                "Nombre, formato, campos y descripción.",
+                false
+            ]
+        ],
+        "correct_answer": "Nombre, tipología, cantidad, datos perdidos, datos erróneos y un histograma de distribución."
+    },
+    {
+        "question": "¿Cómo puedo descargar un dataset de BigML?",
+        "answers": [
+            [
+                "En formato .csv.",
+                true
+            ],
+            [
+                "En formato .txt.",
+                false
+            ],
+            [
+                "En formato .xls.",
+                false
+            ],
+            [
+                "No es posible descargar datasets en BigML.",
+                false
+            ]
+        ],
+        "correct_answer": "En formato .csv."
+    },
+    {
+        "question": "¿Puedo trabajar en BigML con mis propias bases de datos?",
+        "answers": [
+            [
+                "Sí, cargando el archivo correspondiente en el apartado <Source= y generando el dataset.",
+                true
+            ],
+            [
+                "No, solo se pueden trabajar con datasets proporcionados por la plataforma.",
+                false
+            ],
+            [
+                "Solo se pueden trabajar con bases de datos alojadas en la nube de BigML.",
+                false
+            ],
+            [
+                "Solo se pueden trabajar con bases de datos en formato .csv.",
+                false
+            ]
+        ],
+        "correct_answer": "Sí, cargando el archivo correspondiente en el apartado <Source= y generando el dataset."
+    },
+    {
+        "question": "¿Por qué es importante reservar un porcentaje de los datos para la evaluación de un modelo de Inteligencia Artificial?",
+        "answers": [
+            [
+                "Porque nos permite hacer una evaluación realista del modelo.",
+                true
+            ],
+            [
+                "Porque los datos sin utilizar no son necesarios en la fase de entrenamiento.",
+                false
+            ],
+            [
+                "Porque BigML lo recomienda siempre.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores es correcta.",
+                false
+            ]
+        ],
+        "correct_answer": "Porque nos permite hacer una evaluación realista del modelo."
+    },
+    {
+        "question": "¿Cómo podemos iniciar un entrenamiento de aprendizaje automático en BigML?",
+        "answers": [
+            [
+                "De manera rápida o definiendo los parámetros disponibles para cada algoritmo.",
+                true
+            ],
+            [
+                "Solo definiendo los parámetros disponibles para cada algoritmo.",
+                false
+            ],
+            [
+                "Solo de manera rápida.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores es correcta.",
+                false
+            ]
+        ],
+        "correct_answer": "De manera rápida o definiendo los parámetros disponibles para cada algoritmo."
+    },
+    {
+        "question": "¿Cómo afecta el número de instancias y categorías en un dataset al tiempo de cálculo en el entrenamiento?",
+        "answers": [
+            [
+                "A mayor número de instancias y categorías, mayor es el tiempo de cálculo en el entrenamiento.",
+                true
+            ],
+            [
+                "A menor número de instancias y categorías, mayor es el tiempo de cálculo en el entrenamiento.",
+                false
+            ],
+            [
+                "No hay relación entre el número de instancias y categorías y el tiempo de cálculo en el entrenamiento.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores es correcta.",
+                false
+            ]
+        ],
+        "correct_answer": "A mayor número de instancias y categorías, mayor es el tiempo de cálculo en el entrenamiento."
+    },
+    {
+        "question": "¿Qué representaciones gráficas podemos ver al terminar un entrenamiento de aprendizaje automático en BigML?",
+        "answers": [
+            [
+                "Diferentes representaciones gráficas del modelo dependiendo del algoritmo utilizado.",
+                true
+            ],
+            [
+                "Solo una representación gráfica del modelo independientemente del algoritmo utilizado.",
+                false
+            ],
+            [
+                "Ninguna representación gráfica del modelo.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Diferentes representaciones gráficas del modelo dependiendo del algoritmo utilizado."
+    },
+    {
+        "question": "¿Qué necesitamos para hacer la evaluación de un modelo ya entrenado en BigML?",
+        "answers": [
+            [
+                "Una base de datos que incluya el campo objetivo en el entrenamiento.",
+                true
+            ],
+            [
+                "Una base de datos que no incluya el campo objetivo en el entrenamiento.",
+                false
+            ],
+            [
+                "Un archivo en formato .csv con los datos del modelo ya entrenado.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores es correcta.",
+                false
+            ]
+        ],
+        "correct_answer": "Una base de datos que incluya el campo objetivo en el entrenamiento."
+    },
+    {
+        "question": "¿Qué es la exactitud o accuracy en una matriz de confusión?",
+        "answers": [
+            [
+                "La fracción de predicciones que el modelo realizó correctamente.",
+                true
+            ],
+            [
+                "La proporción de ejemplos positivos que están identificados correctamente por el modelo entre todos los positivos reales.",
+                false
+            ],
+            [
+                "La fracción de elementos clasificados correctamente como positivo entre todos los que el modelo ha clasificado como positivos.",
+                false
+            ],
+            [
+                "La media armónica de Precisión y Recall.",
+                false
+            ]
+        ],
+        "correct_answer": "La fracción de predicciones que el modelo realizó correctamente."
+    },
+    {
+        "question": "¿Qué es el recall o sensibilidad en una matriz de confusión?",
+        "answers": [
+            [
+                "La proporción de ejemplos positivos que están identificados correctamente por el modelo entre todos los positivos reales.",
+                true
+            ],
+            [
+                "La fracción de predicciones que el modelo realizó correctamente.",
+                false
+            ],
+            [
+                "La fracción de elementos clasificados correctamente como positivo entre todos los que el modelo ha clasificado como positivos.",
+                false
+            ],
+            [
+                "La media armónica de Precisión y Recall.",
+                false
+            ]
+        ],
+        "correct_answer": "La proporción de ejemplos positivos que están identificados correctamente por el modelo entre todos los positivos reales."
+    },
+    {
+        "question": "¿Qué es la precisión en una matriz de confusión?",
+        "answers": [
+            [
+                "La fracción de elementos clasificados correctamente como positivo entre todos los que el modelo ha clasificado como positivos.",
+                true
+            ],
+            [
+                "La fracción de predicciones que el modelo realizó correctamente.",
+                false
+            ],
+            [
+                "La proporción de ejemplos positivos que están identificados correctamente por el modelo entre todos los positivos reales.",
+                false
+            ],
+            [
+                "La media armónica de Precisión y Recall.",
+                false
+            ]
+        ],
+        "correct_answer": "La fracción de elementos clasificados correctamente como positivo entre todos los que el modelo ha clasificado como positivos."
+    },
+    {
+        "question": "¿Qué es el F1 score en una matriz de confusión?",
+        "answers": [
+            [
+                "La media armónica de Precisión y Recall.",
+                true
+            ],
+            [
+                "La fracción de predicciones que el modelo realizó correctamente.",
+                false
+            ],
+            [
+                "La proporción de ejemplos positivos que están identificados correctamente por el modelo entre todos los positivos reales.",
+                false
+            ],
+            [
+                "La fracción de elementos clasificados correctamente como positivo entre todos los que el modelo ha clasificado como positivos.",
+                false
+            ]
+        ],
+        "correct_answer": "La media armónica de Precisión y Recall."
+    },
+    {
+        "question": "¿Cuáles son las métricas de evaluación más comunes para modelos de regresión?",
+        "answers": [
+            [
+                "Error medio absoluto, Media de los errores al cuadrado y Raíz cuadrada de la media del error al cuadrado.",
+                true
+            ],
+            [
+                "Error medio absoluto, Error medio cuadrático y Error absoluto.",
+                false
+            ],
+            [
+                "Error medio, Media de los errores al cuadrado y Raíz cuadrada del error absoluto medio.",
+                false
+            ],
+            [
+                "Raíz cuadrada de la media del error al cuadrado, Error absoluto medio y Error medio cuadrático.",
+                false
+            ]
+        ],
+        "correct_answer": "Error medio absoluto, Media de los errores al cuadrado y Raíz cuadrada de la media del error al cuadrado."
+    },
+    {
+        "question": "¿Qué es el coeficiente de determinación?",
+        "answers": [
+            [
+                "Es una métrica que compara nuestro modelo con un modelo básico que siempre devuelve la media de los valores objetivo de entrenamiento.",
+                true
+            ],
+            [
+                "Es la media de las diferencias absolutas entre el valor objetivo y el predicho.",
+                false
+            ],
+            [
+                "Es la media de las diferencias entre el valor objetivo y el predicho al cuadrado.",
+                false
+            ],
+            [
+                "Es igual a la raíz cuadrada de la media del error al cuadrado.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una métrica que compara nuestro modelo con un modelo básico que siempre devuelve la media de los valores objetivo de entrenamiento."
+    },
+    {
+        "question": "¿Qué valores puede tomar el coeficiente de determinación?",
+        "answers": [
+            [
+                "Desde menos infinito a 1.",
+                true
+            ],
+            [
+                "Desde 0 a infinito.",
+                false
+            ],
+            [
+                "Desde menos 1 a 1.",
+                false
+            ],
+            [
+                "Desde 0 a 1.",
+                false
+            ]
+        ],
+        "correct_answer": "Desde menos infinito a 1."
+    },
+    {
+        "question": "¿En qué se basa la comparación entre el modelo y el modelo básico en el coeficiente de determinación?",
+        "answers": [
+            [
+                "En la media de los errores al cuadrado de cada modelo.",
+                true
+            ],
+            [
+                "En la media de las diferencias absolutas entre el valor objetivo y el predicho.",
+                false
+            ],
+            [
+                "En la media de las diferencias entre el valor objetivo y el predicho al cuadrado.",
+                false
+            ],
+            [
+                "En la raíz cuadrada de la media del error al cuadrado.",
+                false
+            ]
+        ],
+        "correct_answer": "En la media de los errores al cuadrado de cada modelo."
+    },
+    {
+        "question": "¿Qué es el coeficiente de determinación ajustado?",
+        "answers": [
+            [
+                "Es una mejora de R cuadrado que compensa la adición de variables independientes.",
+                true
+            ],
+            [
+                "Es una métrica que difiere de las anteriores, ya que compara nuestro modelo con un modelo básico que siempre devuelve la media de los valores objetivo de entrenamiento.",
+                false
+            ],
+            [
+                "Es la raíz cuadrada de la media del error al cuadrado.",
+                false
+            ],
+            [
+                "Es la media de las diferencias entre el valor objetivo y el predicho al cuadrado.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una mejora de R cuadrado que compensa la adición de variables independientes."
+    },
+    {
+        "question": "¿Cómo se compara el coeficiente de determinación ajustado con el coeficiente de determinación?",
+        "answers": [
+            [
+                "El valor de R cuadrado ajustado siempre va a ser menor o igual al de R cuadrado.",
+                true
+            ],
+            [
+                "El valor de R cuadrado ajustado siempre va a ser mayor o igual al de R cuadrado.",
+                false
+            ],
+            [
+                "El valor de R cuadrado ajustado siempre va a ser igual al de R cuadrado.",
+                false
+            ],
+            [
+                "El valor de R cuadrado ajustado puede ser mayor o menor al de R cuadrado dependiendo del modelo.",
+                false
+            ]
+        ],
+        "correct_answer": "El valor de R cuadrado ajustado siempre va a ser menor o igual al de R cuadrado."
+    },
+    {
+        "question": "¿Qué es la validación cruzada?",
+        "answers": [
+            [
+                "Es una técnica de evaluación que consiste en repetir y calcular la media aritmética obtenida de las medidas de evaluación sobre diferentes particiones del conjunto de datos.",
+                true
+            ],
+            [
+                "Es una técnica de modelado que utiliza una red neuronal artificial para clasificar y predecir datos.",
+                false
+            ],
+            [
+                "Es una técnica de análisis de datos que se utiliza para detectar patrones y relaciones en grandes conjuntos de datos.",
+                false
+            ],
+            [
+                "Es una técnica de visualización de datos que utiliza gráficos y diagramas para representar información.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una técnica de evaluación que consiste en repetir y calcular la media aritmética obtenida de las medidas de evaluación sobre diferentes particiones del conjunto de datos."
+    },
+    {
+        "question": "¿Cuál es la principal desventaja de la validación cruzada dejando uno fuera?",
+        "answers": [
+            [
+                "Es un proceso muy costoso computacionalmente.",
+                true
+            ],
+            [
+                "Es una técnica poco precisa y confiable para evaluar modelos de aprendizaje automático.",
+                false
+            ],
+            [
+                "No permite evaluar la capacidad de generalización del modelo en datos nunca antes vistos.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un proceso muy costoso computacionalmente."
+    },
+    {
+        "question": "¿En qué consiste la validación cruzada de K iteraciones?",
+        "answers": [
+            [
+                "Consiste en dividir los datos en K subconjuntos y repetir la evaluación del modelo K veces, utilizando cada vez un subconjunto diferente como conjunto de validación.",
+                true
+            ],
+            [
+                "Consiste en dividir los datos en K subconjuntos y seleccionar aleatoriamente uno de ellos como conjunto de entrenamiento y el resto como conjunto de validación.",
+                false
+            ],
+            [
+                "Consiste en dividir los datos en dos subconjuntos, uno para entrenamiento y otro para validación.",
+                false
+            ],
+            [
+                "Consiste en entrenar el modelo con todos los datos y luego evaluar su capacidad de generalización en un conjunto de datos nunca antes vistos.",
+                false
+            ]
+        ],
+        "correct_answer": "Consiste en dividir los datos en K subconjuntos y repetir la evaluación del modelo K veces, utilizando cada vez un subconjunto diferente como conjunto de validación."
+    },
+    {
+        "question": "¿En qué consiste la validación cruzada aleatoria?",
+        "answers": [
+            [
+                "En escoger aleatoriamente un bloque de validación y repetir el proceso k veces.",
+                true
+            ],
+            [
+                "En dejar uno de los registros u observaciones para validación y el resto para entrenamiento.",
+                false
+            ],
+            [
+                "En dividir los datos en K subconjuntos y calcular la media de las medidas de evaluación.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores es correcta.",
+                false
+            ]
+        ],
+        "correct_answer": "En escoger aleatoriamente un bloque de validación y repetir el proceso k veces."
+    },
+    {
+        "question": "¿En qué consiste la validación cruzada dejando uno fuera?",
+        "answers": [
+            [
+                "Cada registro u observación es usado para validación y el resto para entrenamiento.",
+                true
+            ],
+            [
+                "Los datos se dividen en K subconjuntos y se calcula la media de las medidas de evaluación.",
+                false
+            ],
+            [
+                "Se escoge aleatoriamente un bloque de validación y se repite el proceso k veces.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores es correcta.",
+                false
+            ]
+        ],
+        "correct_answer": "Cada registro u observación es usado para validación y el resto para entrenamiento."
+    },
+    {
+        "question": "¿Qué es la optimización de hiper-parámetros?",
+        "answers": [
+            [
+                "Es un proceso de búsqueda para encontrar la mejor selección de valores para un conjunto finito de hiper-parámetros con el objetivo de generar el mejor modelo posible.",
+                true
+            ],
+            [
+                "Es un proceso de selección de características para reducir la dimensionalidad del conjunto de datos.",
+                false
+            ],
+            [
+                "Es un proceso de evaluación del desempeño de un modelo de aprendizaje automático.",
+                false
+            ],
+            [
+                "Es un proceso de entrenamiento de un modelo de aprendizaje automático utilizando diferentes algoritmos.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un proceso de búsqueda para encontrar la mejor selección de valores para un conjunto finito de hiper-parámetros con el objetivo de generar el mejor modelo posible."
+    },
+    {
+        "question": "¿Cuál es el objetivo de la optimización de hiper-parámetros?",
+        "answers": [
+            [
+                "Generar el mejor modelo posible.",
+                true
+            ],
+            [
+                "Reducir la dimensionalidad del conjunto de datos.",
+                false
+            ],
+            [
+                "Evaluar el desempeño de un modelo de aprendizaje automático.",
+                false
+            ],
+            [
+                "Entrenar un modelo de aprendizaje automático utilizando diferentes algoritmos.",
+                false
+            ]
+        ],
+        "correct_answer": "Generar el mejor modelo posible."
+    },
+    {
+        "question": "¿Qué es la búsqueda aleatoria en la optimización de hiper-parámetros?",
+        "answers": [
+            [
+                "Es un proceso de búsqueda de tipo aleatorio sobre un espacio de búsqueda finito donde se modifican aleatoriamente las soluciones previamente generadas en el espacio de búsqueda.",
+                true
+            ],
+            [
+                "Es un proceso de búsqueda donde los diferentes valores de hiper-parámetros se combinan para crear una maya donde se incluyen todas las posibles combinaciones de parámetros distribuidos de manera uniforme.",
+                false
+            ],
+            [
+                "Es un proceso de selección de características para reducir la dimensionalidad del conjunto de datos.",
+                false
+            ],
+            [
+                "Es un proceso de evaluación del desempeño de un modelo de aprendizaje automático.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un proceso de búsqueda de tipo aleatorio sobre un espacio de búsqueda finito donde se modifican aleatoriamente las soluciones previamente generadas en el espacio de búsqueda."
+    },
+    {
+        "question": "¿Qué es la búsqueda en cuadrícula en la optimización de hiper-parámetros?",
+        "answers": [
+            [
+                "Es un proceso de búsqueda donde los diferentes valores de hiper-parámetros se combinan para crear una maya donde se incluyen todas las posibles combinaciones de parámetros distribuidos de manera uniforme.",
+                true
+            ],
+            [
+                "Es un proceso de búsqueda de tipo aleatorio sobre un espacio de búsqueda finito donde se modifican aleatoriamente las soluciones previamente generadas en el espacio de búsqueda.",
+                false
+            ],
+            [
+                "Es un proceso de selección de características para reducir la dimensionalidad del conjunto de datos.",
+                false
+            ],
+            [
+                "Es un proceso de evaluación del desempeño de un modelo de aprendizaje automático.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un proceso de búsqueda donde los diferentes valores de hiper-parámetros se combinan para crear una maya donde se incluyen todas las posibles combinaciones de parámetros distribuidos de manera uniforme."
+    },
+    {
+        "question": "¿Qué es la detección de anomalías y para qué se utiliza?",
+        "answers": [
+            [
+                "La detección de anomalías es la identificación de elementos raros, eventos u observaciones que generan sospechas al diferenciarse significativamente de la mayoría de los datos. Se utiliza para conectar datos anómalos con algún tipo de problema o evento raro como fraude bancario, problemas médicos, defectos estructurales, equipo defectuoso, entre otros.",
+                true
+            ],
+            [
+                "La detección de anomalías es la identificación de elementos comunes en los datos y se utiliza para predecir eventos futuros.",
+                false
+            ],
+            [
+                "La detección de anomalías es la identificación de datos incompletos y se utiliza para completarlos.",
+                false
+            ],
+            [
+                "La detección de anomalías es la identificación de datos irrelevantes y se utiliza para eliminarlos.",
+                false
+            ]
+        ],
+        "correct_answer": "La detección de anomalías es la identificación de elementos raros, eventos u observaciones que generan sospechas al diferenciarse significativamente de la mayoría de los datos. Se utiliza para conectar datos anómalos con algún tipo de problema o evento raro como fraude bancario, problemas médicos, defectos estructurales, equipo defectuoso, entre otros."
+    },
+    {
+        "question": "¿Qué son PCA y Autoencoders y cómo se utilizan para la detección de anomalías?",
+        "answers": [
+            [
+                "PCA y Autoencoders son técnicas de reducción de dimensionalidad y se utilizan para identificar anomalías en conjuntos de datos no etiquetados, es decir, donde no se conoce la clasificación real (anomalía - no anomalía) de las observaciones.",
+                true
+            ],
+            [
+                "PCA y Autoencoders son técnicas de análisis de sentimientos y se utilizan para medir la satisfacción del cliente.",
+                false
+            ],
+            [
+                "PCA y Autoencoders son técnicas de clasificación y se utilizan para predecir la calidad de un producto.",
+                false
+            ],
+            [
+                "PCA y Autoencoders son técnicas de clustering y se utilizan para agrupar elementos similares.",
+                false
+            ]
+        ],
+        "correct_answer": "PCA y Autoencoders son técnicas de reducción de dimensionalidad y se utilizan para identificar anomalías en conjuntos de datos no etiquetados, es decir, donde no se conoce la clasificación real (anomalía - no anomalía) de las observaciones."
+    },
+    {
+        "question": "¿Qué es el Isolation Forest y cómo funciona para la detección de anomalías?",
+        "answers": [
+            [
+                "El Isolation Forest es un algoritmo para la detección de anomalías que se basa en la idea de que los puntos anormales dentro de los conjuntos de datos son más fáciles de separar (isolate) que los puntos normales. Utiliza una serie de árboles de decisión aleatorios para separar los puntos anómalos del resto de los datos.",
+                true
+            ],
+            [
+                "El Isolation Forest es un algoritmo de clasificación y se utiliza para predecir la probabilidad de éxito de un proyecto.",
+                false
+            ],
+            [
+                "El Isolation Forest es un algoritmo de regresión y se utiliza para predecir valores numéricos.",
+                false
+            ],
+            [
+                "El Isolation Forest es un algoritmo de clustering y se utiliza para agrupar elementos similares.",
+                false
+            ]
+        ],
+        "correct_answer": "El Isolation Forest es un algoritmo para la detección de anomalías que se basa en la idea de que los puntos anormales dentro de los conjuntos de datos son más fáciles de separar (isolate) que los puntos normales. Utiliza una serie de árboles de decisión aleatorios para separar los puntos anómalos del resto de los datos."
+    },
+    {
+        "question": "¿Qué tipo de aprendizaje automático se debe utilizar para detectar posibles casos de diabetes en mujeres de cualquier edad?",
+        "answers": [
+            [
+                "Aprendizaje Automático Supervisado.",
+                true
+            ],
+            [
+                "Aprendizaje Automático No Supervisado.",
+                false
+            ],
+            [
+                "Aprendizaje Automático Reforzado.",
+                false
+            ],
+            [
+                "Aprendizaje Automático de Clustering.",
+                false
+            ]
+        ],
+        "correct_answer": "Aprendizaje Automático Supervisado."
+    },
+    {
+        "question": "¿Qué tipo de algoritmo se puede utilizar para clasificar los posibles casos de diabetes en mujeres?",
+        "answers": [
+            [
+                "Regresión Logística o Árbol de Decisión.",
+                true
+            ],
+            [
+                "Redes Neuronales.",
+                false
+            ],
+            [
+                "Máquinas de Vectores de Soporte.",
+                false
+            ],
+            [
+                "K-Vecinos más cercanos.",
+                false
+            ]
+        ],
+        "correct_answer": "Regresión Logística o Árbol de Decisión."
+    },
+    {
+        "question": "¿Cuál es el campo objetivo en los datos que se utilizarán para entrenar el modelo?",
+        "answers": [
+            [
+                "Si hubo o no diabetes.",
+                true
+            ],
+            [
+                "Edad de las mujeres.",
+                false
+            ],
+            [
+                "Peso de las mujeres.",
+                false
+            ],
+            [
+                "Altura de las mujeres.",
+                false
+            ]
+        ],
+        "correct_answer": "Si hubo o no diabetes."
+    },
+    {
+        "question": "¿Qué tipo de aprendizaje automático se utiliza en un modelo que predice el precio de venta de un inmueble?",
+        "answers": [
+            [
+                "Aprendizaje Automático Supervisado",
+                true
+            ],
+            [
+                "Aprendizaje Automático No Supervisado",
+                false
+            ],
+            [
+                "Aprendizaje Automático por Refuerzo",
+                false
+            ],
+            [
+                "No se utiliza aprendizaje automático en este modelo",
+                false
+            ]
+        ],
+        "correct_answer": "Aprendizaje Automático Supervisado"
+    },
+    {
+        "question": "¿Qué tipo de algoritmo se podría utilizar en un modelo que predice el precio de venta de un inmueble?",
+        "answers": [
+            [
+                "Regresión Lineal",
+                true
+            ],
+            [
+                "Árbol de Decisión",
+                false
+            ],
+            [
+                "Clustering",
+                false
+            ],
+            [
+                "SVM",
+                false
+            ]
+        ],
+        "correct_answer": "Regresión Lineal"
+    },
+    {
+        "question": "¿Qué tipo de Aprendizaje Automático se utiliza en el modelo para detectar usos fraudulentos en tarjetas de crédito?",
+        "answers": [
+            [
+                "Aprendizaje Automático Supervisado",
+                false
+            ],
+            [
+                "Aprendizaje Automático No supervisado",
+                true
+            ],
+            [
+                "Aprendizaje Automático por refuerzo",
+                false
+            ],
+            [
+                "Aprendizaje Automático Profundo",
+                false
+            ]
+        ],
+        "correct_answer": "Aprendizaje Automático No supervisado"
+    },
+    {
+        "question": "¿Qué tipo de algoritmo se utiliza en el modelo para detectar usos fraudulentos en tarjetas de crédito?",
+        "answers": [
+            [
+                "Regresión Lineal",
+                false
+            ],
+            [
+                "Clustering",
+                true
+            ],
+            [
+                "Árbol de decisión",
+                false
+            ],
+            [
+                "Redes neuronales",
+                false
+            ]
+        ],
+        "correct_answer": "Clustering"
+    },
+    {
+        "question": "¿Por qué se utiliza el algoritmo tipo G-Means en el modelo para detectar usos fraudulentos en tarjetas de crédito?",
+        "answers": [
+            [
+                "Para realizar una clasificación de los datos",
+                false
+            ],
+            [
+                "Para encontrar patrones en los datos",
+                false
+            ],
+            [
+                "Para detectar anomalías en los datos",
+                true
+            ],
+            [
+                "Para predecir valores numéricos",
+                false
+            ]
+        ],
+        "correct_answer": "Para detectar anomalías en los datos"
+    },
+    {
+        "question": "¿Qué tipo de Aprendizaje Automático se utilizará en el reconocimiento de caras en fotografías?",
+        "answers": [
+            [
+                "Aprendizaje Automático Supervisado.",
+                true
+            ],
+            [
+                "Aprendizaje Automático No Supervisado.",
+                false
+            ],
+            [
+                "Aprendizaje Automático por Reforzamiento.",
+                false
+            ],
+            [
+                "Aprendizaje Profundo.",
+                false
+            ]
+        ],
+        "correct_answer": "Aprendizaje Automático Supervisado."
+    },
+    {
+        "question": "¿Qué tipo de algoritmo es el óptimo para casos de reconocimiento de imágenes?",
+        "answers": [
+            [
+                "Regresión Logística.",
+                false
+            ],
+            [
+                "Árbol de Decisión.",
+                false
+            ],
+            [
+                "Máquina de Vector Soporte.",
+                true
+            ],
+            [
+                "K-Means.",
+                false
+            ]
+        ],
+        "correct_answer": "Máquina de Vector Soporte."
+    },
+    {
+        "question": "En el caso práctico de un sistema que clasifica correos electrónicos en spam y no spam, ¿qué tipo de Aprendizaje Automático habría que aplicar y qué tipo de algoritmo o algoritmos se podrían utilizar para obtener resultados óptimos?",
+        "options": [
+            "Aprendizaje Automático Supervisado y algoritmo de Naive Bayes",
+            "Aprendizaje Automático No supervisado y algoritmo K-means",
+            "Aprendizaje por Refuerzo y algoritmo Q-learning",
+            "Aprendizaje Automático Supervisado y algoritmo Árbol de Decisión"
+        ],
+        "correct_answer": "Aprendizaje Automático Supervisado y algoritmo de Naive Bayes"
+    },
+    {
+        "question": "En el caso práctico de un sistema que detecta fraude en transacciones bancarias, ¿qué tipo de Aprendizaje Automático habría que aplicar y qué tipo de algoritmo o algoritmos se podrían utilizar para obtener resultados óptimos?",
+        "options": [
+            "Aprendizaje Automático Supervisado y algoritmo de Regresión Logística",
+            "Aprendizaje Automático No supervisado y algoritmo Clustering",
+            "Aprendizaje por Refuerzo y algoritmo Actor-Critic",
+            "Aprendizaje Automático Supervisado y algoritmo Máquinas de Vector Soporte"
+        ],
+        "correct_answer": "Aprendizaje Automático Supervisado y algoritmo Máquinas de Vector Soporte"
+    },
+    {
+        "question": "En el caso práctico de un sistema que recomienda películas a usuarios en función de sus gustos, ¿qué tipo de Aprendizaje Automático habría que aplicar y qué tipo de algoritmo o algoritmos se podrían utilizar para obtener resultados óptimos?",
+        "options": [
+            "Aprendizaje Automático Supervisado y algoritmo de Árbol de Decisión",
+            "Aprendizaje Automático No supervisado y algoritmo DBSCAN",
+            "Aprendizaje por Refuerzo y algoritmo SARSA",
+            "Aprendizaje Automático Supervisado y algoritmo de Filtro Colaborativo"
+        ],
+        "correct_answer": "Aprendizaje Automático Supervisado y algoritmo de Filtro Colaborativo"
+    },
+    {
+        "question": "En el caso práctico de un sistema de reconocimiento de voz para controlar dispositivos electrónicos, ¿qué tipo de Aprendizaje Automático habría que aplicar y qué tipo de algoritmo o algoritmos se podrían utilizar para obtener resultados óptimos?",
+        "options": [
+            "Aprendizaje Automático Supervisado y algoritmo de Regresión Logística",
+            "Aprendizaje Automático No supervisado y algoritmo Clustering",
+            "Aprendizaje por Refuerzo y algoritmo Actor-Critic",
+            "Aprendizaje Automático Supervisado y algoritmo Redes Neuronales"
+        ],
+        "correct_answer": "Aprendizaje Automático Supervisado y algoritmo Redes Neuronales"
+    },
+    {
+        "question": "En el caso práctico de un sistema que recomienda productos a usuarios en función de sus compras anteriores, ¿qué tipo de Aprendizaje Automático habría que aplicar y qué tipo de algoritmo o algoritmos se podrían utilizar para obtener resultados óptimos?",
+        "options": [
+            "Aprendizaje Automático Supervisado y algoritmo de Árbol de Decisión",
+            "Aprendizaje Automático No supervisado y algoritmo DBSCAN",
+            "Aprendizaje por Refuerzo y algoritmo Q-learning",
+            "Aprendizaje Automático Supervisado y algoritmo de Filtro Colaborativo"
+        ],
+        "correct_answer": "Aprendizaje Automático Supervisado y algoritmo de Filtro Colaborativo"
+    },
+    {
+        "question": "En el caso práctico de un sistema que analiza imágenes de cámaras de seguridad para detectar comportamientos sospechosos, ¿qué tipo de Aprendizaje Automático habría que aplicar y qué tipo de algoritmo o algoritmos se podrían utilizar para obtener resultados óptimos?",
+        "options": [
+            "Aprendizaje Automático Supervisado y algoritmo de SVM",
+            "Aprendizaje Automático No supervisado y algoritmo Análisis de Componentes Principales",
+            "Aprendizaje por Refuerzo y algoritmo Monte Carlo Tree Search",
+            "Aprendizaje Automático Supervisado y algoritmo Redes Neuronales Convolucionales"
+        ],
+        "correct_answer": "Aprendizaje Automático Supervisado y algoritmo Redes Neuronales Convolucionales"
+    },
+    {
+        "question": "¿Qué tipo de Aprendizaje Automático habría que aplicar para el proyecto de detección temprana de enfermedades?",
+        "answers": [
+            [
+                "Aprendizaje Supervisado",
+                true
+            ],
+            [
+                "Aprendizaje No Supervisado",
+                false
+            ],
+            [
+                "Aprendizaje por Refuerzo",
+                false
+            ]
+        ],
+        "correct_answer": "Aprendizaje Supervisado"
+    },
+    {
+        "question": "¿Qué tipo de algoritmo o algoritmos se podría/n utilizar para obtener resultados óptimos en el proyecto de personalización de tratamientos?",
+        "answers": [
+            [
+                "Redes Neuronales",
+                true
+            ],
+            [
+                "Algoritmos Genéticos",
+                false
+            ],
+            [
+                "Árboles de Decisión",
+                false
+            ]
+        ],
+        "correct_answer": "Redes Neuronales"
+    },
+    {
+        "question": "¿Qué tipo de Aprendizaje Automático habría que aplicar para el proyecto de robótica y automatización en cirugía?",
+        "answers": [
+            [
+                "Aprendizaje por Refuerzo",
+                true
+            ],
+            [
+                "Aprendizaje No Supervisado",
+                false
+            ],
+            [
+                "Aprendizaje Supervisado",
+                false
+            ]
+        ],
+        "correct_answer": "Aprendizaje por Refuerzo"
+    },
+    {
+        "question": "¿Qué es TensorFlow Playground y cómo se utiliza?",
+        "answers": [
+            [
+                "Una plataforma de aprendizaje automático que permite entrenar modelos de redes neuronales y visualizar su comportamiento en un entorno interactivo y fácil de usar. Se utiliza mediante la selección de un conjunto de datos y la configuración de la arquitectura de la red, luego se inicia el entrenamiento y se observa el comportamiento de la red en tiempo real.",
+                true
+            ],
+            [
+                "Una herramienta para la automatización de procesos en la nube.",
+                false
+            ],
+            [
+                "Un programa de análisis estadístico para grandes conjuntos de datos.",
+                false
+            ],
+            [
+                "Un framework para el desarrollo de aplicaciones móviles y web.",
+                false
+            ]
+        ],
+        "correct_answer": "Una plataforma de aprendizaje automático que permite entrenar modelos de redes neuronales y visualizar su comportamiento en un entorno interactivo y fácil de usar. Se utiliza mediante la selección de un conjunto de datos y la configuración de la arquitectura de la red, luego se inicia el entrenamiento y se observa el comportamiento de la red en tiempo real."
+    },
+    {
+        "question": "¿Cómo se puede utilizar BigML para detectar anomalías en un conjunto de datos?",
+        "answers": [
+            [
+                "BigML ofrece herramientas de detección de anomalías que utilizan algoritmos de aprendizaje automático para identificar patrones y comportamientos inusuales en los datos. Se pueden cargar los datos en la plataforma, seleccionar la herramienta de detección de anomalías y ajustar los parámetros según las necesidades del proyecto.",
+                true
+            ],
+            [
+                "BigML es una herramienta para crear y entrenar modelos de redes neuronales.",
+                false
+            ],
+            [
+                "BigML es una plataforma para la gestión y análisis de datos en la nube.",
+                false
+            ],
+            [
+                "BigML es un lenguaje de programación para el análisis estadístico de grandes conjuntos de datos.",
+                false
+            ]
+        ],
+        "correct_answer": "BigML ofrece herramientas de detección de anomalías que utilizan algoritmos de aprendizaje automático para identificar patrones y comportamientos inusuales en los datos. Se pueden cargar los datos en la plataforma, seleccionar la herramienta de detección de anomalías y ajustar los parámetros según las necesidades del proyecto."
+    },
+    {
+        "question": "¿Qué es Playground TensorFlow?",
+        "answers": [
+            [
+                "Es una herramienta para visualizar y experimentar con algoritmos de Machine Learning de manera interactiva.",
+                true
+            ],
+            [
+                "Es una biblioteca de Python para realizar cálculos numéricos con alta eficiencia.",
+                false
+            ],
+            [
+                "Es un servicio de nube para el entrenamiento y despliegue de modelos de Machine Learning.",
+                false
+            ],
+            [
+                "Es una plataforma para la gestión de datos y análisis de negocios.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una herramienta para visualizar y experimentar con algoritmos de Machine Learning de manera interactiva."
+    },
+    {
+        "question": "¿Qué es BigML?",
+        "answers": [
+            [
+                "Es una plataforma para el desarrollo y despliegue de modelos de Machine Learning en la nube.",
+                true
+            ],
+            [
+                "Es una biblioteca de Python para la creación de modelos de Machine Learning.",
+                false
+            ],
+            [
+                "Es una herramienta para el análisis de datos y la generación de gráficos.",
+                false
+            ],
+            [
+                "Es un lenguaje de programación enfocado en el procesamiento de datos a gran escala.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una plataforma para el desarrollo y despliegue de modelos de Machine Learning en la nube."
+    },
+    {
+        "question": "¿Qué es una matriz de confusión en el contexto de Machine Learning?",
+        "answers": [
+            [
+                "Es una tabla que muestra el número de predicciones correctas e incorrectas para un modelo de clasificación.",
+                true
+            ],
+            [
+                "Es una herramienta para visualizar el proceso de entrenamiento de un modelo de Machine Learning.",
+                false
+            ],
+            [
+                "Es una técnica de preprocesamiento de datos para mejorar la calidad de los datos de entrada.",
+                false
+            ],
+            [
+                "Es un algoritmo de Machine Learning para la identificación de patrones en datos no etiquetados.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una tabla que muestra el número de predicciones correctas e incorrectas para un modelo de clasificación."
+    },
+    {
+        "question": "¿Qué son las anomalías en el contexto de BigML?",
+        "answers": [
+            [
+                "Son eventos raros o inusuales que se detectan en los datos y que pueden indicar problemas o oportunidades.",
+                true
+            ],
+            [
+                "Son valores atípicos que se encuentran en los datos y que pueden distorsionar los resultados del análisis.",
+                false
+            ],
+            [
+                "Son patrones ocultos o difíciles de detectar que se encuentran en los datos y que pueden ser útiles para la toma de decisiones.",
+                false
+            ],
+            [
+                "Son errores de programación en el código de los modelos de Machine Learning que pueden llevar a resultados incorrectos.",
+                false
+            ]
+        ],
+        "correct_answer": "Son eventos raros o inusuales que se detectan en los datos y que pueden indicar problemas o oportunidades."
+    }
+]
