@@ -177,4 +177,4 @@ if __name__ == "__main__":
         with open(sys.argv[2], "r") as links:
             dataset.write(json.dumps(extract_test(*sys.argv[3:8], *links.readlines())))
 
-# CIDEAD: python scrapper.py <JSON file> <links file> username password loginbtn <username> <password>
+# python scrapper.py <JSON file> <links file> username password loginbtn <username> <password>
