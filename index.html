@@ -42,6 +42,9 @@
 
                 <div id="body" class="card-body">
                     <div class="row">
+                        <div class="col-md-9 mb-2">
+                            <p class="card-text" id="text"></p>
+                        </div>
                         <div class="col-md-3">
                             <div class="btn-group w-100 justify-content-end mb-3">
                                 <button title="Anterior" type="button" class="btn btn-primary mr-2" id="prevBtn"><i
@@ -49,9 +52,6 @@
                                 <button title="Siguiente" type="button" class="btn btn-primary ml-2" id="nextBtn"><i
                                         class="fas fa-arrow-right"></i></button>
                             </div>
-                        </div>
-                        <div class="col-md-9 mb-2">
-                            <p class="card-text" id="text"></p>
                         </div>
                     </div>
                     <div class="form-group">
@@ -75,7 +75,7 @@
         // THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
         $(document).ready(function () {
-            //$("#main").hide();
+            $("#main").hide();
 
             var questions = [];
             var userAnswers = [];
