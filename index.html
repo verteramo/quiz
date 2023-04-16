@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <h1 class="card-header mb-4">Quiz
+            </h1>
+            <div class="card-body">
+                <form>
+                    <div class="form-group row">
+                        <label class="form-label col-12 col-md-4" for="jsonFile">Selecciona un archivo JSON:</label>
+                        <div class="col-12 col-md-8">
+                            <input type="file" class="form-control-file" id="file" title="Fichero" accept=".json">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="form-label col-12 col-md-4" for="quantity">Número de preguntas al
+                            azar:</label>
+                        <div class="col-12 col-md-6">
+                            <input type="number" class="form-control" id="quantity" min="1" value="10">
+                        </div>
+                        <div class="col-12 col-md-2">
+                            <button type="button" class="btn btn-primary btn-block" id="generateBtn">Generar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-5" id="main">
+            <div class="card">
+                <h5 id="title" class="card-header mb-0"></h5>
+
+                <div id="body" class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="btn-group w-100 justify-content-end mb-3">
+                                <button title="Anterior" type="button" class="btn btn-primary mr-2" id="prevBtn"><i
+                                        class="fas fa-arrow-left"></i></button>
+                                <button title="Siguiente" type="button" class="btn btn-primary ml-2" id="nextBtn"><i
+                                        class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-md-9 mb-2">
+                            <p class="card-text" id="text"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="list-group" id="answers">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        // Copyright 2022 @verteramo
+        // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        // The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        // THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+        $(document).ready(function () {
+            //$("#main").hide();
+
+            var questions = [];
+            var userAnswers = [];
+            var current = 0;
+
+            function shuffle(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            }
+
+            $("#generateBtn").click(function () {
+                var file = $("#file")[0].files[0];
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        try {
+                            questions = shuffle(
+                                JSON.parse(e.target.result)
+                            ).slice(0, $("#quantity").val());
+
+                            current = 0;
+
+                            questions.forEach(function (question) {
+                                question.answers = shuffle(question.answers);
+                            });
+
+                            changeQuestion();
+
+                            $("#main").show();
+                        } catch (ex) {
+                            console.log("El archivo no es válido: " + ex.message);
+                        }
+                    }
+                    reader.readAsText(file);
+                }
+                else {
+                    console.log("Selecciona un archivo JSON");
+                }
+            });
+
+            $("#nextBtn").click(function () {
+                current++;
+                changeQuestion();
+            });
+
+            $("#prevBtn").click(function () {
+                current--;
+                changeQuestion();
+            });
+
+            $("#marksBtn").click(function () {
+                showResults();
+            });
+
+            function showResults() {
+                $("#prevBtn").prop("disabled", true);
+                $("#nextBtn").prop("disabled", true);
+
+                $("#title").text("Resultados");
+                $("#text").text("Puntuación: " + score + "/" + questions.length);
+
+                $("#answers").empty();
+
+                questions.forEach(function (answer, index) {
+                    console.log("hola");
+
+                    var buttonClass = userAnswers[index] == questions[index].correct_answer ? "list-group-item list-group-item-success flex-column align-items-start" : "list-group-item list-group-item-danger flex-column align-items-start";
+
+                    var button = $("button", {
+                        class: buttonClass
+                    }).append($("div", {
+                        class: "d-flex w-100 justify-content-between"
+                    }).append($("h5", {
+                        class: "mb-1",
+                        text: questions[index].question
+                    })).append($("small", {
+                        text: userAnswers[index] == questions[index].correct_answer ? "Correcto" : "Incorrecto"
+                    })));
+
+                    $("#answers").append(button);
+                });
+            }
+
+            function changeQuestion() {
+                if (current <= 0) {
+                    current = 0;
+                }
+                else if (current >= questions.length) {
+                    current = questions.length - 1;
+                }
+
+                $("#title").text("Pregunta " + (current + 1) + " de " + questions.length);
+                $("#text").text(questions[current].question);
+
+                $("#answers").empty();
+
+                questions[current].answers.
+                    forEach(function (answer) {
+                        var button = $("<button>", {
+                            type: "button",
+                            class: "list-group-item list-group-item-action answer-btn",
+                            text: answer[0]
+                        }).click(function () {
+                            userAnswers[current] = $(this).text();
+                            $(".answer-btn").removeClass("active");
+                            $(this).addClass("active");
+                        })
+
+                        if (userAnswers[current] === answer[0]) {
+                            button.addClass("active");
+                        }
+
+                        $("#answers").append(button);
+                    });
+
+                $("#prevBtn").prop("disabled", current <= 0);
+                $("#nextBtn").prop("disabled", current > questions.length - 1);
+            }
+        });
+    </script>
+</body>
+
+</html>

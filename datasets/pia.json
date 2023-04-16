@@ -1,0 +1,4155 @@
+[
+    {
+        "question": "¿Cómo puedo seleccionar todas las filas de un dataframe de pandas que cumplen una cierta condición en una columna específica?",
+        "answers": [
+            [
+                "Usando la función loc() y especificando la condición dentro de los corchetes.",
+                true
+            ],
+            [
+                "Usando la función iloc() y especificando la condición dentro de los corchetes.",
+                false
+            ],
+            [
+                "Usando la función filter() y especificando la condición dentro de los corchetes.",
+                false
+            ],
+            [
+                "Usando la función query() y especificando la condición como un string.",
+                true
+            ]
+        ],
+        "correct_answer": "Usando la función loc() y especificando la condición dentro de los corchetes."
+    },
+    {
+        "question": "¿Qué método de pandas se utiliza para renombrar columnas en un dataframe?",
+        "answers": [
+            [
+                ".rename()",
+                true
+            ],
+            [
+                ".rename_column()",
+                false
+            ],
+            [
+                ".columns()",
+                false
+            ],
+            [
+                ".rename_columns()",
+                false
+            ]
+        ],
+        "correct_answer": ".rename()"
+    },
+    {
+        "question": "¿Cuál es la herramienta de Google Cloud Platform orientada a la analítica de datos y machine learning?",
+        "answers": [
+            [
+                "Vertex AI",
+                true
+            ],
+            [
+                "Dialog Flow",
+                false
+            ],
+            [
+                "BigQuery",
+                false
+            ],
+            [
+                "AutoML",
+                false
+            ]
+        ],
+        "correct_answer": "Vertex AI"
+    },
+    {
+        "question": "¿Cuál es la herramienta base de Amazon Web Services para crear y entrenar modelos de machine learning?",
+        "answers": [
+            [
+                "Amazon SageMaker",
+                true
+            ],
+            [
+                "Rekognition",
+                false
+            ],
+            [
+                "Comprehend",
+                false
+            ],
+            [
+                "AWS",
+                false
+            ]
+        ],
+        "correct_answer": "Amazon SageMaker"
+    },
+    {
+        "question": "¿Cuál es el sistema cognitivo de IBM en el campo de la IA?",
+        "answers": [
+            [
+                "Watson",
+                true
+            ],
+            [
+                "SageMaker",
+                false
+            ],
+            [
+                "Rekognition",
+                false
+            ],
+            [
+                "Comprehend",
+                false
+            ]
+        ],
+        "correct_answer": "Watson"
+    },
+    {
+        "question": "¿En qué se enfoca más el ingeniero de datos en el campo de la IA?",
+        "answers": [
+            [
+                "Gestión de los datos (gobernanza del dato)",
+                true
+            ],
+            [
+                "Aplicación de los algoritmos",
+                false
+            ],
+            [
+                "Acceso y tratamiento de los datos",
+                false
+            ],
+            [
+                "Investigación",
+                false
+            ]
+        ],
+        "correct_answer": "Gestión de los datos (gobernanza del dato)"
+    },
+    {
+        "question": "¿Qué plataforma de Microsoft es la más conocida para servicios en la nube y de IA?",
+        "answers": [
+            [
+                "Azure",
+                true
+            ],
+            [
+                "AWS",
+                false
+            ],
+            [
+                "IBM Cloud",
+                false
+            ],
+            [
+                "Google Cloud Platform",
+                false
+            ]
+        ],
+        "correct_answer": "Azure"
+    },
+    {
+        "question": "¿Cuál es la diferencia entre un científico de datos y un analista?",
+        "answers": [
+            [
+                "El científico de datos se enfoca en la investigación, mientras que el analista está más enfocado en la aplicación de los algoritmos",
+                true
+            ],
+            [
+                "El científico de datos trabaja exclusivamente con técnicas de inteligencia artificial, mientras que el analista se enfoca en el tratamiento de datos",
+                false
+            ],
+            [
+                "El analista se enfoca en la investigación, mientras que el científico de datos está más enfocado en la aplicación de los algoritmos",
+                false
+            ],
+            [
+                "No hay diferencia entre un científico de datos y un analista",
+                false
+            ]
+        ]
+    },
+    {
+        "question": "¿Qué es BigQuery de Google Cloud Platform?",
+        "answers": [
+            [
+                "Es una plataforma unificada de aprendizaje automático",
+                false
+            ],
+            [
+                "Es una herramienta para la gobernanza del dato",
+                false
+            ],
+            [
+                "Es una herramienta orientada a la analítica de datos, pero también permite entrar en la experiencia del machine learning",
+                true
+            ],
+            [
+                "Es una herramienta para el reconocimiento de imagen",
+                false
+            ]
+        ]
+    },
+    {
+        "question": "¿Cuál es el producto estrella de IBM en el campo de la IA?",
+        "answers": [
+            [
+                "Vertex AI",
+                false
+            ],
+            [
+                "Amazon SageMaker",
+                false
+            ],
+            [
+                "Watson",
+                true
+            ],
+            [
+                "Dialog Flow",
+                false
+            ]
+        ]
+    },
+    {
+        "question": "¿Qué servicios de Azure son recomendables para aplicar técnicas de machine learning?",
+        "answers": [
+            [
+                "Cognitive Services",
+                false
+            ],
+            [
+                "Rekognition",
+                false
+            ],
+            [
+                "Comprehend",
+                false
+            ],
+            [
+                "Azure ML",
+                true
+            ]
+        ]
+    },
+    {
+        "question": "¿Cuál es la diferencia entre un científico de datos y un analista?",
+        "answers": [
+            [
+                "El científico de datos está enfocado en la investigación, mientras que el analista está más enfocado en la aplicación de los algoritmos.",
+                true
+            ],
+            [
+                "El científico de datos se enfoca en la gestión de los datos, mientras que el analista está enfocado en la investigación.",
+                false
+            ],
+            [
+                "El científico de datos y el analista tienen la misma función.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores es correcta.",
+                false
+            ]
+        ],
+        "correct_answer": "El científico de datos está enfocado en la investigación, mientras que el analista está más enfocado en la aplicación de los algoritmos."
+    },
+    {
+        "question": "¿En qué se enfoca el ingeniero de datos?",
+        "answers": [
+            [
+                "En la gestión de los datos (gobernanza del dato).",
+                true
+            ],
+            [
+                "En la investigación de nuevos algoritmos de inteligencia artificial.",
+                false
+            ],
+            [
+                "En la aplicación de los algoritmos de inteligencia artificial.",
+                false
+            ],
+            [
+                "En la implementación de los servicios en la nube.",
+                false
+            ]
+        ],
+        "correct_answer": "En la gestión de los datos (gobernanza del dato)."
+    },
+    {
+        "question": "¿Cuál es el servicio de Google Cloud Platform orientado a la analítica de datos?",
+        "answers": [
+            [
+                "BigQuery",
+                true
+            ],
+            [
+                "Vertex AI",
+                false
+            ],
+            [
+                "Dialog Flow",
+                false
+            ],
+            [
+                "AutoML",
+                false
+            ]
+        ],
+        "correct_answer": "BigQuery"
+    },
+    {
+        "question": "¿Cuál es el servicio de Google Cloud Platform que es una plataforma unificada de aprendizaje automático?",
+        "answers": [
+            [
+                "Vertex AI",
+                true
+            ],
+            [
+                "BigQuery",
+                false
+            ],
+            [
+                "Dialog Flow",
+                false
+            ],
+            [
+                "AutoML",
+                false
+            ]
+        ],
+        "correct_answer": "Vertex AI"
+    },
+    {
+        "question": "¿Cuál es el servicio de AWS para el reconocimiento de imagen?",
+        "answers": [
+            [
+                "Rekognition",
+                true
+            ],
+            [
+                "Comprehend",
+                false
+            ],
+            [
+                "Amazon SageMaker",
+                false
+            ],
+            [
+                "Watson",
+                false
+            ]
+        ],
+        "correct_answer": "Rekognition"
+    },
+    {
+        "question": "¿Cuál es el servicio de AWS para el análisis de textos y procesamiento de lenguaje natural?",
+        "answers": [
+            [
+                "Comprehend",
+                true
+            ],
+            [
+                "Rekognition",
+                false
+            ],
+            [
+                "Amazon SageMaker",
+                false
+            ],
+            [
+                "Watson",
+                false
+            ]
+        ],
+        "correct_answer": "Comprehend"
+    },
+    {
+        "question": "¿Cuál es el sistema cognitivo de IBM en el campo de la IA?",
+        "answers": [
+            [
+                "Watson",
+                true
+            ],
+            [
+                "Rekognition",
+                false
+            ],
+            [
+                "Comprehend",
+                false
+            ],
+            [
+                "Vertex AI",
+                false
+            ]
+        ],
+        "correct_answer": "Watson"
+    },
+    {
+        "question": "¿Cuál es el grupo dentro del servicio Azure que provee API listas para usar de forma rápida y ágil?",
+        "answers": [
+            [
+                "Cognitive Services",
+                true
+            ],
+            [
+                "ML para aplicar técnicas de machine learning",
+                false
+            ],
+            [
+                "Automatización en cirugía",
+                false
+            ],
+            [
+                "Herramienta base Amazon SageMaker",
+                false
+            ]
+        ],
+        "correct_answer": "Cognitive Services"
+    },
+    {
+        "question": "¿Cuál es la diferencia entre un científico de datos y un analista de datos?",
+        "answers": [
+            [
+                "El científico de datos se enfoca en la investigación y la aplicación de técnicas de inteligencia artificial, mientras que el analista de datos se enfoca más en la aplicación de algoritmos.",
+                true
+            ],
+            [
+                "El científico de datos se enfoca en la gestión de los datos, mientras que el analista de datos se enfoca en la investigación.",
+                false
+            ],
+            [
+                "El científico de datos y el analista de datos tienen el mismo enfoque y responsabilidades.",
+                false
+            ],
+            [
+                "El científico de datos se enfoca en la aplicación de algoritmos, mientras que el analista de datos se enfoca en la investigación y la aplicación de técnicas de inteligencia artificial.",
+                false
+            ]
+        ],
+        "correct_answer": "El científico de datos se enfoca en la investigación y la aplicación de técnicas de inteligencia artificial, mientras que el analista de datos se enfoca más en la aplicación de algoritmos."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre la herramienta BigQuery y Vertex AI de Google Cloud Platform?",
+        "answers": [
+            [
+                "BigQuery está orientada a analítica de datos, mientras que Vertex AI es una plataforma unificada de aprendizaje automático que contiene la herramienta AutoML.",
+                true
+            ],
+            [
+                "BigQuery es una plataforma unificada de aprendizaje automático que contiene la herramienta AutoML, mientras que Vertex AI está orientada a analítica de datos.",
+                false
+            ],
+            [
+                "BigQuery y Vertex AI son herramientas completamente diferentes y no tienen relación alguna.",
+                false
+            ],
+            [
+                "BigQuery y Vertex AI son ambas plataformas unificadas de aprendizaje automático.",
+                false
+            ]
+        ],
+        "correct_answer": "BigQuery está orientada a analítica de datos, mientras que Vertex AI es una plataforma unificada de aprendizaje automático que contiene la herramienta AutoML."
+    },
+    {
+        "question": "¿Cuál es el producto estrella de IBM en el campo de la inteligencia artificial?",
+        "answers": [
+            [
+                "Watson",
+                true
+            ],
+            [
+                "Comprehend",
+                false
+            ],
+            [
+                "Rekognition",
+                false
+            ],
+            [
+                "Azure ML",
+                false
+            ]
+        ],
+        "correct_answer": "Watson"
+    },
+    {
+        "question": "¿Qué servicios en la nube proporciona Microsoft?",
+        "answers": [
+            [
+                "Azure",
+                true
+            ],
+            [
+                "AWS",
+                false
+            ],
+            [
+                "IBM Cloud",
+                false
+            ],
+            [
+                "Google Cloud Platform",
+                false
+            ]
+        ],
+        "correct_answer": "Azure"
+    },
+    {
+        "question": "¿Cuáles son algunos de los servicios de inteligencia artificial que ofrece Amazon Web Services?",
+        "answers": [
+            [
+                "Amazon SageMaker para crear y entrenar modelos de machine learning, Rekognition para reconocimiento de imagen y Comprehend para el análisis de textos y procesamiento de lenguaje natural.",
+                true
+            ],
+            [
+                "BigQuery para analítica de datos y Vertex AI para el entrenamiento de modelos de machine learning.",
+                false
+            ],
+            [
+                "Watson para asistentes conversacionales y soluciones de IA de uso directo en procesos empresariales.",
+                false
+            ],
+            [
+                "Dialog Flow para aplicación de asistentes conversacionales y servicios de IA pre-entrenados listos para usar.",
+                false
+            ]
+        ],
+        "correct_answer": "Amazon SageMaker para crear y entrenar modelos de machine learning, Rekognition para reconocimiento de imagen y Comprehend para el análisis de textos y procesamiento de lenguaje"
+    },
+    {
+        "question": "¿Qué es el lenguaje R y en qué se enfocan sus librerías y paquetes?",
+        "answers": [
+            [
+                "R es un entorno de software libre y lenguaje de programación interpretado, enfocado en el análisis estadístico, visualización y flujo de datos en general.",
+                true
+            ],
+            [
+                "R es un lenguaje de programación científica, con una sintaxis muy orientada al cálculo matemático.",
+                false
+            ],
+            [
+                "R es un lenguaje de programación de propósito general muy sencillo y fácil de aprender.",
+                false
+            ],
+            [
+                "R es un lenguaje de programación enfocado en la creación de aplicaciones de IA para empresas.",
+                false
+            ]
+        ],
+        "correct_answer": "R es un entorno de software libre y lenguaje de programación interpretado, enfocado en el análisis estadístico, visualización y flujo de datos en general."
+    },
+    {
+        "question": "¿Qué es Octave y en qué se destaca en el campo del machine learning?",
+        "answers": [
+            [
+                "Octave es un lenguaje de programación científica, compatible con Matlab y escrito en C++, destacándose en el planteamiento de cálculos matemáticos y sus herramientas de visualización 2D y 3D en el campo del machine learning y la optimización.",
+                true
+            ],
+            [
+                "Octave es un lenguaje de programación de propósito general muy sencillo y fácil de aprender.",
+                false
+            ],
+            [
+                "Octave es un lenguaje de programación interpretado, enfocado en el análisis estadístico y visualización de datos.",
+                false
+            ],
+            [
+                "Octave es un lenguaje de programación enfocado en la creación de aplicaciones de IA para empresas.",
+                false
+            ]
+        ],
+        "correct_answer": "Octave es un lenguaje de programación científica, compatible con Matlab y escrito en C++, destacándose en el planteamiento de cálculos matemáticos y sus herramientas de visualización 2D y 3D en el campo del machine learning y la optimización."
+    },
+    {
+        "question": "¿Qué es Tensorflow y quién lo desarrolló?",
+        "answers": [
+            [
+                "Tensorflow es una librería de software libre para el aprendizaje automático y la creación de redes neuronales profundas, desarrollada por Google.",
+                true
+            ],
+            [
+                "Tensorflow es un lenguaje de programación científica, compatible con Matlab y escrito en C++.",
+                false
+            ],
+            [
+                "Tensorflow es un entorno de software libre y lenguaje de programación interpretado, enfocado en el análisis estadístico y visualización de datos.",
+                false
+            ],
+            [
+                "Tensorflow es un lenguaje de programación enfocado en la creación de aplicaciones de IA para empresas.",
+                false
+            ]
+        ],
+        "correct_answer": "Tensorflow es una librería de software libre para el aprendizaje automático y la creación de redes neuronales profundas, desarrollada por Google."
+    },
+    {
+        "question": "¿Qué es SOAP en términos de API?",
+        "answers": [
+            [
+                "Es la forma más clásica y menos flexible de API, en la que la información intercambiada va en XML.",
+                true
+            ],
+            [
+                "Es una API que utiliza objetos JSON para pasar datos de forma bidireccional entre servidor y cliente.",
+                false
+            ],
+            [
+                "Es una API que utiliza solicitudes de cliente como datos para ejecutar funciones internas en el servidor.",
+                false
+            ],
+            [
+                "Es una API en la que el cliente ejecuta una función en el servidor y éste devuelve el resultado.",
+                false
+            ]
+        ],
+        "correct_answer": "Es la forma más clásica y menos flexible de API, en la que la información intercambiada va en XML."
+    },
+    {
+        "question": "¿Qué es RPC en términos de API?",
+        "answers": [
+            [
+                "Es una API en la que el cliente ejecuta una función en el servidor y éste devuelve el resultado.",
+                true
+            ],
+            [
+                "Es la forma más clásica y menos flexible de API, en la que la información intercambiada va en XML.",
+                false
+            ],
+            [
+                "Es una API que utiliza objetos JSON para pasar datos de forma bidireccional entre servidor y cliente.",
+                false
+            ],
+            [
+                "Es una API que utiliza solicitudes de cliente como datos para ejecutar funciones internas en el servidor.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una API en la que el cliente ejecuta una función en el servidor y éste devuelve el resultado."
+    },
+    {
+        "question": "¿Qué es WebSocket en términos de API?",
+        "answers": [
+            [
+                "Es una API web que utiliza objetos JSON para pasar datos de forma bidireccional entre servidor y cliente.",
+                true
+            ],
+            [
+                "Es la forma más clásica y menos flexible de API, en la que la información intercambiada va en XML.",
+                false
+            ],
+            [
+                "Es una API que utiliza solicitudes de cliente como datos para ejecutar funciones internas en el servidor.",
+                false
+            ],
+            [
+                "Es una API en la que el cliente ejecuta una función en el servidor y éste devuelve el resultado.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una API web que utiliza objetos JSON para pasar datos de forma bidireccional entre servidor y cliente."
+    },
+    {
+        "question": "¿Qué es REST en términos de API?",
+        "answers": [
+            [
+                "Es la forma más utilizada actualmente de API, que permite al cliente enviar solicitudes al servidor como datos.",
+                true
+            ],
+            [
+                "Es la forma más clásica y menos flexible de API, en la que la información intercambiada va en XML.",
+                false
+            ],
+            [
+                "Es una API que utiliza objetos JSON para pasar datos de forma bidireccional entre servidor y cliente.",
+                false
+            ],
+            [
+                "Es una API en la que el cliente ejecuta una función en el servidor y éste devuelve el resultado.",
+                false
+            ]
+        ],
+        "correct_answer": "Es la forma más utilizada actualmente de API, que permite al cliente enviar solicitudes al servidor como datos."
+    },
+    {
+        "question": "¿Qué es Google Platform?",
+        "answers": [
+            [
+                "Es un catálogo de servicios muy extenso ofrecido por Google, con servicios 'llave en mano' o para procesos muy concretos y habituales.",
+                true
+            ],
+            [
+                "Es un sistema operativo para móviles desarrollado por Google.",
+                false
+            ],
+            [
+                "Es un servicio de almacenamiento en la nube ofrecido por Google.",
+                false
+            ],
+            [
+                "Es una herramienta de análisis de datos para empresas.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un catálogo de servicios muy extenso ofrecido por Google, con servicios 'llave en mano' o para procesos muy concretos y habituales."
+    },
+    {
+        "question": "¿Qué es Document AI?",
+        "answers": [
+            [
+                "Es un servicio de inteligencia artificial ofrecido por Google que permite el análisis y extracción de información de un tipo concreto de documentos.",
+                true
+            ],
+            [
+                "Es una herramienta para edición y colaboración en documentos en tiempo real.",
+                false
+            ],
+            [
+                "Es una plataforma de gestión de documentos en la nube.",
+                false
+            ],
+            [
+                "Es una tecnología de procesamiento de texto desarrollada por Google.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un servicio de inteligencia artificial ofrecido por Google que permite el análisis y extracción de información de un tipo concreto de documentos."
+    },
+    {
+        "question": "¿Qué se necesita para utilizar los servicios de Google Platform?",
+        "answers": [
+            [
+                "Es necesario registrarse y crear una cuenta de facturación, aunque la mayoría de los servicios son gratuitos hasta cierto volumen de datos.",
+                true
+            ],
+            [
+                "Es necesario ser una empresa grande y pagar una tarifa anual.",
+                false
+            ],
+            [
+                "Es necesario tener conocimientos avanzados de programación.",
+                false
+            ],
+            [
+                "Es necesario tener un equipo especializado en inteligencia artificial.",
+                false
+            ]
+        ],
+        "correct_answer": "Es necesario registrarse y crear una cuenta de facturación, aunque la mayoría de los servicios son gratuitos hasta cierto volumen de datos."
+    },
+    {
+        "question": "¿Qué es VertexAI?",
+        "answers": [
+            [
+                "Es un servicio de Google Platform para entrenar y desplegar modelos de aprendizaje automático en la nube.",
+                true
+            ],
+            [
+                "Es una herramienta para la gestión de proyectos en línea.",
+                false
+            ],
+            [
+                "Es un servicio de correo electrónico ofrecido por Google.",
+                false
+            ],
+            [
+                "Es un lenguaje de programación desarrollado por Google.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un servicio de Google Platform para entrenar y desplegar modelos de aprendizaje automático en la nube."
+    },
+    {
+        "question": "¿Qué es AutoML?",
+        "answers": [
+            [
+                "Es un servicio de Google Platform que permite crear modelos de aprendizaje automático personalizados sin necesidad de tener conocimientos avanzados en programación o machine learning.",
+                true
+            ],
+            [
+                "Es una herramienta para automatizar la gestión de tareas en línea.",
+                false
+            ],
+            [
+                "Es un servicio de videoconferencia ofrecido por Google.",
+                false
+            ],
+            [
+                "Es un lenguaje de programación para automatización de tareas.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un servicio de Google Platform que permite crear modelos de aprendizaje automático personalizados sin necesidad de tener conocimientos avanzados en programación o machine learning."
+    },
+    {
+        "question": "¿Cuáles son algunas de las funcionalidades de la API de Vision de GCP?",
+        "answers": [
+            [
+                "Reconocimiento facial, reconocimiento de objetos en una imagen, identificación de etiquetas para una imagen, extracción de texto de una imagen y detección de elementos no seguros en imagen.",
+                true
+            ],
+            [
+                "Análisis de sentimientos y publicidad enfocada en pacientes.",
+                false
+            ],
+            [
+                "Robótica y automatización en cirugía.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Reconocimiento facial, reconocimiento de objetos en una imagen, identificación de etiquetas para una imagen, extracción de texto de una imagen y detección de elementos no seguros en imagen."
+    },
+    {
+        "question": "¿Cómo puede ser utilizado el reconocimiento facial de VisionAI?",
+        "answers": [
+            [
+                "Para etiquetar emociones en base a los elementos del rostro y detectar la orientación del rostro en la imagen.",
+                true
+            ],
+            [
+                "Para analizar sentimientos y publicidad enfocada en pacientes.",
+                false
+            ],
+            [
+                "Para realizar robótica y automatización en cirugía.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Para etiquetar emociones en base a los elementos del rostro y detectar la orientación del rostro en la imagen."
+    },
+    {
+        "question": "¿Qué funcionalidad de VisionAI es útil para detectar texto en una imagen?",
+        "answers": [
+            [
+                "Extracción de texto de una imagen.",
+                true
+            ],
+            [
+                "Reconocimiento facial.",
+                false
+            ],
+            [
+                "Identificación de etiquetas para una imagen.",
+                false
+            ],
+            [
+                "Detección de elementos no seguros en imagen.",
+                false
+            ]
+        ],
+        "correct_answer": "Extracción de texto de una imagen."
+    },
+    {
+        "question": "¿Para qué se puede utilizar Dialogflow?",
+        "answers": [
+            [
+                "Para crear una interfaz de usuario de conversación orientada a la comprensión del lenguaje natural.",
+                true
+            ],
+            [
+                "Para realizar la detección de elementos no seguros en imagen.",
+                false
+            ],
+            [
+                "Para analizar sentimientos y publicidad enfocada en pacientes.",
+                false
+            ],
+            [
+                "Para automatizar procesos en la atención al cliente.",
+                false
+            ]
+        ],
+        "correct_answer": "Para crear una interfaz de usuario de conversación orientada a la comprensión del lenguaje natural."
+    },
+    {
+        "question": "¿Qué es Agent Assist de Dialogflow?",
+        "answers": [
+            [
+                "Un complemento para trabajar con agentes humanos en atención al cliente.",
+                true
+            ],
+            [
+                "Una funcionalidad para detectar objetos en una imagen.",
+                false
+            ],
+            [
+                "Una herramienta de reconocimiento facial.",
+                false
+            ],
+            [
+                "Una utilidad para la extracción de texto de una imagen.",
+                false
+            ]
+        ],
+        "correct_answer": "Un complemento para trabajar con agentes humanos en atención al cliente."
+    },
+    {
+        "question": "¿Qué es Amazon Web Services?",
+        "answers": [
+            [
+                "Una plataforma de computación en la nube lanzada en 2006.",
+                true
+            ],
+            [
+                "Una aplicación para la gestión de proyectos de inteligencia artificial.",
+                false
+            ],
+            [
+                "Una herramienta para el análisis de datos en tiempo real.",
+                false
+            ],
+            [
+                "Un servicio de almacenamiento en línea para usuarios finales.",
+                false
+            ]
+        ],
+        "correct_answer": "Una plataforma de computación en la nube lanzada en 2006."
+    },
+    {
+        "question": "¿Qué son las funciones 'Lambda' de AWS?",
+        "answers": [
+            [
+                "Una arquitectura sin servidor para proyectos emergentes y que necesitan escalabilidad.",
+                true
+            ],
+            [
+                "Un servicio administrado para la creación, entrenamiento y despliegue de modelos de aprendizaje automático.",
+                false
+            ],
+            [
+                "Una herramienta extra de SageMaker para la selección del tipo de modelo y parámetros asociados al entrenamiento.",
+                false
+            ],
+            [
+                "Una interfaz Canva para el panel de control de SageMaker.",
+                false
+            ]
+        ],
+        "correct_answer": "Una arquitectura sin servidor para proyectos emergentes y que necesitan escalabilidad."
+    },
+    {
+        "question": "¿Qué es SageMaker de AWS?",
+        "answers": [
+            [
+                "Un servicio administrado para la creación, entrenamiento y despliegue de modelos de machine learning en AWS.",
+                true
+            ],
+            [
+                "Una arquitectura sin servidor para proyectos emergentes y que necesitan escalabilidad.",
+                false
+            ],
+            [
+                "Una herramienta para el análisis de datos en tiempo real.",
+                false
+            ],
+            [
+                "Un servicio de almacenamiento en línea para usuarios finales.",
+                false
+            ]
+        ],
+        "correct_answer": "Un servicio administrado para la creación, entrenamiento y despliegue de modelos de machine learning en AWS."
+    },
+    {
+        "question": "¿Qué herramienta extra ofrece SageMaker llamada Autopilot?",
+        "answers": [
+            [
+                "Analiza el dataset y la morfología de los datos objetivo, y automatiza la selección del tipo de modelo y parámetros asociados al entrenamiento.",
+                true
+            ],
+            [
+                "Proporciona una interfaz Canva para el panel de control de SageMaker.",
+                false
+            ],
+            [
+                "Es una arquitectura sin servidor para proyectos emergentes y que necesitan escalabilidad.",
+                false
+            ],
+            [
+                "Es una herramienta para el análisis de datos en tiempo real.",
+                false
+            ]
+        ],
+        "correct_answer": "Analiza el dataset y la morfología de los datos objetivo, y automatiza la selección del tipo de modelo y parámetros asociados al entrenamiento."
+    },
+    {
+        "question": "¿Cuál es una desventaja de utilizar el servicio SageMaker de AWS?",
+        "answers": [
+            [
+                "Tiene un coste mayor que un proyecto normal.",
+                true
+            ],
+            [
+                "No cuenta con herramientas extra para la selección del tipo de modelo y parámetros asociados al entrenamiento.",
+                false
+            ],
+            [
+                "No permite la creación y entrenamiento de modelos de machine learning.",
+                false
+            ],
+            [
+                "Solo está orientado para proyectos de inteligencia artificial a gran escala.",
+                false
+            ]
+        ],
+        "correct_answer": "Tiene un coste mayor que un proyecto normal."
+    }, {
+        "question": "¿Qué es Watson Studio?",
+        "answers": [
+            [
+                "Una herramienta de IBM para el desarrollo de modelos de aprendizaje automático con un entorno gráfico al estilo Node.js y Notebooks.",
+                true
+            ],
+            [
+                "Una suite de modelos listos para usar de Microsoft que implementa servicios de reconocimiento de voz, texto, comprensión de lenguaje natural, reconocimiento de imagen y analítica avanzada de datos.",
+                false
+            ],
+            [
+                "Una herramienta para crear y entrenar modelos de cero, con la facilidad de conectarlos al resto de servicios necesarios en un proyecto de forma eficiente e integrada.",
+                false
+            ],
+            [
+                "Un servicio de reconocimiento de imagen de AWS ya pre-entrenado y desplegado, que se puede probar a través de una interfaz demostrativa.",
+                false
+            ]
+        ],
+        "correct_answer": "Una herramienta de IBM para el desarrollo de modelos de aprendizaje automático con un entorno gráfico al estilo Node.js y Notebooks."
+    },
+    {
+        "question": "¿Qué herramienta de IBM Watson es capaz de lograr un resultado muy completo en la fase de extracción y clasificación de entidades y expresiones clave, así como en la fase de interpretación de emociones para cada expresión clave?",
+        "answers": [
+            [
+                "IBM Watson natural Language Understanding en su extensión de análisis de texto.",
+                true
+            ],
+            [
+                "Watson Studio.",
+                false
+            ],
+            [
+                "Cognitive services.",
+                false
+            ],
+            [
+                "AzureML.",
+                false
+            ]
+        ],
+        "correct_answer": "IBM Watson natural Language Understanding en su extensión de análisis de texto."
+    },
+    {
+        "question": "¿Qué es AzureML?",
+        "answers": [
+            [
+                "Un servicio para crear y entrenar modelos de cero, con la facilidad de conectarlos al resto de servicios necesarios en un proyecto de forma eficiente e integrada.",
+                true
+            ],
+            [
+                "Una herramienta de IBM para el desarrollo de modelos de aprendizaje automático con un entorno gráfico al estilo Node.js y Notebooks.",
+                false
+            ],
+            [
+                "Una suite de modelos listos para usar de Microsoft que implementa servicios de reconocimiento de voz, texto, comprensión de lenguaje natural, reconocimiento de imagen y analítica avanzada de datos.",
+                false
+            ],
+            [
+                "Un servicio de reconocimiento de imagen de AWS ya pre-entrenado y desplegado, que se puede probar a través de una interfaz demostrativa.",
+                false
+            ]
+        ],
+        "correct_answer": "Un servicio para crear y entrenar modelos de cero, con la facilidad de conectarlos al resto de servicios necesarios en un proyecto de forma eficiente e integrada."
+    },
+    {
+        "question": "¿Cuál es la principal función de la API de OpenAI basada en el algoritmo GPT-3?",
+        "answers": [
+            [
+                "Crear modelos de aprendizaje automático desde cero.",
+                false
+            ],
+            [
+                "Completar o crear fragmentos de texto a partir de una instrucción en lenguaje natural.",
+                true
+            ],
+            [
+                "Generar imágenes realistas a partir de una descripción verbal.",
+                false
+            ],
+            [
+                "Traducir texto de un idioma a otro en tiempo real.",
+                false
+            ]
+        ],
+        "correct_answer": "Completar o crear fragmentos de texto a partir de una instrucción en lenguaje natural."
+    },
+    {
+        "question": "¿Qué es el parámetro 'temperatura' en la API de OpenAI basada en GPT-3?",
+        "answers": [
+            [
+                "El margen de error permitido en la respuesta del modelo.",
+                false
+            ],
+            [
+                "La velocidad a la que se procesa la solicitud en la API.",
+                false
+            ],
+            [
+                "El margen de libertad que se le da al modelo para ser más creativo o riguroso.",
+                true
+            ],
+            [
+                "El número máximo de palabras que puede tener la respuesta generada por el modelo.",
+                false
+            ]
+        ],
+        "correct_answer": "El margen de libertad que se le da al modelo para ser más creativo o riguroso."
+    },
+    {
+        "question": "¿Qué valor representa una temperatura de 0 en la API de OpenAI basada en GPT-3?",
+        "answers": [
+            [
+                "Ningún margen de libertad, el modelo responde de forma muy determinista y dará la misma respuesta para la misma entrada.",
+                true
+            ],
+            [
+                "El máximo margen de libertad, el modelo puede ser muy creativo en su respuesta.",
+                false
+            ],
+            [
+                "Un valor medio de libertad que permite al modelo ser más o menos creativo según la solicitud.",
+                false
+            ],
+            [
+                "El valor de temperatura no afecta la respuesta del modelo.",
+                false
+            ]
+        ],
+        "correct_answer": "Ningún margen de libertad, el modelo responde de forma muy determinista y dará la misma respuesta para la misma entrada."
+    },
+    {
+        "question": "¿Cuál es el modelo más potente en la API de Open AI?",
+        "answers": [
+            [
+                "Curie",
+                false
+            ],
+            [
+                "Babbage",
+                false
+            ],
+            [
+                "Ada",
+                false
+            ],
+            [
+                "Davinci 2",
+                true
+            ]
+        ],
+        "correct_answer": "Davinci 2"
+    },
+    {
+        "question": "¿Qué parámetro se utiliza para establecer la flexibilidad creativa del modelo en la API de Open AI?",
+        "answers": [
+            [
+                "Model",
+                false
+            ],
+            [
+                "Prompt",
+                false
+            ],
+            [
+                "Temperature",
+                true
+            ],
+            [
+                "Max_tokens",
+                false
+            ]
+        ],
+        "correct_answer": "Temperature"
+    },
+    {
+        "question": "¿Qué son los tokens en la API de Open AI?",
+        "answers": [
+            [
+                "La unidad de trabajo del modelo",
+                true
+            ],
+            [
+                "El número máximo de palabras que se generan",
+                false
+            ],
+            [
+                "El modelo que se quiere usar",
+                false
+            ],
+            [
+                "La instrucción de entrada",
+                false
+            ]
+        ],
+        "correct_answer": "La unidad de trabajo del modelo"
+    },
+    {
+        "question": "¿Cuál es el modelo más potente pero también el más caro que se puede utilizar al hacer llamadas a la API?",
+        "answers": [
+            [
+                "Davinci 2",
+                true
+            ],
+            [
+                "Curie",
+                false
+            ],
+            [
+                "Babbage",
+                false
+            ],
+            [
+                "Ada",
+                false
+            ]
+        ],
+        "correct_answer": "Davinci 2"
+    },
+    {
+        "question": "¿Qué parámetro se utiliza para especificar la instrucción de entrada al hacer una llamada a la API?",
+        "answers": [
+            [
+                "prompt",
+                true
+            ],
+            [
+                "temperature",
+                false
+            ],
+            [
+                "max_tokens",
+                false
+            ],
+            [
+                "model",
+                false
+            ]
+        ],
+        "correct_answer": "prompt"
+    },
+    {
+        "question": "¿Cuál es la relación entre tokens y palabras?",
+        "answers": [
+            [
+                "3 a 4 (100 tokens equivalen a unas 75 palabras)",
+                true
+            ],
+            [
+                "2 a 3 (50 tokens equivalen a unas 100 palabras)",
+                false
+            ],
+            [
+                "4 a 5 (200 tokens equivalen a unas 100 palabras)",
+                false
+            ],
+            [
+                "1 a 2 (25 tokens equivalen a unas 50 palabras)",
+                false
+            ]
+        ],
+        "correct_answer": "3 a 4 (100 tokens equivalen a unas 75 palabras)"
+    },
+    {
+        "question": "¿Qué es Pandas?",
+        "answers": [
+            [
+                "Una librería de Python para ciencia de datos.",
+                true
+            ],
+            [
+                "Un objeto de la clase DataFrame.",
+                false
+            ],
+            [
+                "Un proyecto de código abierto.",
+                false
+            ],
+            [
+                "Una función de manipulación de datos.",
+                false
+            ]
+        ],
+        "correct_answer": "Una librería de Python para ciencia de datos."
+    },
+    {
+        "question": "¿Cuál es el principal logro de Pandas?",
+        "answers": [
+            [
+                "Generar un objeto de la clase DataFrame con gran capacidad de manipulación.",
+                true
+            ],
+            [
+                "Facilitar el trabajo de los científicos de datos.",
+                false
+            ],
+            [
+                "Ser gestionado por NumFOCUS.",
+                false
+            ],
+            [
+                "Ser un proyecto de código abierto.",
+                false
+            ]
+        ],
+        "correct_answer": "Generar un objeto de la clase DataFrame con gran capacidad de manipulación."
+    },
+    {
+        "question": "¿Cómo se carga un archivo de datos con Pandas?",
+        "answers": [
+            [
+                "data = pd.read_csv('datos.csv')",
+                true
+            ],
+            [
+                "data = pd.load('datos.csv')",
+                false
+            ],
+            [
+                "data = pd.read_file('datos.csv')",
+                false
+            ],
+            [
+                "data = pd.read('datos.csv')",
+                false
+            ]
+        ],
+        "correct_answer": "data = pd.read_csv('datos.csv')"
+    },
+    {
+        "question": "¿Qué función de Pandas permite ver las dimensiones principales de un array?",
+        "answers": [
+            [
+                "shape()",
+                true
+            ],
+            [
+                "size()",
+                false
+            ],
+            [
+                "dimensions()",
+                false
+            ],
+            [
+                "length()",
+                false
+            ]
+        ],
+        "correct_answer": "shape()"
+    },
+    {
+        "question": "¿Qué función de Pandas muestra por defecto 5 registros de un dataset?",
+        "answers": [
+            [
+                "head()",
+                true
+            ],
+            [
+                "tail()",
+                false
+            ],
+            [
+                "preview()",
+                false
+            ],
+            [
+                "view()",
+                false
+            ]
+        ],
+        "correct_answer": "head()"
+    },
+    {
+        "question": "¿Qué función de Pandas muestra los principales valores estadísticos de un dataset?",
+        "answers": [
+            [
+                "describe()",
+                true
+            ],
+            [
+                "stats()",
+                false
+            ],
+            [
+                "values()",
+                false
+            ],
+            [
+                "summarize()",
+                false
+            ]
+        ],
+        "correct_answer": "describe()"
+    },
+    {
+        "question": "¿Para qué se utiliza la función plot de Pandas?",
+        "answers": [
+            [
+                "Para representaciones sencillas.",
+                true
+            ],
+            [
+                "Para cálculos estadísticos.",
+                false
+            ],
+            [
+                "Para manipulación de datos.",
+                false
+            ],
+            [
+                "Para dimensionar un array.",
+                false
+            ]
+        ],
+        "correct_answer": "Para representaciones sencillas."
+    },
+    {
+        "question": "¿Cuándo fue creada la librería Pandas?",
+        "answers": [
+            [
+                "Fue creada en 2008 y liberada en 2009.",
+                true
+            ],
+            [
+                "Fue creada en 2015.",
+                false
+            ],
+            [
+                "Fue creada en 2009 y liberada en 2008.",
+                false
+            ],
+            [
+                "Fue creada en 2007 y liberada en 2008.",
+                false
+            ]
+        ],
+        "correct_answer": "Fue creada en 2008 y liberada en 2009."
+    },
+    {
+        "question": "¿Qué tipo de objeto se puede generar con Pandas?",
+        "answers": [
+            [
+                "Un objeto de la clase DataFrame.",
+                true
+            ],
+            [
+                "Un objeto de la clase Array.",
+                false
+            ],
+            [
+                "Un objeto de la clase List.",
+                false
+            ],
+            [
+                "Un objeto de la clase Tuple.",
+                false
+            ]
+        ],
+        "correct_answer": "Un objeto de la clase DataFrame."
+    },
+    {
+        "question": "¿Cuál es el objetivo principal de Pandas?",
+        "answers": [
+            [
+                "Facilitar el trabajo de los científicos de datos.",
+                true
+            ],
+            [
+                "Crear gráficos y visualizaciones.",
+                false
+            ],
+            [
+                "Realizar análisis de sentimientos.",
+                false
+            ],
+            [
+                "Automatizar procesos de cirugía.",
+                false
+            ]
+        ],
+        "correct_answer": "Facilitar el trabajo de los científicos de datos."
+    },
+    {
+        "question": "¿Qué función de Pandas se utiliza para cargar datos desde un archivo csv?",
+        "answers": [
+            [
+                "read_csv",
+                true
+            ],
+            [
+                "load_data",
+                false
+            ],
+            [
+                "read_data",
+                false
+            ],
+            [
+                "load_csv",
+                false
+            ]
+        ],
+        "correct_answer": "read_csv"
+    },
+    {
+        "question": "¿Qué información nos proporciona la función describe de Pandas?",
+        "answers": [
+            [
+                "Los principales valores estadísticos de un dataset.",
+                true
+            ],
+            [
+                "Las dimensiones principales de un array.",
+                false
+            ],
+            [
+                "Los registros de un dataset.",
+                false
+            ],
+            [
+                "Las representaciones sencillas de un dataset.",
+                false
+            ]
+        ],
+        "correct_answer": "Los principales valores estadísticos de un dataset."
+    },
+    {
+        "question": "¿Qué es Matplotlib?",
+        "answers": [
+            [
+                "Una librería para Python para hacer representaciones gráficas y de imágenes en procesos de ciencia de datos.",
+                true
+            ],
+            [
+                "Un lenguaje de programación para hacer representaciones gráficas en procesos de ciencia de datos.",
+                false
+            ],
+            [
+                "Un software para hacer representaciones gráficas y de imágenes en procesos de ciencia de datos.",
+                false
+            ],
+            [
+                "Un paquete de software de análisis de datos para Python.",
+                false
+            ]
+        ],
+        "correct_answer": "Una librería para Python para hacer representaciones gráficas y de imágenes en procesos de ciencia de datos."
+    },
+    {
+        "question": "¿Qué permite hacer Matplotlib con pocas líneas de código?",
+        "answers": [
+            [
+                "Permite hacer gráficas interactivas.",
+                false
+            ],
+            [
+                "Permite hacer gráficas de barras.",
+                false
+            ],
+            [
+                "Permite hacer gráficas de dispersión de puntos.",
+                true
+            ],
+            [
+                "Permite hacer gráficas de líneas.",
+                false
+            ]
+        ],
+        "correct_answer": "Permite hacer gráficas de dispersión de puntos."
+    },
+    {
+        "question": "¿En qué está basada Matplotlib?",
+        "answers": [
+            [
+                "Está basada en la gestión de arrays de NumPy.",
+                true
+            ],
+            [
+                "Está basada en la gestión de arrays de Pandas.",
+                false
+            ],
+            [
+                "Está basada en la gestión de matrices de SciPy.",
+                false
+            ],
+            [
+                "Está basada en la gestión de cadenas de caracteres de Python.",
+                false
+            ]
+        ],
+        "correct_answer": "Está basada en la gestión de arrays de NumPy."
+    },
+    {
+        "question": "¿Quién creó Matplotlib?",
+        "answers": [
+            [
+                "John Hunter.",
+                true
+            ],
+            [
+                "Guido van Rossum.",
+                false
+            ],
+            [
+                "Andrew Ng.",
+                false
+            ],
+            [
+                "Jeff Dean.",
+                false
+            ]
+        ],
+        "correct_answer": "John Hunter."
+    },
+    {
+        "question": "¿Qué función de Pyplot se utiliza para crear gráficas de dispersión de puntos?",
+        "answers": [
+            [
+                "plot.",
+                false
+            ],
+            [
+                "scatter.",
+                true
+            ],
+            [
+                "hist.",
+                false
+            ],
+            [
+                "bar.",
+                false
+            ]
+        ],
+        "correct_answer": "scatter."
+    },
+    {
+        "question": "¿Qué función de Pyplot se utiliza para mostrar una gráfica?",
+        "answers": [
+            [
+                "show.",
+                true
+            ],
+            [
+                "savefig.",
+                false
+            ],
+            [
+                "xlabel.",
+                false
+            ],
+            [
+                "ylabel.",
+                false
+            ]
+        ],
+        "correct_answer": "show."
+    },
+    {
+        "question": "¿Para qué se utiliza Matplotlib?",
+        "answers": [
+            [
+                "Para hacer representaciones gráficas y de imágenes en procesos de ciencia de datos.",
+                true
+            ],
+            [
+                "Para realizar cálculos matemáticos y estadísticos.",
+                false
+            ],
+            [
+                "Para generar código en Python.",
+                false
+            ],
+            [
+                "Para trabajar con bases de datos.",
+                false
+            ]
+        ],
+        "correct_answer": "Para hacer representaciones gráficas y de imágenes en procesos de ciencia de datos."
+    },
+    {
+        "question": "¿En qué se basa Matplotlib?",
+        "answers": [
+            [
+                "En la gestión de arrays de NumPy.",
+                true
+            ],
+            [
+                "En la programación orientada a objetos.",
+                false
+            ],
+            [
+                "En la gestión de bases de datos.",
+                false
+            ],
+            [
+                "En la manipulación de texto.",
+                false
+            ]
+        ],
+        "correct_answer": "En la gestión de arrays de NumPy."
+    },
+    {
+        "question": "¿Quién creó Matplotlib y en qué año?",
+        "answers": [
+            [
+                "John Hunter, en 2002.",
+                true
+            ],
+            [
+                "Guido van Rossum, en 1991.",
+                false
+            ],
+            [
+                "Andrew Ng, en 2008.",
+                false
+            ],
+            [
+                "Yann LeCun, en 2012.",
+                false
+            ]
+        ],
+        "correct_answer": "John Hunter, en 2002."
+    },
+    {
+        "question": "¿Qué tipo de gráficas se pueden hacer con Matplotlib?",
+        "answers": [
+            [
+                "Gráficas de barras, de dispersión, de línea, de torta, entre otras.",
+                true
+            ],
+            [
+                "Gráficas 3D y animaciones.",
+                false
+            ],
+            [
+                "Gráficas de redes y mapas de calor.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Gráficas de barras, de dispersión, de línea, de torta, entre otras."
+    },
+    {
+        "question": "¿Quién fue el creador de Scikit-learn y cuál era su objetivo inicial?",
+        "answers": [
+            [
+                "Fue creado por David Cournapeau como una extensión auxiliar a Scipy.",
+                true
+            ],
+            [
+                "Fue creado por John Hunter como un parche para Python.",
+                false
+            ],
+            [
+                "Fue creado por Guido van Rossum para el procesamiento de imágenes.",
+                false
+            ],
+            [
+                "Fue creado por Travis Oliphant como una extensión para NumPy.",
+                false
+            ]
+        ],
+        "correct_answer": "Fue creado por David Cournapeau como una extensión auxiliar a Scipy."
+    },
+    {
+        "question": "¿Para qué tareas es especialmente útil Scikit-learn?",
+        "answers": [
+            [
+                "Para la generación y entrenamiento de modelos sencillos de aprendizaje automático.",
+                true
+            ],
+            [
+                "Para la creación de modelos complejos de redes neuronales.",
+                false
+            ],
+            [
+                "Para la automatización de procesos de fabricación.",
+                false
+            ],
+            [
+                "Para la generación de gráficos y visualizaciones.",
+                false
+            ]
+        ],
+        "correct_answer": "Para la generación y entrenamiento de modelos sencillos de aprendizaje automático."
+    },
+    {
+        "question": "¿Qué clase se utiliza para generar un modelo de K-Nearest Neighbors en Scikit-learn?",
+        "answers": [
+            [
+                "KNeighborsClassifier()",
+                true
+            ],
+            [
+                "RandomForestClassifier()",
+                false
+            ],
+            [
+                "LogisticRegression()",
+                false
+            ],
+            [
+                "SVM()",
+                false
+            ]
+        ],
+        "correct_answer": "KNeighborsClassifier()"
+    },
+    {
+        "question": "¿Qué código se utiliza para crear y entrenar un modelo de regresión logística en Scikit-learn?",
+        "answers": [
+            [
+                "from sklearn.linear_model import LogisticRegression \ndata = pd.read_csv('data.csv') \ny = data['result'] \nX = data.drop('result', axis=1) \nmodel = LogisticRegression() \nmodel.fit(X, y)",
+                true
+            ],
+            [
+                "from sklearn.neighbors import KNeighborsClassifier \ndata = pd.read_csv('data.csv') \ny = data['result'] \nX = data.drop('result', axis=1) \nmodel = KNeighborsClassifier() \nmodel.fit(X, y)",
+                false
+            ],
+            [
+                "from sklearn.ensemble import RandomForestClassifier \ndata = pd.read_csv('data.csv') \ny = data['result'] \nX = data.drop('result', axis=1) \nmodel = RandomForestClassifier() \nmodel.fit(X, y)",
+                false
+            ],
+            [
+                "from sklearn.svm import SVC \ndata = pd.read_csv('data.csv') \ny = data['result'] \nX = data.drop('result', axis=1) \nmodel = SVC() \nmodel.fit(X, y)",
+                false
+            ]
+        ],
+        "correct_answer": "from sklearn.linear_model import LogisticRegression \ndata = pd.read_csv('data.csv') \ny = data['result'] \nX = data.drop('result', axis=1) \nmodel = LogisticRegression() \nmodel.fit(X, y)"
+    },
+    {
+        "question": "¿Qué es Scikit learn y cuál es su origen?",
+        "answers": [
+            [
+                "Es una librería de aprendizaje automático y su origen se encuentra en el proyecto de Google Summer of Code liderado por David Cournapeau.",
+                true
+            ],
+            [
+                "Es una librería para análisis de datos y su origen se encuentra en el proyecto de Google Summer of Code liderado por David Cournapeau.",
+                false
+            ],
+            [
+                "Es una librería para la generación de redes neuronales y su origen se encuentra en el proyecto de Google Summer of Code liderado por David Cournapeau.",
+                false
+            ],
+            [
+                "Es una librería para la automatización en cirugía y su origen se encuentra en el proyecto de Google Summer of Code liderado por David Cournapeau.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una librería de aprendizaje automático y su origen se encuentra en el proyecto de Google Summer of Code liderado por David Cournapeau."
+    },
+    {
+        "question": "¿Qué algoritmos son muy utilizados en Scikit learn?",
+        "answers": [
+            [
+                "Regresión lineal, regresión logística, random forest y máquinas de vector soporte.",
+                true
+            ],
+            [
+                "Análisis de sentimientos, reconocimiento de imágenes, regresión polinómica y agrupamiento jerárquico.",
+                false
+            ],
+            [
+                "Redes neuronales, árboles de decisión, análisis de componentes principales y boosting.",
+                false
+            ],
+            [
+                "Todos los anteriores son algoritmos muy utilizados en Scikit learn.",
+                false
+            ]
+        ],
+        "correct_answer": "Regresión lineal, regresión logística, random forest y máquinas de vector soporte."
+    },
+    {
+        "question": "¿Cuál es la función de la clase KNeighborsClassifier en Scikit learn?",
+        "answers": [
+            [
+                "Generar un modelo de K-Nearest Neighbors.",
+                true
+            ],
+            [
+                "Generar un modelo de regresión logística.",
+                false
+            ],
+            [
+                "Generar un modelo de máquinas de vector soporte.",
+                false
+            ],
+            [
+                "Generar un modelo de random forest.",
+                false
+            ]
+        ],
+        "correct_answer": "Generar un modelo de K-Nearest Neighbors."
+    },
+    {
+        "question": "¿Para qué técnicas de aprendizaje automático se suele utilizar Scikit learn?",
+        "answers": [
+            [
+                "Para la generación y entrenamiento de modelos sencillos de aprendizaje automático.",
+                true
+            ],
+            [
+                "Para la generación y entrenamiento de modelos complejos de redes neuronales.",
+                false
+            ],
+            [
+                "Para la generación y entrenamiento de modelos de deep learning.",
+                false
+            ],
+            [
+                "Para la generación y entrenamiento de modelos de procesamiento del lenguaje natural.",
+                false
+            ]
+        ],
+        "correct_answer": "Para la generación y entrenamiento de modelos sencillos de aprendizaje automático."
+    },
+    {
+        "question": "¿Quiénes desarrollaron TensorFlow?",
+        "answers": [
+            [
+                "Fue desarrollado por Google Brain.",
+                true
+            ],
+            [
+                "Fue desarrollado por Microsoft.",
+                false
+            ],
+            [
+                "Fue desarrollado por Apple.",
+                false
+            ],
+            [
+                "Fue desarrollado por Facebook.",
+                false
+            ]
+        ],
+        "correct_answer": "Fue desarrollado por Google Brain."
+    },
+    {
+        "question": "¿Qué es Keras y qué función cumple en TensorFlow?",
+        "answers": [
+            [
+                "Keras es un subpaquete integrado en TensorFlow y sirve para simplificar la programación de redes neuronales profundas.",
+                true
+            ],
+            [
+                "Keras es un paquete independiente de TensorFlow y no tiene ninguna relación con él.",
+                false
+            ],
+            [
+                "Keras es una herramienta de visualización de datos que se utiliza para mostrar los resultados de entrenamientos.",
+                false
+            ],
+            [
+                "Keras es un subpaquete de Tensorboard para trabajar con dispositivos móviles.",
+                false
+            ]
+        ],
+        "correct_answer": "Keras es un subpaquete integrado en TensorFlow y sirve para simplificar la programación de redes neuronales profundas."
+    },
+    {
+        "question": "¿Qué es Sequential en Keras?",
+        "answers": [
+            [
+                "Sequential es la clase de la librería Keras que nos permite construir un modelo de deep learning con varias capas.",
+                true
+            ],
+            [
+                "Sequential es una clase que no tiene ninguna relación con la librería Keras.",
+                false
+            ],
+            [
+                "Sequential es una función que permite realizar operaciones matemáticas complejas en TensorFlow.",
+                false
+            ],
+            [
+                "Sequential es una herramienta de visualización de datos que se utiliza para mostrar los resultados de entrenamientos.",
+                false
+            ]
+        ],
+        "correct_answer": "Sequential es la clase de la librería Keras que nos permite construir un modelo de deep learning con varias capas."
+    },
+    {
+        "question": "¿Qué función cumple layers.Dense() en Keras?",
+        "answers": [
+            [
+                "La función layers.Dense() añade una capa de tipo red neuronal cuando estamos trabajando con Keras.",
+                true
+            ],
+            [
+                "La función layers.Dense() se utiliza para visualizar los resultados de entrenamientos en Tensorboard.",
+                false
+            ],
+            [
+                "La función layers.Dense() permite construir un modelo de machine learning en Scikit-learn.",
+                false
+            ],
+            [
+                "La función layers.Dense() no tiene ninguna función en Keras.",
+                false
+            ]
+        ],
+        "correct_answer": "La función layers.Dense() añade una capa de tipo red neuronal cuando estamos trabajando con Keras."
+    },
+    {
+        "question": "¿Cuántas capas tiene el modelo Sequential con el siguiente código: model = models.Sequential() \n model.add(layers.Dense(128, activation='relu')) \n model.add(layers.Dense(10, activation='softmax'))?",
+        "answers": [
+            [
+                "El modelo tiene dos capas, una de 128 neuronas y otra de 10 neuronas.",
+                true
+            ],
+            [
+                "El modelo tiene una capa de 128 neuronas y otra capa de 10 neuronas, que se combinan en una sola capa.",
+                false
+            ],
+            [
+                "El modelo tiene una capa de 138 neuronas.",
+                false
+            ],
+            [
+                "El modelo tiene tres capas, una de 128 neuronas, otra de 10 neuronas y otra capa adicional no especificada.",
+                false
+            ]
+        ],
+        "correct_answer": "El modelo tiene dos capas, una de 128 neuronas y otra de 10 neuronas."
+    },
+    {
+        "question": "¿Qué es TensorFlow y quién lo desarrolló?",
+        "answers": [
+            [
+                "TensorFlow es una librería de código abierto para el aprendizaje automático desarrollada originalmente por Google Brain.",
+                true
+            ],
+            [
+                "TensorFlow es una librería cerrada para el aprendizaje automático desarrollada por Microsoft.",
+                false
+            ],
+            [
+                "TensorFlow es un lenguaje de programación para el aprendizaje automático desarrollado por la comunidad.",
+                false
+            ],
+            [
+                "TensorFlow es una herramienta para el análisis de datos desarrollada por IBM.",
+                false
+            ]
+        ],
+        "correct_answer": "TensorFlow es una librería de código abierto para el aprendizaje automático desarrollada originalmente por Google Brain."
+    },
+    {
+        "question": "¿Qué es Keras y quién lo desarrolló?",
+        "answers": [
+            [
+                "Keras es un subpaquete integrado en TensorFlow desarrollado por François Chollet para simplificar la programación de redes neuronales profundas.",
+                true
+            ],
+            [
+                "Keras es una librería de código abierto para el aprendizaje automático desarrollada por Google Brain.",
+                false
+            ],
+            [
+                "Keras es un lenguaje de programación para el aprendizaje automático desarrollado por la comunidad.",
+                false
+            ],
+            [
+                "Keras es una herramienta para el análisis de datos desarrollada por IBM.",
+                false
+            ]
+        ],
+        "correct_answer": "Keras es un subpaquete integrado en TensorFlow desarrollado por François Chollet para simplificar la programación de redes neuronales profundas."
+    },
+    {
+        "question": "¿Qué es Sequential en Keras?",
+        "answers": [
+            [
+                "Sequential es la clase de la librería Keras que nos permite construir un modelo de deep learning con varias capas.",
+                true
+            ],
+            [
+                "Sequential es una función de la librería Keras para crear gráficos y visualizaciones.",
+                false
+            ],
+            [
+                "Sequential es una herramienta para el análisis de datos desarrollada por IBM.",
+                false
+            ],
+            [
+                "Sequential es una librería de código abierto para el aprendizaje automático desarrollada por Microsoft.",
+                false
+            ]
+        ],
+        "correct_answer": "Sequential es la clase de la librería Keras que nos permite construir un modelo de deep learning con varias capas."
+    },
+    {
+        "question": "¿Qué hace la función layers.Dense() en Keras?",
+        "answers": [
+            [
+                "La función layers.Dense() añade una capa de tipo red neuronal cuando estamos trabajando con Keras.",
+                true
+            ],
+            [
+                "La función layers.Dense() añade una capa de tipo convolucional cuando estamos trabajando con Keras.",
+                false
+            ],
+            [
+                "La función layers.Dense() añade una capa de tipo recurrente cuando estamos trabajando con Keras.",
+                false
+            ],
+            [
+                "La función layers.Dense() añade una capa de tipo pooling cuando estamos trabajando con Keras.",
+                false
+            ]
+        ],
+        "correct_answer": "La función layers.Dense() añade una capa de tipo red neuronal cuando estamos trabajando con Keras."
+    },
+    {
+        "question": "¿Qué es Pytorch?",
+        "answers": [
+            [
+                "Es una librería de código cerrado para aprendizaje automático desarrollada por Facebook.",
+                false
+            ],
+            [
+                "Es una librería de código abierto para aprendizaje automático basada en Torch para Python desarrollada por el equipo de investigación de IA de Facebook.",
+                true
+            ],
+            [
+                "Es una herramienta de procesamiento de lenguaje natural desarrollada por el equipo de investigación de IA de Facebook.",
+                false
+            ],
+            [
+                "Es una plataforma de análisis de datos desarrollada por el equipo de investigación de IA de Facebook.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una librería de código abierto para aprendizaje automático basada en Torch para Python desarrollada por el equipo de investigación de IA de Facebook."
+    },
+    {
+        "question": "¿Para qué están optimizados los cálculos en Pytorch?",
+        "answers": [
+            [
+                "Para el cálculo de matrices en general.",
+                false
+            ],
+            [
+                "Para modelos de machine learning que no involucren redes neuronales profundas.",
+                false
+            ],
+            [
+                "Para modelos de redes neuronales profundas.",
+                true
+            ],
+            [
+                "Para el procesamiento de imágenes.",
+                false
+            ]
+        ],
+        "correct_answer": "Para modelos de redes neuronales profundas."
+    },
+    {
+        "question": "¿Qué es la librería fastai?",
+        "answers": [
+            [
+                "Es una librería de cálculo numérico para Python.",
+                false
+            ],
+            [
+                "Es una herramienta de visualización de datos para Python.",
+                false
+            ],
+            [
+                "Es una librería que simplifica el desarrollo de inteligencia artificial, con modelos pre-entrenados que ya vienen cargados.",
+                true
+            ],
+            [
+                "Es una plataforma para el desarrollo de aplicaciones web.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una librería que simplifica el desarrollo de inteligencia artificial, con modelos pre-entrenados que ya vienen cargados."
+    },
+    {
+        "question": "¿Cómo se crea un modelo utilizando la clase Net definida en el código?",
+        "answers": [
+            [
+                "net = Net(input_size, num_classes, hidden_size)",
+                false
+            ],
+            [
+                "net = Net(hidden_size, input_size, num_classes)",
+                false
+            ],
+            [
+                "net = Net(num_classes, hidden_size, input_size)",
+                false
+            ],
+            [
+                "net = Net(input_size, hidden_size, num_classes)",
+                true
+            ]
+        ],
+        "correct_answer": "net = Net(input_size, hidden_size, num_classes)"
+    },
+    {
+        "question": "¿Qué es la unidad básica de una red neuronal y qué operación realiza?",
+        "answers": [
+            [
+                "La unidad básica de una red neuronal es el perceptrón y realiza una función lineal.",
+                true
+            ],
+            [
+                "La unidad básica de una red neuronal es la función de activación y realiza una operación no lineal.",
+                false
+            ],
+            [
+                "La unidad básica de una red neuronal es la capa Dense y realiza la conexión de todos los nodos con las diferentes variables de entrada.",
+                false
+            ],
+            [
+                "La unidad básica de una red neuronal es la capa de salida y realiza la clasificación final.",
+                false
+            ]
+        ],
+        "correct_answer": "La unidad básica de una red neuronal es el perceptrón y realiza una función lineal."
+    },
+    {
+        "question": "¿Qué clase de Keras define la estructura por capas en un modelo de varias capas de redes neuronales?",
+        "answers": [
+            [
+                "La clase Sequential.",
+                true
+            ],
+            [
+                "La clase Dense.",
+                false
+            ],
+            [
+                "La clase Input.",
+                false
+            ],
+            [
+                "La clase Model.",
+                false
+            ]
+        ],
+        "correct_answer": "La clase Sequential."
+    },
+    {
+        "question": "¿Qué parámetro en la capa Dense de Keras se refiere al número de neuronas que debe tener la capa?",
+        "answers": [
+            [
+                "El parámetro 'units'.",
+                true
+            ],
+            [
+                "El parámetro 'input_shape'.",
+                false
+            ],
+            [
+                "El parámetro 'activation'.",
+                false
+            ],
+            [
+                "El parámetro 'dtype'.",
+                false
+            ]
+        ],
+        "correct_answer": "El parámetro 'units'."
+    },
+    {
+        "question": "¿Cuál es el criterio para definir el número de neuronas en la capa de salida de una red neuronal en problemas de clasificación binaria y múltiple, respectivamente?",
+        "answers": [
+            [
+                "En clasificación binaria, la capa de salida tendrá una única neurona y en clasificación múltiple, la capa de salida debe tener tantas neuronas como clases o categorías de clasificación tenga el problema.",
+                true
+            ],
+            [
+                "En clasificación binaria, la capa de salida debe tener tantas neuronas como clases o categorías de clasificación tenga el problema y en clasificación múltiple, la capa de salida tendrá una única neurona.",
+                false
+            ],
+            [
+                "El número de neuronas en la capa de salida es independiente del tipo de clasificación.",
+                false
+            ],
+            [
+                "No hay criterio para definir el número de neuronas en la capa de salida.",
+                false
+            ]
+        ],
+        "correct_answer": "En clasificación binaria, la capa de salida tendrá una única neurona y en clasificación múltiple, la capa de salida debe tener tantas neuronas como clases o categorías de clasificación tenga el problema."
+    },
+    {
+        "question": "¿Cuáles son las funciones de activación más utilizadas en redes neuronales?",
+        "answers": [
+            [
+                "ReLu, Sigmoid, Softmax y Tanh.",
+                true
+            ],
+            [
+                "SVM, Naive Bayes y K-NN.",
+                false
+            ],
+            [
+                "Decision Trees, Random Forest y Gradient Boosting.",
+                false
+            ],
+            [
+                "K-Means, DBSCAN y Hierarchical Clustering.",
+                false
+            ]
+        ],
+        "correct_answer": "ReLu, Sigmoid, Softmax y Tanh."
+    },
+    {
+        "question": "¿Qué función de activación se recomienda para las capas internas en una red neuronal?",
+        "answers": [
+            [
+                "ReLu.",
+                true
+            ],
+            [
+                "Sigmoid.",
+                false
+            ],
+            [
+                "Softmax.",
+                false
+            ],
+            [
+                "Tanh.",
+                false
+            ]
+        ],
+        "correct_answer": "ReLu."
+    },
+    {
+        "question": "¿Qué función de activación se recomienda para la capa de salida en un problema de clasificación binaria?",
+        "answers": [
+            [
+                "Sigmoid.",
+                true
+            ],
+            [
+                "ReLu.",
+                false
+            ],
+            [
+                "Softmax.",
+                false
+            ],
+            [
+                "Tanh.",
+                false
+            ]
+        ],
+        "correct_answer": "Sigmoid."
+    },
+    {
+        "question": "¿Qué función de activación se recomienda para la capa de salida en un problema de clasificación múltiple?",
+        "answers": [
+            [
+                "Softmax.",
+                true
+            ],
+            [
+                "ReLu.",
+                false
+            ],
+            [
+                "Sigmoid.",
+                false
+            ],
+            [
+                "Tanh.",
+                false
+            ]
+        ],
+        "correct_answer": "Softmax."
+    },
+    {
+        "question": "¿Qué hace la capa Flatten en una red neuronal?",
+        "answers": [
+            [
+                "Aplana una estructura de datos de entrada de más de una dimensión para obtener un vector de una dimensión.",
+                true
+            ],
+            [
+                "Agrega capas de neuronas para aumentar la precisión del modelo.",
+                false
+            ],
+            [
+                "Elimina la necesidad de normalizar los datos de entrada.",
+                false
+            ],
+            [
+                "Aplica una función de activación a todos los datos de entrada.",
+                false
+            ]
+        ],
+        "correct_answer": "Aplana una estructura de datos de entrada de más de una dimensión para obtener un vector de una dimensión."
+    },
+    {
+        "question": "¿Qué función de Keras es utilizada para controlar la configuración del entrenamiento del modelo?",
+        "answers": [
+            [
+                "compile",
+                true
+            ],
+            [
+                "fit",
+                false
+            ],
+            [
+                "predict",
+                false
+            ],
+            [
+                "evaluate",
+                false
+            ]
+        ],
+        "correct_answer": "compile"
+    },
+    {
+        "question": "¿Qué es la función de coste o pérdida en un modelo basado en neuronas?",
+        "answers": [
+            [
+                "El valor medio del error entre las variables de salida del modelo y las etiquetas reales.",
+                true
+            ],
+            [
+                "La tasa de acierto del modelo en la predicción de nuevos datos.",
+                false
+            ],
+            [
+                "La cantidad de parámetros en el modelo.",
+                false
+            ],
+            [
+                "El número de capas en el modelo.",
+                false
+            ]
+        ],
+        "correct_answer": "El valor medio del error entre las variables de salida del modelo y las etiquetas reales."
+    },
+    {
+        "question": "¿Qué es la entropía cruzada y por qué es utilizada en los modelos basados en neuronas?",
+        "answers": [
+            [
+                "Es una medida de la incertidumbre en la distribución de probabilidad de un conjunto de datos y es utilizada para calcular la función de coste en problemas de clasificación.",
+                true
+            ],
+            [
+                "Es una medida de la distancia entre la distribución de probabilidad de los datos reales y la distribución de probabilidad del modelo y es utilizada para calcular la precisión del modelo en problemas de regresión.",
+                false
+            ],
+            [
+                "Es una medida de la complejidad del modelo y es utilizada para evitar el sobreajuste en los datos de entrenamiento.",
+                false
+            ],
+            [
+                "Es una medida de la similitud entre la distribución de probabilidad de los datos reales y la distribución de probabilidad del modelo y es utilizada para calcular la función de activación en los modelos de neuronas.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una medida de la incertidumbre en la distribución de probabilidad de un conjunto de datos y es utilizada para calcular la función de coste en problemas de clasificación."
+    },
+    {
+        "question": "¿Cuál es la función de coste adecuada para problemas de clasificación binaria en Keras?",
+        "answers": [
+            [
+                "Binary Crossentropy",
+                true
+            ],
+            [
+                "Categorical Crossentropy",
+                false
+            ],
+            [
+                "Sparse Categorical Crossentropy",
+                false
+            ],
+            [
+                "MeanSquaredError",
+                false
+            ]
+        ],
+        "correct_answer": "Binary Crossentropy"
+    },
+    {
+        "question": "¿Cuál es la función de coste adecuada para problemas de clasificación múltiple con etiquetas de salida categóricas en formato one-hot encoding en Keras?",
+        "answers": [
+            [
+                "Categorical Crossentropy",
+                true
+            ],
+            [
+                "Binary Crossentropy",
+                false
+            ],
+            [
+                "Sparse Categorical Crossentropy",
+                false
+            ],
+            [
+                "MeanSquaredError",
+                false
+            ]
+        ],
+        "correct_answer": "Categorical Crossentropy"
+    },
+    {
+        "question": "¿Cuál es la función de coste adecuada para problemas de clasificación tanto binarios como múltiples con etiquetas de salida dadas como números enteros en Keras?",
+        "answers": [
+            [
+                "Sparse Categorical Crossentropy",
+                true
+            ],
+            [
+                "Categorical Crossentropy",
+                false
+            ],
+            [
+                "Binary Crossentropy",
+                false
+            ],
+            [
+                "MeanSquaredError",
+                false
+            ]
+        ],
+        "correct_answer": "Sparse Categorical Crossentropy"
+    },
+    {
+        "question": "¿Qué función se encarga de controlar la configuración del entrenamiento de un modelo?",
+        "answers": [
+            [
+                "La función 'compile'",
+                true
+            ],
+            [
+                "La función 'fit'",
+                false
+            ],
+            [
+                "La función 'predict'",
+                false
+            ],
+            [
+                "La función 'evaluate'",
+                false
+            ]
+        ],
+        "correct_answer": "La función 'compile'"
+    },
+    {
+        "question": "¿Qué representa el parámetro 'loss' en la función 'compile' de un modelo de redes neuronales?",
+        "answers": [
+            [
+                "La función de coste o función de pérdida",
+                true
+            ],
+            [
+                "La tasa de aprendizaje del modelo",
+                false
+            ],
+            [
+                "El número de capas en el modelo",
+                false
+            ],
+            [
+                "La métrica de evaluación del modelo",
+                false
+            ]
+        ],
+        "correct_answer": "La función de coste o función de pérdida"
+    },
+    {
+        "question": "¿Qué es la entropía cruzada y para qué se utiliza en el entrenamiento de modelos de redes neuronales?",
+        "answers": [
+            [
+                "Es un cálculo del índice de error entre las clases reales y las predicciones del modelo, utilizado en modelos basados en neuronas.",
+                true
+            ],
+            [
+                "Es una métrica de evaluación del modelo utilizada para medir la precisión en la clasificación de datos.",
+                false
+            ],
+            [
+                "Es una función de activación utilizada en problemas de clasificación múltiple.",
+                false
+            ],
+            [
+                "Es un método de optimización utilizado para mejorar la precisión del modelo.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un cálculo del índice de error entre las clases reales y las predicciones del modelo, utilizado en modelos basados en neuronas."
+    },
+    {
+        "question": "¿Para qué tipo de problema de clasificación se utiliza la función de coste Binary Crossentropy?",
+        "answers": [
+            [
+                "Para problemas de clasificación binaria",
+                true
+            ],
+            [
+                "Para problemas de clasificación múltiple con etiquetas de tipo categórico",
+                false
+            ],
+            [
+                "Para problemas tanto binarios como múltiples con etiquetas dadas como números enteros",
+                false
+            ],
+            [
+                "Para problemas de regresión",
+                false
+            ]
+        ],
+        "correct_answer": "Para problemas de clasificación binaria"
+    },
+    {
+        "question": "¿Cuál es la diferencia entre las funciones de coste Categorical Crossentropy y Sparse Categorical Crossentropy?",
+        "answers": [
+            [
+                "Categorical Crossentropy se utiliza para problemas de clasificación múltiple con etiquetas en formato one-hot encoding, mientras que Sparse Categorical Crossentropy se utiliza para problemas tanto binarios como múltiples con etiquetas dadas como números enteros.",
+                false
+            ],
+            [
+                "Categorical Crossentropy se utiliza para problemas tanto binarios como múltiples con etiquetas dadas como números enteros, mientras que Sparse Categorical Crossentropy se utiliza para problemas de clasificación múltiple con etiquetas en formato one-hot encoding.",
+                false
+            ],
+            [
+                "Categorical Crossentropy y Sparse Categorical Crossentropy son lo mismo y se utilizan indistintamente para cualquier tipo de problema de clasificación.",
+                false
+            ],
+            [
+                "La diferencia radica en el formato de las etiquetas o variables de salida: Categorical Crossentropy se utiliza para etiquetas en formato one-hot encoding y Sparse Categorical Crossentropy para etiquetas dadas como números enteros.",
+                true
+            ]
+        ],
+        "correct_answer": "La diferencia radica en el formato de las etiquetas o variables de salida: Categorical Crossentropy se utiliza para etiquetas en formato one-hot encoding y Sparse Categorical Crossentropy para etiquetas dadas como números enteros."
+    },
+    {
+        "question": "¿Qué son los optimizadores en el entrenamiento de modelos?",
+        "answers": [
+            [
+                "Son herramientas que se encargan de alcanzar la configuración de los pesos en toda la red para minimizar el error.",
+                true
+            ],
+            [
+                "Son métricas necesarias para ajustar los coeficientes o pesos de las redes neuronales.",
+                false
+            ],
+            [
+                "Son funciones que calculan el índice de error entre las clases reales y las predicciones del modelo.",
+                false
+            ],
+            [
+                "Son algoritmos de activación utilizados en problemas de clasificación múltiple.",
+                false
+            ]
+        ],
+        "correct_answer": "Son herramientas que se encargan de alcanzar la configuración de los pesos en toda la red para minimizar el error."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre RMSprop y Adam como optimizadores?",
+        "answers": [
+            [
+                "RMSprop tiene una convergencia más rápida hacia el mínimo, mientras que Adam tiene un mejor comportamiento general.",
+                true
+            ],
+            [
+                "RMSprop tiene un mejor comportamiento general, mientras que Adam tiene una convergencia más rápida hacia el mínimo.",
+                false
+            ],
+            [
+                "RMSprop y Adam son iguales en términos de convergencia y comportamiento general.",
+                false
+            ],
+            [
+                "No hay diferencia entre RMSprop y Adam como optimizadores.",
+                false
+            ]
+        ],
+        "correct_answer": "RMSprop tiene una convergencia más rápida hacia el mínimo, mientras que Adam tiene un mejor comportamiento general."
+    },
+    {
+        "question": "¿Qué es el ratio de aprendizaje o 'learning rate'?",
+        "answers": [
+            [
+                "Es el parámetro que controla la magnitud con la que modificamos los pesos en función de la pendiente de la función de coste.",
+                true
+            ],
+            [
+                "Es el número de iteraciones del entrenamiento.",
+                false
+            ],
+            [
+                "Es el número de muestras que se utilizan en cada iteración o epoch.",
+                false
+            ],
+            [
+                "Es el valor por defecto de 32 muestras para el parámetro batch_size.",
+                false
+            ]
+        ],
+        "correct_answer": "Es el parámetro que controla la magnitud con la que modificamos los pesos en función de la pendiente de la función de coste."
+    },
+    {
+        "question": "¿Qué sucede si el learning rate es muy pequeño?",
+        "answers": [
+            [
+                "El proceso de entrenamiento será muy lento.",
+                true
+            ],
+            [
+                "El proceso de entrenamiento será muy rápido.",
+                false
+            ],
+            [
+                "El proceso de entrenamiento será muy inestable e incluso podría no converger.",
+                false
+            ],
+            [
+                "No sucede nada en particular.",
+                false
+            ]
+        ],
+        "correct_answer": "El proceso de entrenamiento será muy lento."
+    },
+    {
+        "question": "¿Qué sucede si el learning rate es muy grande?",
+        "answers": [
+            [
+                "El proceso de entrenamiento será muy inestable e incluso podría no converger.",
+                true
+            ],
+            [
+                "El proceso de entrenamiento será muy rápido.",
+                false
+            ],
+            [
+                "El proceso de entrenamiento será muy lento.",
+                false
+            ],
+            [
+                "No sucede nada en particular.",
+                false
+            ]
+        ],
+        "correct_answer": "El proceso de entrenamiento será muy inestable e incluso podría no converger."
+    },
+    {
+        "question": "¿Cómo se especifica el valor del learning rate al llamar a la función de optimización en Keras?",
+        "answers": [
+            [
+                "Se pasa como argumento por clave, por ejemplo: learning_rate=0.001.",
+                true
+            ],
+            [
+                "Se indica el número de epochs al llamar a la función de optimización.",
+                false
+            ],
+            [
+                "Se indica el batch size al llamar a la función de optimización.",
+                false
+            ],
+            [
+                "No es posible especificar el valor del learning rate en Keras.",
+                false
+            ]
+        ],
+        "correct_answer": "Se pasa como argumento por clave, por ejemplo: learning_rate=0.001."
+    },
+    {
+        "question": "¿Qué parámetro indica el número de iteraciones del entrenamiento en Keras?",
+        "answers": [
+            [
+                "El parámetro epochs.",
+                true
+            ],
+            [
+                "El parámetro batch_size.",
+                false
+            ],
+            [
+                "El parámetro opt.",
+                false
+            ],
+            [
+                "No es posible especificar el número de iteraciones del entrenamiento en Keras.",
+                false
+            ]
+        ],
+        "correct_answer": "El parámetro epochs."
+    },
+    {
+        "question": "¿Qué parámetro indica el número de muestras que se utilizan en cada iteración o epoch en Keras?",
+        "answers": [
+            [
+                "El parámetro batch_size.",
+                true
+            ],
+            [
+                "El parámetro epochs.",
+                false
+            ],
+            [
+                "El parámetro opt.",
+                false
+            ],
+            [
+                "No es posible especificar el número de muestras en Keras.",
+                false
+            ]
+        ],
+        "correct_answer": "El parámetro batch_size."
+    },
+    {
+        "question": "¿Cuál es la función en Keras que se utiliza para dividir un dataset entre los datos de entrenamiento y los datos para la evaluación?",
+        "answers": [
+            [
+                "train_test_split",
+                true
+            ],
+            [
+                "evaluate_train_split",
+                false
+            ],
+            [
+                "test_train_split",
+                false
+            ],
+            [
+                "split_train_test",
+                false
+            ]
+        ],
+        "correct_answer": "train_test_split"
+    },
+    {
+        "question": "¿Qué porcentaje de los datos se ha dedicado para el entrenamiento en el ejemplo mencionado?",
+        "answers": [
+            [
+                "25%",
+                false
+            ],
+            [
+                "42%",
+                false
+            ],
+            [
+                "75%",
+                true
+            ],
+            [
+                "100%",
+                false
+            ]
+        ],
+        "correct_answer": "75%"
+    },
+    {
+        "question": "¿Qué es el sobre entrenamiento o overfitting?",
+        "answers": [
+            [
+                "Un tipo de entrenamiento que permite mejorar el rendimiento del modelo",
+                false
+            ],
+            [
+                "Cuando se cuelan datos anómalos que el algoritmo trata de adaptar, y el modelo se confunde",
+                true
+            ],
+            [
+                "Un error en el proceso de entrenamiento que impide que el modelo aprenda correctamente",
+                false
+            ],
+            [
+                "Un término utilizado para describir el subentrenamiento de un modelo",
+                false
+            ]
+        ],
+        "correct_answer": "Cuando se cuelan datos anómalos que el algoritmo trata de adaptar, y el modelo se confunde"
+    },
+    {
+        "question": "¿Qué beneficios se pueden obtener en el ámbito médico a través del uso de Machine Learning?",
+        "answers": [
+            [
+                "Detección temprana de enfermedades, asistencia médica virtual, personalización de tratamientos, monitoreo de pacientes y descubrimiento de medicamentos.",
+                true
+            ],
+            [
+                "Análisis de sentimientos y publicidad enfocada en pacientes.",
+                false
+            ],
+            [
+                "Robótica y automatización en cirugía.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Detección temprana de enfermedades, asistencia médica virtual, personalización de tratamientos, monitoreo de pacientes y descubrimiento de medicamentos."
+    },
+    {
+        "question": "¿Qué técnica nos permite monitorizar el posible overfitting en un entrenamiento con Keras?",
+        "answers": [
+            [
+                "Reservar datos de validación del dataset y utilizarlos en fit como parámetro validation_data",
+                true
+            ],
+            [
+                "Aumentar el tamaño de la red neuronal",
+                false
+            ],
+            [
+                "Aplicar regularización a los pesos del modelo",
+                false
+            ],
+            [
+                "Descartar algunas salidas al azar durante el entrenamiento",
+                false
+            ]
+        ],
+        "correct_answer": "Reservar datos de validación del dataset y utilizarlos en fit como parámetro validation_data"
+    },
+    {
+        "question": "¿Cuál es una de las soluciones para evitar el sobre entrenamiento en un modelo de Keras?",
+        "answers": [
+            [
+                "Contar con más datos",
+                true
+            ],
+            [
+                "Aumentar el tamaño de la red neuronal",
+                false
+            ],
+            [
+                "Aplicar regularización a los pesos del modelo",
+                false
+            ],
+            [
+                "Descartar algunas salidas al azar durante el entrenamiento",
+                false
+            ]
+        ],
+        "correct_answer": "Contar con más datos"
+    },
+    {
+        "question": "¿Qué es la técnica de descarte (dropout) en Keras?",
+        "answers": [
+            [
+                "Hacer nulos, de forma arbitraria, ciertos pesos por capa, durante el entrenamiento",
+                true
+            ],
+            [
+                "Limitar el valor que pueden alcanzar los pesos del modelo",
+                false
+            ],
+            [
+                "Reducir el tamaño de la red neuronal",
+                false
+            ],
+            [
+                "Utilizar datos de validación en fit como parámetro validation_data",
+                false
+            ]
+        ],
+        "correct_answer": "Hacer nulos, de forma arbitraria, ciertos pesos por capa, durante el entrenamiento"
+    },
+    {
+        "question": "¿Qué es TensorBoard y cuáles son sus funcionalidades principales?",
+        "answers": [
+            [
+                "Una herramienta de visualización con una interfaz sencilla que permite monitorizar visualmente las métricas de loss y precisión, tener una representación en forma de grafo del modelo, gráficas de histogramas de coeficientes del modelo y hacer seguimiento del histórico de proyecto creando perfiles.",
+                true
+            ],
+            [
+                "Un kit de herramientas para el procesamiento de lenguaje natural que permite detectar enfermedades, personalizar tratamientos y monitorear pacientes.",
+                false
+            ],
+            [
+                "Una herramienta para la automatización en cirugía.",
+                false
+            ],
+            [
+                "Una herramienta para el análisis de sentimientos y publicidad enfocada en pacientes.",
+                false
+            ]
+        ],
+        "correct_answer": "Una herramienta de visualización con una interfaz sencilla que permite monitorizar visualmente las métricas de loss y precisión, tener una representación en forma de grafo del modelo, gráficas de histogramas de coeficientes del modelo y hacer seguimiento del histórico de proyecto creando perfiles."
+    },
+    {
+        "question": "¿Qué es la normalización de datos y cómo se aplica en Keras?",
+        "answers": [
+            [
+                "Es un proceso para centrar los datos en 0, restando la media y dividiéndolos por la desviación estándar. En Keras, se puede aplicar como una capa de transformación de los datos que van de una capa a otra, utilizando la capa BatchNormalization.",
+                true
+            ],
+            [
+                "Es una técnica para mejorar la precisión del modelo en el análisis de sentimientos. En Keras, se puede aplicar como una capa de transformación de los datos que van de una capa a otra, utilizando la capa BatchNormalization.",
+                false
+            ],
+            [
+                "Es una técnica para la automatización en cirugía. En Keras, se puede aplicar como una capa de transformación de los datos que van de una capa a otra, utilizando la capa BatchNormalization.",
+                false
+            ],
+            [
+                "Es una técnica para la detección temprana de enfermedades. En Keras, se puede aplicar como una capa de transformación de los datos que van de una capa a otra, utilizando la capa BatchNormalization.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un proceso para centrar los datos en 0, restando la media y dividiéndolos por la desviación estándar. En Keras, se puede aplicar como una capa de transformación de los datos que van de una capa a otra, utilizando la capa BatchNormalization."
+    },
+    {
+        "question": "¿Cuál es el principal efecto de la normalización por lotes en el entrenamiento de redes neuronales?",
+        "answers": [
+            [
+                "Ayuda a propagar el gradiente en redes con muchas capas.",
+                true
+            ],
+            [
+                "Reduce el número de parámetros del modelo.",
+                false
+            ],
+            [
+                "Limita el valor que pueden alcanzar los pesos.",
+                false
+            ],
+            [
+                "Mejora la capacidad de generalización del modelo.",
+                false
+            ]
+        ],
+        "correct_answer": "Ayuda a propagar el gradiente en redes con muchas capas."
+    },
+    {
+        "question": "¿Qué es la operación convolucional en las redes neuronales convolucionales?",
+        "answers": [
+            [
+                "Es el proceso de utilizar una ventana o matriz que se va desplazando sobre la imagen y aplicando producto tensorial sobre los píxeles de la ventana en cada posición.",
+                true
+            ],
+            [
+                "Es el proceso de establecer capas con un orden jerárquico, estando cada capa especializada en detectar un nivel de comprensión de la imagen.",
+                false
+            ],
+            [
+                "Es el proceso de programar una capa convolucional en Keras con los parámetros output_depth, window_height y window_width.",
+                false
+            ],
+            [
+                "Es el proceso de utilizar filtros en paralelo que tienen la capa y que darán otros tantos mapas de salida.",
+                false
+            ]
+        ],
+        "correct_answer": "Es el proceso de utilizar una ventana o matriz que se va desplazando sobre la imagen y aplicando producto tensorial sobre los píxeles de la ventana en cada posición."
+    },
+    {
+        "question": "¿Cuál es la principal ventaja de las redes neuronales convolucionales?",
+        "answers": [
+            [
+                "Se establecen las capas con un orden jerárquico, estando cada capa especializada en detectar un nivel de comprensión de la imagen.",
+                true
+            ],
+            [
+                "Se utilizan filtros en paralelo que tienen la capa y que darán otros tantos mapas de salida.",
+                false
+            ],
+            [
+                "Se utilizan ventanas o matrices de diferentes dimensiones en la operación convolucional.",
+                false
+            ],
+            [
+                "Se establece la profundidad del mapa de salida, que es el número de filtros en paralelo que tiene la capa.",
+                false
+            ]
+        ],
+        "correct_answer": "Se establecen las capas con un orden jerárquico, estando cada capa especializada en detectar un nivel de comprensión de la imagen."
+    },
+    {
+        "question": "¿Cuáles son los dos parámetros principales de las capas convolucionales?",
+        "answers": [
+            [
+                "Dimensiones de la ventana que va aplicando la transformación y profundidad del mapa de salida.",
+                true
+            ],
+            [
+                "Número de filtros en paralelo y dimensiones de la matriz de transformación o filtro.",
+                false
+            ],
+            [
+                "Número de imágenes de salida y dimensiones de la matriz de transformación o filtro.",
+                false
+            ],
+            [
+                "Número de neuronas y profundidad del mapa de salida.",
+                false
+            ]
+        ],
+        "correct_answer": "Dimensiones de la ventana que va aplicando la transformación y profundidad del mapa de salida."
+    },
+    {
+        "question": "¿Cómo se programa una capa convolucional en Keras?",
+        "answers": [
+            [
+                "Con los parámetros Conv2D(output_depth, (window_height, window_width)).",
+                true
+            ],
+            [
+                "Con los parámetros output_depth, window_height y window_width.",
+                false
+            ],
+            [
+                "Con los parámetros output_depth, (window_height, window_width) y depth_map.",
+                false
+            ],
+            [
+                "Con los parámetros Conv2D(window_height, window_width, output_depth).",
+                false
+            ]
+        ],
+        "correct_answer": "Con los parámetros Conv2D(output_depth, (window_height, window_width))."
+    },
+    {
+        "question": "¿Qué es output_depth en una red neuronal convolucional?",
+        "answers": [
+            [
+                "Es un parámetro que controla la profundidad o el número de filtros en paralelo que tiene una capa convolucional.",
+                true
+            ],
+            [
+                "Es una técnica para evitar el efecto borde en la operación convolucional.",
+                false
+            ],
+            [
+                "Es una capa que se utiliza para mantener bajo control el tamaño de la red.",
+                false
+            ],
+            [
+                "Es una técnica de reducción de dimensionalidad en imágenes.",
+                false
+            ]
+        ],
+        "correct_answer": "Es un parámetro que controla la profundidad o el número de filtros en paralelo que tiene una capa convolucional."
+    },
+    {
+        "question": "¿Qué es padding en una red neuronal convolucional?",
+        "answers": [
+            [
+                "Es una técnica que se utiliza para evitar el efecto borde en la operación convolucional.",
+                true
+            ],
+            [
+                "Es una capa que se utiliza para mantener bajo control el tamaño de la red.",
+                false
+            ],
+            [
+                "Es una técnica de reducción de dimensionalidad en imágenes.",
+                false
+            ],
+            [
+                "Es un parámetro que controla la profundidad o el número de filtros en paralelo que tiene una capa convolucional.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una técnica que se utiliza para evitar el efecto borde en la operación convolucional."
+    },
+    {
+        "question": "¿Qué es la capa de max-pooling en una red neuronal convolucional?",
+        "answers": [
+            [
+                "Es una capa que se utiliza para reducir el tamaño de la red.",
+                true
+            ],
+            [
+                "Es una técnica que se utiliza para evitar la pérdida de información del contorno de la imagen.",
+                false
+            ],
+            [
+                "Es una técnica de reducción de dimensionalidad en imágenes.",
+                false
+            ],
+            [
+                "Es un parámetro que controla la profundidad o el número de filtros en paralelo que tiene una capa convolucional.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una capa que se utiliza para reducir el tamaño de la red."
+    },
+    {
+        "question": "¿Qué es la técnica de stride en una red neuronal convolucional?",
+        "answers": [
+            [
+                "Es una técnica que hace que la ventana de la convolución no vaya recorriendo los píxeles seguidos, sino que se vaya saltando un cierto número de ellos.",
+                true
+            ],
+            [
+                "Es una técnica que se utiliza para evitar la pérdida de información del contorno de la imagen.",
+                false
+            ],
+            [
+                "Es una técnica de reducción de dimensionalidad en imágenes.",
+                false
+            ],
+            [
+                "Es un parámetro que controla la profundidad o el número de filtros en paralelo que tiene una capa convolucional.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una técnica que hace que la ventana de la convolución no vaya recorriendo los píxeles seguidos, sino que se vaya saltando un cierto número de ellos."
+    },
+    {
+        "question": "¿Qué son las redes pre-entrenadas y cuáles son las dos formas en que se pueden utilizar?",
+        "answers": [
+            [
+                "Las redes pre-entrenadas son modelos de red neuronal que ya han sido entrenados con grandes conjuntos de datos y se pueden utilizar mediante 'Feature Extraction' o 'Fine-tuning'.",
+                true
+            ],
+            [
+                "Las redes pre-entrenadas son modelos de red neuronal que solo pueden ser entrenados desde cero y no se pueden utilizar en la detección de patrones en imágenes.",
+                false
+            ],
+            [
+                "Las redes pre-entrenadas son modelos de red neuronal que solo pueden ser utilizados mediante 'Fine-tuning' y no a través de 'Feature Extraction'.",
+                false
+            ],
+            [
+                "Las redes pre-entrenadas son modelos de red neuronal que solo pueden ser utilizados mediante 'Feature Extraction' y no a través de 'Fine-tuning'.",
+                false
+            ]
+        ],
+        "correct_answer": "Las redes pre-entrenadas son modelos de red neuronal que ya han sido entrenados con grandes conjuntos de datos y se pueden utilizar mediante 'Feature Extraction' o 'Fine-tuning'."
+    },
+    {
+        "question": "¿Qué es 'Feature Extraction' en las redes pre-entrenadas?",
+        "answers": [
+            [
+                "'Feature Extraction' es una técnica en la que se utiliza un modelo pre-entrenado para extraer los patrones principales de las imágenes y se pasan a un modelo sencillo de red neuronal para su entrenamiento.",
+                true
+            ],
+            [
+                "'Feature Extraction' es una técnica en la que se utiliza un modelo pre-entrenado para entrenar una red neuronal desde cero.",
+                false
+            ],
+            [
+                "'Feature Extraction' es una técnica en la que se utiliza un modelo pre-entrenado para entrenar una red neuronal mediante 'Fine-tuning'.",
+                false
+            ],
+            [
+                "'Feature Extraction' es una técnica en la que se utiliza un modelo pre-entrenado para entrenar una red neuronal y mejorar su rendimiento.",
+                false
+            ]
+        ],
+        "correct_answer": "'Feature Extraction' es una técnica en la que se utiliza un modelo pre-entrenado para extraer los patrones principales de las imágenes y se pasan a un modelo sencillo de red neuronal para su entrenamiento."
+    },
+    {
+        "question": "¿Qué es 'Fine-tuning' en las redes pre-entrenadas?",
+        "answers": [
+            [
+                "'Fine-tuning' es una técnica en la que se compone un modelo híbrido en el que se añaden dos capas de red neuronal al final de la red pre-entrenada y se entrenan solo las últimas capas y el último bloque.",
+                true
+            ],
+            [
+                "'Fine-tuning' es una técnica en la que se utiliza un modelo pre-entrenado para extraer los patrones principales de las imágenes y se pasan a un modelo sencillo de red neuronal para su entrenamiento.",
+                false
+            ],
+            [
+                "'Fine-tuning' es una técnica en la que se utiliza un modelo pre-entrenado para entrenar una red neuronal desde cero.",
+                false
+            ],
+            [
+                "'Fine-tuning' es una técnica en la que se utiliza un modelo pre-entrenado para entrenar una red neuronal y mejorar su rendimiento.",
+                false
+            ]
+        ],
+        "correct_answer": "'Fine-tuning' es una técnica en la que se compone un modelo híbrido en el que se añaden dos capas de red neuronal al final de la red pre-entrenada y se entrenan solo las últimas capas y el último bloque."
+    },
+    {
+        "question": "¿Qué son los modelos LSTM?",
+        "answers": [
+            [
+                "Son una extensión de las redes neuronales recurrentes que amplían su memoria para tener en cuenta los estados cronológicamente más antiguos.",
+                true
+            ],
+            [
+                "Son una arquitectura que implican la interacción entre dos modelos de redes neuronales profundas.",
+                false
+            ],
+            [
+                "Son una técnica que combina dos redes que compiten en un juego de suma cero.",
+                false
+            ],
+            [
+                "Son una técnica que utiliza redes pre-entrenadas para extraer características de imágenes.",
+                false
+            ]
+        ],
+        "correct_answer": "Son una extensión de las redes neuronales recurrentes que amplían su memoria para tener en cuenta los estados cronológicamente más antiguos."
+    },
+    {
+        "question": "¿Qué son las redes generativas adversarias o redes GAN?",
+        "answers": [
+            [
+                "Son una arquitectura que implican la interacción entre dos modelos de redes neuronales profundas.",
+                true
+            ],
+            [
+                "Son una técnica que utiliza redes pre-entrenadas para extraer características de imágenes.",
+                false
+            ],
+            [
+                "Son una técnica que combina dos redes que compiten en un juego de suma cero.",
+                false
+            ],
+            [
+                "Son una extensión de las redes neuronales recurrentes que amplían su memoria para tener en cuenta los estados cronológicamente más antiguos.",
+                false
+            ]
+        ],
+        "correct_answer": "Son una arquitectura que implican la interacción entre dos modelos de redes neuronales profundas."
+    },
+    {
+        "question": "¿Cómo se sabe que el sistema de redes GAN está listo?",
+        "answers": [
+            [
+                "Cuando el discriminador da por válidos los casos generados por el generador.",
+                true
+            ],
+            [
+                "Cuando el generador alcanza la precisión deseada en la tarea que se le asignó.",
+                false
+            ],
+            [
+                "Cuando el discriminador es capaz de generar casos a partir de un conjunto de datos de entrenamiento.",
+                false
+            ],
+            [
+                "Cuando el generador y el discriminador logran una alta precisión en la clasificación de datos.",
+                false
+            ]
+        ],
+        "correct_answer": "Cuando el discriminador da por válidos los casos generados por el generador."
+    },
+    {
+        "question": "¿Qué es el Design Thinking?",
+        "answers": [
+            [
+                "Una metodología que traslada al ámbito general de proyectos el proceso que se sigue en el diseño de productos comerciales en la industria.",
+                true
+            ],
+            [
+                "Un conjunto de metodologías para gestionar un proyecto dividiéndolo en varias etapas.",
+                false
+            ],
+            [
+                "Una metodología utilizada por Google para la creación de productos.",
+                false
+            ],
+            [
+                "Una metodología de gestión de proyectos que utiliza ciclos temporales cortos.",
+                false
+            ]
+        ],
+        "correct_answer": "Una metodología que traslada al ámbito general de proyectos el proceso que se sigue en el diseño de productos comerciales en la industria."
+    },
+    {
+        "question": "¿Qué es Agile?",
+        "answers": [
+            [
+                "Un proceso mediante el cual un equipo puede gestionar un proyecto dividiéndolo en varias etapas e involucrando la colaboración constante de las partes interesadas y una mejora e iteración continuas en cada etapa.",
+                true
+            ],
+            [
+                "Una metodología para la creación de productos utilizada por Google.",
+                false
+            ],
+            [
+                "Una metodología de gestión de proyectos que utiliza ciclos temporales cortos.",
+                false
+            ],
+            [
+                "Una metodología que traslada al ámbito general de proyectos el proceso que se sigue en el diseño de productos comerciales en la industria.",
+                false
+            ]
+        ],
+        "correct_answer": "Un proceso mediante el cual un equipo puede gestionar un proyecto dividiéndolo en varias etapas e involucrando la colaboración constante de las partes interesadas y una mejora e iteración continuas en cada etapa."
+    },
+    {
+        "question": "¿Qué es Scrum?",
+        "answers": [
+            [
+                "Una metodología utilizada para realizar entregas parciales y regulares del producto final, priorizadas por el beneficio que aportan al receptor del proyecto.",
+                true
+            ],
+            [
+                "Un proceso mediante el cual un equipo puede gestionar un proyecto dividiéndolo en varias etapas e involucrando la colaboración constante de las partes interesadas y una mejora e iteración continuas en cada etapa.",
+                false
+            ],
+            [
+                "Una metodología de gestión de proyectos que utiliza ciclos temporales cortos.",
+                false
+            ],
+            [
+                "Una metodología que traslada al ámbito general de proyectos el proceso que se sigue en el diseño de productos comerciales en la industria.",
+                false
+            ]
+        ],
+        "correct_answer": "Una metodología utilizada para realizar entregas parciales y regulares del producto final, priorizadas por el beneficio que aportan al receptor del proyecto."
+    },
+    [
+        {
+            "question": "¿Cuáles son algunas fuentes habituales de datos?",
+            "answers": [
+                "Informes de plataformas, empresas y consultoras",
+                "Datos abiertos",
+                "Buscador Google de conjuntos de datos",
+                "Datasets en Kaggle",
+                "Data.world",
+                "UCI"
+            ],
+            "correct_answer": "Todas las anteriores son correctas."
+        },
+        {
+            "question": "¿Qué es el web scraping o raspado web?",
+            "answers": [
+                "Una técnica para extraer información de sitios web",
+                "Una técnica para generar datos falsos",
+                "Una técnica para enmascarar datos reales",
+                "Una técnica para cifrar información"
+            ],
+            "correct_answer": "Una técnica para extraer información de sitios web"
+        },
+        {
+            "question": "¿Qué son los Data Lakes?",
+            "answers": [
+                "Bases de datos propias de las organizaciones",
+                "Bases de datos públicas",
+                "Bases de datos especializadas en machine learning",
+                "Bases de datos con información no estructurada"
+            ],
+            "correct_answer": "Bases de datos propias de las organizaciones"
+        },
+        {
+            "question": "¿Qué es Kaggle?",
+            "answers": [
+                "Una plataforma de competiciones de machine learning",
+                "Un buscador de datasets",
+                "Un proveedor de informes empresariales",
+                "Una herramienta de raspado web"
+            ],
+            "correct_answer": "Una plataforma de competiciones de machine learning"
+        }
+    ],
+    {
+        "question": "¿Qué ventajas ofrece el cloud computing?",
+        "answers": [
+            [
+                "Escalabilidad, pago por uso y seguridad.",
+                true
+            ],
+            [
+                "Acceso directo a hardware de la empresa y pago único.",
+                false
+            ],
+            [
+                "Mejor rendimiento y capacidad de personalización.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Escalabilidad, pago por uso y seguridad."
+    },
+    {
+        "question": "¿Cuáles son las tres capas de servicio en la nube?",
+        "answers": [
+            [
+                "SaaS, PaaS y IaaS.",
+                true
+            ],
+            [
+                "SaaS, PaaS y DaaS.",
+                false
+            ],
+            [
+                "SaaS, CaaS y PaaS.",
+                false
+            ],
+            [
+                "SaaS, IaaS y DaaS.",
+                false
+            ]
+        ],
+        "correct_answer": "SaaS, PaaS y IaaS."
+    },
+    {
+        "question": "¿Qué es SaaS en la nube?",
+        "answers": [
+            [
+                "Software as a Service, una aplicación completa ofrecida con un servicio bajo demanda a través de multitenencia.",
+                true
+            ],
+            [
+                "Plataforma como Servicio, la encapsulación de una abstracción de un ambiente de desarrollo y una serie de módulos o complementos.",
+                false
+            ],
+            [
+                "Infraestructura como Servicio, la entrega de hardware virtualizado como un servicio.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Software as a Service, una aplicación completa ofrecida con un servicio bajo demanda a través de multitenencia."
+    },
+    {
+        "question": "¿Qué es PaaS en la nube?",
+        "answers": [
+            [
+                "Plataforma como Servicio, la encapsulación de una abstracción de un ambiente de desarrollo y una serie de módulos o complementos.",
+                true
+            ],
+            [
+                "Software as a Service, una aplicación completa ofrecida con un servicio bajo demanda a través de multitenencia.",
+                false
+            ],
+            [
+                "Infraestructura como Servicio, la entrega de hardware virtualizado como un servicio.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Plataforma como Servicio, la encapsulación de una abstracción de un ambiente de desarrollo y una serie de módulos o complementos."
+    },
+    {
+        "question": "¿Qué es IaaS en la nube?",
+        "answers": [
+            [
+                "Infraestructura como Servicio, la entrega de hardware virtualizado como un servicio.",
+                true
+            ],
+            [
+                "Software as a Service, una aplicación completa ofrecida con un servicio bajo demanda a través de multitenencia.",
+                false
+            ],
+            [
+                "Plataforma como Servicio, la encapsulación de una abstracción de un ambiente de desarrollo y una serie de módulos o complementos.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Infraestructura como Servicio, la entrega de hardware virtualizado como un servicio."
+    },
+    {
+        "question": "¿Qué es IaaS?",
+        "answers": [
+            [
+                "IaaS significa Infraestructure as a Service y es un modelo de entrega de recursos de cómputo como servicios estandarizados en la red.",
+                true
+            ],
+            [
+                "IaaS es una nube pública en la que los datos y procesos de varios clientes se mezclan en los servidores, sistemas de almacenamiento y otras infraestructuras de la nube.",
+                false
+            ],
+            [
+                "IaaS es una nube privada destinada exclusivamente a un usuario o grupo final.",
+                false
+            ],
+            [
+                "IaaS es una nube híbrida creada a partir de múltiples entornos que se conectan mediante redes de área local (LAN), redes de área amplia (WAN), redes privadas virtuales (VPN) o API.",
+                false
+            ]
+        ],
+        "correct_answer": "IaaS significa Infraestructure as a Service y es un modelo de entrega de recursos de cómputo como servicios estandarizados en la red."
+    },
+    {
+        "question": "¿En qué capa de servicio en la nube se encuentra IaaS?",
+        "answers": [
+            [
+                "IaaS se encuentra en la capa inferior de servicio en la nube.",
+                true
+            ],
+            [
+                "IaaS se encuentra en la capa del medio de servicio en la nube.",
+                false
+            ],
+            [
+                "IaaS se encuentra en la capa más alta de servicio en la nube.",
+                false
+            ],
+            [
+                "IaaS se encuentra en una capa diferente a las mencionadas.",
+                false
+            ]
+        ],
+        "correct_answer": "IaaS se encuentra en la capa inferior de servicio en la nube."
+    },
+    {
+        "question": "¿Qué tipos de nubes según el modelo de implementación existen?",
+        "answers": [
+            [
+                "Nubes públicas, nubes privadas y nubes híbridas.",
+                true
+            ],
+            [
+                "Nubes de desarrollo, nubes de producción y nubes de prueba.",
+                false
+            ],
+            [
+                "Nubes locales, nubes regionales y nubes globales.",
+                false
+            ],
+            [
+                "Nubes de propiedad, nubes compartidas y nubes tercerizadas.",
+                false
+            ]
+        ],
+        "correct_answer": "Nubes públicas, nubes privadas y nubes híbridas."
+    },
+    {
+        "question": "¿En qué se diferencian las nubes públicas y privadas?",
+        "answers": [
+            [
+                "Las nubes públicas suelen crearse a partir de una infraestructura de TI ajena al usuario final, mientras que las nubes privadas se destinan exclusivamente a un usuario o grupo final.",
+                true
+            ],
+            [
+                "Las nubes públicas tienen alta protección de datos y ediciones a nivel de servicio, mientras que las nubes privadas mezclan los datos y procesos de varios clientes en los servidores y sistemas de almacenamiento.",
+                false
+            ],
+            [
+                "Las nubes públicas son una buena opción para las compañías que necesitan alta protección de datos y ediciones a nivel de servicio, mientras que las nubes privadas se conectan mediante redes de área local (LAN), redes de área amplia (WAN), redes privadas virtuales (VPN) o API.",
+                false
+            ],
+            [
+                "Las nubes públicas se destinan exclusivamente a un usuario o grupo final, mientras que las nubes privadas suelen crearse a partir de una infraestructura de TI ajena al usuario final.",
+                false
+            ]
+        ],
+        "correct_answer": "as nubes públicas suelen crearse a partir de una infraestructura de TI ajena al usuario final, mientras que las nubes privadas se destinan exclusivamente a un usuario o grupo final."
+    },
+    {
+        "question": "¿Qué es IoT o Internet de las cosas?",
+        "answers": [
+            [
+                "Es el concepto que agrupa tecnologías, protocolos y dispositivos que permiten que los objetos estén conectados a internet.",
+                true
+            ],
+            [
+                "Es un tipo de red social enfocado en dispositivos electrónicos.",
+                false
+            ],
+            [
+                "Es una plataforma de videojuegos en línea.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Es el concepto que agrupa tecnologías, protocolos y dispositivos que permiten que los objetos estén conectados a internet."
+    },
+    {
+        "question": "¿Qué características tienen los objetos físicos en IoT?",
+        "answers": [
+            [
+                "Sensores, capacidad de procesamiento, software y otras tecnologías.",
+                true
+            ],
+            [
+                "Solo capacidad de procesamiento.",
+                false
+            ],
+            [
+                "Solo sensores y software.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Sensores, capacidad de procesamiento, software y otras tecnologías."
+    },
+    {
+        "question": "¿Cómo se conectan los dispositivos en IoT?",
+        "answers": [
+            [
+                "A través de internet u otras redes de comunicación.",
+                true
+            ],
+            [
+                "A través de cables de red físicos.",
+                false
+            ],
+            [
+                "A través de una señal de radio.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "A través de internet u otras redes de comunicación."
+    },
+    {
+        "question": "¿Qué tipo de datos intercambian los dispositivos en IoT?",
+        "answers": [
+            [
+                "Datos de sensores, estado de los dispositivos, información de localización, entre otros.",
+                true
+            ],
+            [
+                "Solo datos de procesamiento.",
+                false
+            ],
+            [
+                "Solo datos de localización.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Datos de sensores, estado de los dispositivos, información de localización, entre otros."
+    },
+    {
+        "question": "¿Qué beneficios aporta IoT?",
+        "answers": [
+            [
+                "Automatización de procesos, mejora en la eficiencia de recursos, recopilación de datos en tiempo real, entre otros.",
+                true
+            ],
+            [
+                "Solo mejora en la eficiencia de recursos.",
+                false
+            ],
+            [
+                "Solo automatización de procesos.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Automatización de procesos, mejora en la eficiencia de recursos, recopilación de datos en tiempo real, entre otros."
+    },
+    {
+        "question": "¿Qué es el Edge computing?",
+        "answers": [
+            [
+                "Es la contraposición a el cloud.",
+                false
+            ],
+            [
+                "Es el plano local y el conjunto de elementos más cercanos a la captura de información y de interacción con nuestra realidad física.",
+                true
+            ],
+            [
+                "Es el conjunto de técnicas orientadas al tratamiento, análisis y explotación de los datos que se capturan a través de los diferentes elementos que forman parte del propio edge.",
+                true
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Es el plano local y el conjunto de elementos más cercanos a la captura de información y de interacción con nuestra realidad física. Es el conjunto de técnicas orientadas al tratamiento, análisis y explotación de los datos que se capturan a través de los diferentes elementos que forman parte del propio edge."
+    },
+    {
+        "question": "¿Cuál es la diferencia entre Edge y Cloud Computing?",
+        "answers": [
+            [
+                "El Edge computing se refiere a la captura de datos en un plano local cercano al cliente, mientras que el Cloud computing se refiere a servicios y sistemas remotos y alejados de la toma de datos.",
+                true
+            ],
+            [
+                "El Edge computing se enfoca en el tratamiento, análisis y explotación de los datos que se capturan en un plano local cercano al cliente, mientras que el Cloud computing se enfoca en el almacenamiento y procesamiento de datos en la nube.",
+                false
+            ],
+            [
+                "El Edge computing solo es utilizado en entornos empresariales, mientras que el Cloud computing es utilizado por cualquier usuario en internet.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "El Edge computing se refiere a la captura de datos en un plano local cercano al cliente, mientras que el Cloud computing se refiere a servicios y sistemas remotos y alejados de la toma de datos."
+    },
+    {
+        "question": "¿Cuál es el conjunto de elementos que forman parte del Edge computing?",
+        "answers": [
+            [
+                "Sensores y actuadores que interactúan con el mundo físico.",
+                true
+            ],
+            [
+                "Servidores y sistemas de almacenamiento remotos.",
+                false
+            ],
+            [
+                "Dispositivos móviles y computadoras personales.",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas.",
+                false
+            ]
+        ],
+        "correct_answer": "Sensores y actuadores que interactúan con el mundo físico."
+    },
+    {
+        "question": "¿Qué es un qubit en la computación cuántica?",
+        "answers": [
+            [
+                "Una unidad de información en un sistema de computación cuántico.",
+                true
+            ],
+            [
+                "Una bifurcación en un laberinto que permite probar dos caminos diferentes.",
+                false
+            ],
+            [
+                "Una combinación de estados 0 y 1 en la computación clásica.",
+                false
+            ],
+            [
+                "Un circuito de puertas cuánticas en la computación clásica.",
+                false
+            ]
+        ],
+        "correct_answer": "Una unidad de información en un sistema de computación cuántico."
+    },
+    {
+        "question": "¿Cómo aumenta la capacidad de cómputo en la computación cuántica?",
+        "answers": [
+            [
+                "Con el número de qubits a razón de 2 elevado a n.",
+                true
+            ],
+            [
+                "Con el número de circuitos de puertas cuánticas en el sistema.",
+                false
+            ],
+            [
+                "Con el número de combinaciones de estados 0 y 1 en la computación clásica.",
+                false
+            ],
+            [
+                "Con el número de bifurcaciones en un laberinto.",
+                false
+            ]
+        ],
+        "correct_answer": "Con el número de qubits a razón de 2 elevado a n."
+    },
+    {
+        "question": "¿Cómo puede la computación cuántica resolver problemas de complejidad exponencial?",
+        "answers": [
+            [
+                "Un qubit puede comportarse como una combinación de estados 0 y 1 a la vez al pasar por un circuito de puertas cuánticas.",
+                true
+            ],
+            [
+                "Un qubit puede bifurcarse en un laberinto para probar dos caminos diferentes.",
+                false
+            ],
+            [
+                "Un circuito de puertas cuánticas puede resolver problemas complejos en una sola etapa.",
+                false
+            ],
+            [
+                "Un qubit puede almacenar una gran cantidad de información en comparación con un bit en la computación clásica.",
+                false
+            ]
+        ],
+        "correct_answer": "Un qubit puede comportarse como una combinación de estados 0 y 1 a la vez al pasar por un circuito de puertas cuánticas."
+    },
+    {
+        "question": "¿Quién publicó el paper original que describe un sistema monetario electrónico descentralizado en 2008?",
+        "answers": [
+            [
+                "Satoshi Nakamoto",
+                true
+            ],
+            [
+                "Bill Gates",
+                false
+            ],
+            [
+                "Steve Jobs",
+                false
+            ],
+            [
+                "Mark Zuckerberg",
+                false
+            ]
+        ],
+        "correct_answer": "Satoshi Nakamoto"
+    },
+    {
+        "question": "¿Qué elementos principales caracterizaron a Bitcoin y se han perpetuado en la tecnología Blockchain?",
+        "answers": [
+            [
+                "Código, criptografía, cadena de bloques, prueba de trabajo, minería, nodos, tokens, transacciones y wallet",
+                true
+            ],
+            [
+                "Hardware, software, red, enrutador, firewall, servidor y almacenamiento",
+                false
+            ],
+            [
+                "HTML, CSS, JavaScript, base de datos y servidor web",
+                false
+            ],
+            [
+                "Todas las anteriores son correctas",
+                false
+            ]
+        ],
+        "correct_answer": "Código, criptografía, cadena de bloques, prueba de trabajo, minería, nodos, tokens, transacciones y wallet"
+    },
+    {
+        "question": "¿Qué es la prueba de trabajo en la tecnología Blockchain?",
+        "answers": [
+            [
+                "Un sistema de resolución de problemas que permite la validación de transacciones y la creación de nuevos bloques en la cadena de bloques",
+                true
+            ],
+            [
+                "Una medida de la cantidad de poder de procesamiento de un nodo en la red Blockchain",
+                false
+            ],
+            [
+                "Un método de encriptación que asegura la privacidad de las transacciones",
+                false
+            ],
+            [
+                "Un sistema de votación utilizado por los nodos para tomar decisiones en la red Blockchain",
+                false
+            ]
+        ],
+        "correct_answer": "Un sistema de resolución de problemas que permite la validación de transacciones y la creación de nuevos bloques en la cadena de bloques"
+    },
+    {
+        "question": "¿Qué función se utiliza para cargar un archivo CSV en un DataFrame de Pandas?",
+        "answers": [
+            [
+                ".load_csv()",
+                false
+            ],
+            [
+                ".read_csv()",
+                true
+            ],
+            [
+                ".open_csv()",
+                false
+            ],
+            [
+                ".import_csv()",
+                false
+            ]
+        ],
+        "correct_answer": ".read_csv()"
+    },
+    {
+        "question": "¿Cómo se selecciona una columna específica en un DataFrame de Pandas?",
+        "answers": [
+            [
+                ".select_column()",
+                false
+            ],
+            [
+                ".get_column()",
+                false
+            ],
+            [
+                ".column()",
+                false
+            ],
+            [
+                ".loc[] o .iloc[]",
+                true
+            ]
+        ],
+        "correct_answer": ".loc[] o .iloc[]"
+    },
+    {
+        "question": "¿Cómo se seleccionan filas específicas en un DataFrame de Pandas?",
+        "answers": [
+            [
+                ".select_rows()",
+                false
+            ],
+            [
+                ".get_rows()",
+                false
+            ],
+            [
+                ".rows()",
+                false
+            ],
+            [
+                ".loc[] o .iloc[]",
+                true
+            ]
+        ],
+        "correct_answer": ".loc[] o .iloc[]"
+    },
+    {
+        "question": "¿Cómo se realiza una operación de agregación en un DataFrame de Pandas?",
+        "answers": [
+            [
+                ".group_by()",
+                true
+            ],
+            [
+                ".aggregate()",
+                false
+            ],
+            [
+                ".summarize()",
+                false
+            ],
+            [
+                ".transform()",
+                false
+            ]
+        ],
+        "correct_answer": ".group_by()"
+    },
+    {
+        "question": "¿Cómo se elimina una columna de un DataFrame de Pandas?",
+        "answers": [
+            [
+                ".delete()",
+                false
+            ],
+            [
+                ".drop()",
+                true
+            ],
+            [
+                ".remove()",
+                false
+            ],
+            [
+                ".erase()",
+                false
+            ]
+        ],
+        "correct_answer": ".drop()"
+    },
+    {
+        "question": "¿Qué es la transposición de un DataFrame en Pandas?",
+        "answers": [
+            [
+                "Es una operación que intercambia las filas y las columnas del DataFrame.",
+                true
+            ],
+            [
+                "Es una operación que convierte un DataFrame en un objeto de tipo lista.",
+                false
+            ],
+            [
+                "Es una operación que elimina todas las filas y columnas con valores nulos.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una operación que intercambia las filas y las columnas del DataFrame."
+    },
+    {
+        "question": "¿Cómo se pueden combinar dos DataFrames en Pandas?",
+        "answers": [
+            [
+                "Se pueden combinar utilizando el método merge().",
+                true
+            ],
+            [
+                "Se pueden combinar utilizando el método transpose().",
+                false
+            ],
+            [
+                "Se pueden combinar utilizando el método sort_values().",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Se pueden combinar utilizando el método merge()."
+    },
+    {
+        "question": "¿Qué es la conversión de tipos de datos en Pandas?",
+        "answers": [
+            [
+                "Es una operación que cambia el tipo de dato de una columna o serie de un DataFrame.",
+                true
+            ],
+            [
+                "Es una operación que elimina las columnas y filas con valores nulos de un DataFrame.",
+                false
+            ],
+            [
+                "Es una operación que filtra un DataFrame en función de una condición.",
+                false
+            ],
+            [
+                "Ninguna de las anteriores.",
+                false
+            ]
+        ],
+        "correct_answer": "Es una operación que cambia el tipo de dato de una columna o serie de un DataFrame."
+    }
+]
