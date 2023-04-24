@@ -1,3 +1,6 @@
 /links
 /drivers
+/datasets
 *.txt
+*.pdf
+*json

@@ -1,204 +1,537 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
 </head>
 
 <body>
-    <div class="container mt-5">
-        <div class="card">
-            <h1 class="card-header mb-4">Quiz
-            </h1>
-            <div class="card-body">
-                <form>
-                    <div class="form-group row">
-                        <label class="form-label col-12 col-md-4" for="jsonFile">Selecciona un archivo JSON:</label>
-                        <div class="col-12 col-md-8">
-                            <input type="file" class="form-control-file" id="file" title="Fichero" accept=".json">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="form-label col-12 col-md-4" for="quantity">Número de preguntas al
-                            azar:</label>
-                        <div class="col-12 col-md-6">
-                            <input type="number" class="form-control" id="quantity" min="1" value="10">
-                        </div>
-                        <div class="col-12 col-md-2">
-                            <button type="button" class="btn btn-primary btn-block" id="generateBtn">Generar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="card mt-5" id="main">
-            <div class="card">
-                <h5 id="title" class="card-header mb-0"></h5>
 
-                <div id="body" class="card-body">
-                    <div class="row">
-                        <div class="col-md-9 mb-2">
-                            <p class="card-text" id="text"></p>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="btn-group w-100 justify-content-end mb-3">
-                                <button title="Anterior" type="button" class="btn btn-primary mr-2" id="prevBtn"><i
-                                        class="fas fa-arrow-left"></i></button>
-                                <button title="Siguiente" type="button" class="btn btn-primary ml-2" id="nextBtn"><i
-                                        class="fas fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="list-group" id="answers">
-                        </div>
-                    </div>
+  <main class="container mt-4">
+
+    <div class="card">
+      <h5 class="card-header">
+        Quiz
+      </h5>
+
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h6 class="card-title">
+            Configuración del cuestionario
+          </h6>
+          <div class="form-check form-switch form-check-reverse fw-semibold">
+            <input id="dark-switch" class="form-check-input" type="checkbox" role="switch" title="Dark">
+            <label for="dark-switch" class="form-check-label">Dark</label>
+          </div>
+        </div>
+        <p class="card-text text-muted">
+          Selecciona uno o varios archivos JSON con el formato correcto y elige la categoría y la cantidad
+          de preguntas.
+        </p>
+
+        <form class="mt-4">
+          <div class="row">
+            <div class="col">
+              <div class="input-group">
+                <input id="file" class="form-control" type="file" accept=".json" title="Archivo" multiple>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <div class="form-group">
+                <select id="categories" class="form-select" title="Categoría" disabled></select>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="form-group">
+                <input id="quantity" class="form-control" type="number" min="1" value="10" placeholder="Preguntas"
+                  title="Preguntas" disabled>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="form-group">
+                <div class="input-group">
+                  <button id="generateButton" class="btn btn-dark" type="button" title="Generar" disabled>
+                    Generar
+                  </button>
                 </div>
-
-
+              </div>
             </div>
+          </div>
+        </form>
+
+      </div>
+
+      <div class="card-footer">
+        <div class="float-end">
+          <a class="text-reset text-decoration-none me-2" title="Discord" target="_blank" rel="noopener noreferrer"
+            href="https://discordapp.com/users/582980625112367104">
+            <i class="bi bi-discord"></i>
+          </a>
+          <a class="text-reset text-decoration-none" title="GitHub" target="_blank" rel="noopener noreferrer"
+            href="https://github.com/verteramo/quiz">
+            <i class="bi bi-github"></i>
+          </a>
         </div>
+      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script>
-        // Copyright 2022 @verteramo
-        // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-        // The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-        // THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    <div id="question-card" class="card mt-4">
+      <h5 id="question-card-header" class="card-header">
+        question-card-header
+      </h5>
 
-        $(document).ready(function () {
-            $("#main").hide();
+      <div class="card-body">
+        <div class="d-flex justify-content-between mb-3">
+          <h6 id="question-card-title" class="card-title">
+            question-card-title
+          </h6>
+          <div id="nav-buttons" class="btn-group" role="group">
+            <button id="prev-button" class="btn btn-dark" type="button" title="Anterior">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <button id="clipboard-button" class="btn btn-dark" type="button" title="Copiar">
+              <i class="bi bi-clipboard"></i>
+            </button>
+            <div class="btn-group dropup" role="group">
+              <button id="search-button" class="btn btn-dark" type="button" title="Buscar" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-search"></i>
+              </button>
+              <ul class="dropdown-menu" style="min-width: 1%;">
+                <li><a id="duck-button" class="dropdown-item" href="#" title="DuckDuckGo"><i
+                      class="cib-duckduckgo"></i></a></li>
+                <li><a id="google-button" class="dropdown-item" href="#" title="Google"><i class="cib-google"></i></a>
+                </li>
+                <li><a id="bing-button" class="dropdown-item" href="#" title="Bing"><i class="cib-bing"></i></a></li>
+              </ul>
+            </div>
+            <button id="next-button" class="btn btn-dark" type="button" title="Siguiente">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <p id="question-card-text" class="card-text text-muted">
+          question-card-text
+        </p>
+        <ul id="question-card-list" class="list-group">
+          <li class="list-group-item">
+            question-card-list-item
+          </li>
+        </ul>
+      </div>
+    </div>
 
-            var questions = [];
-            var userAnswers = [];
-            var current = 0;
+    <div id="results-card" class="card mt-4">
 
-            function shuffle(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-                return array;
-            }
+      <h5 class="card-header">
+        Resultados
+      </h5>
 
-            $("#generateBtn").click(function () {
-                var file = $("#file")[0].files[0];
-                if (file) {
-                    var reader = new FileReader();
-                    reader.onload = function (e) {
-                        try {
-                            questions = shuffle(
-                                JSON.parse(e.target.result)
-                            ).slice(0, $("#quantity").val());
+      <div class="card-body">
+        <h6 id="results-card-title" class="card-title">
+          result-card-title
+        </h6>
+        <div id="results-card-cards">
+          results-card-cards
+        </div>
+      </div>
 
-                            current = 0;
+    </div>
 
-                            questions.forEach(function (question) {
-                                question.answers = shuffle(question.answers);
-                            });
+  </main>
 
-                            changeQuestion();
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="toast" class="toast align-items-center text-bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+        <div id="toast-body" class="toast-body">
+          toast-body
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
 
-                            $("#main").show();
-                        } catch (ex) {
-                            console.log("El archivo no es válido: " + ex.message);
-                        }
-                    }
-                    reader.readAsText(file);
-                }
-                else {
-                    console.log("Selecciona un archivo JSON");
-                }
-            });
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"></script>
+  <script>
+    // Copyright 2022 @verteramo
+    // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    // The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    // THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-            $("#nextBtn").click(function () {
-                current++;
-                changeQuestion();
-            });
+    $(document).ready(function () {
+      var data;
+      var current;
+      var questions;
+      var userAnswers;
 
-            $("#prevBtn").click(function () {
-                current--;
-                changeQuestion();
-            });
+      //$("#question-card").hide();
+      //$("#results-card").hide();
 
-            $("#marksBtn").click(function () {
-                showResults();
-            });
+      /**
+       * Baraja un array
+       */
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
 
-            function showResults() {
-                $("#prevBtn").prop("disabled", true);
-                $("#nextBtn").prop("disabled", true);
+      /**
+       * Habilita el formulario
+       */
+      function enableForm() {
+        $("#quantity").removeAttr("disabled");
+        $("#categories").removeAttr("disabled");
+        $("#generateButton").removeAttr("disabled");
+      }
 
-                $("#title").text("Resultados");
-                $("#text").text("Puntuación: " + score + "/" + questions.length);
+      /**
+       * Deshabilita el formulario
+       */
+      function disableForm() {
+        $("#categories").empty();
+        $("#quantity").attr("disabled", "disabled");
+        $("#categories").attr("disabled", "disabled");
+        $("#generateButton").attr("disabled", "disabled");
+      }
 
-                $("#answers").empty();
+      function showToast(message) {
+        $("#toast-body").text(message);
+        (new bootstrap.Toast($("#toast")[0])).show();
+      }
 
-                questions.forEach(function (answer, index) {
-                    console.log("hola");
+      /**
+       * Switch dark mode
+       */
+      $("#dark-switch").change(function () {
+        if ($(this).is(":checked")) {
+          $("html").attr("data-bs-theme", "dark");
+        } else {
+          $("html").removeAttr("data-bs-theme");
+        }
+      });
 
-                    var buttonClass = userAnswers[index] == questions[index].correct_answer ? "list-group-item list-group-item-success flex-column align-items-start" : "list-group-item list-group-item-danger flex-column align-items-start";
+      /**
+       * Cambio de fichero
+       */
+      $("#file").change(function () {
+        var files = $(this)[0].files;
 
-                    var button = $("button", {
-                        class: buttonClass
-                    }).append($("div", {
-                        class: "d-flex w-100 justify-content-between"
-                    }).append($("h5", {
-                        class: "mb-1",
-                        text: questions[index].question
-                    })).append($("small", {
-                        text: userAnswers[index] == questions[index].correct_answer ? "Correcto" : "Incorrecto"
-                    })));
+        if (files.length) {
+          // Si se ha seleccionado algún fichero, se sobrescribe el objeto data
+          data = {};
+          Array.from(files).forEach(file => {
+            var reader = new FileReader();
 
-                    $("#answers").append(button);
-                });
-            }
+            reader.onload = event => {
+              result = JSON.parse(event.target.result);
 
-            function changeQuestion() {
-                if (current <= 0) {
-                    current = 0;
-                }
-                else if (current >= questions.length) {
-                    current = questions.length - 1;
-                }
+              // Por cada fichero, se añaden las categorías al objeto data
+              data = { ...data, ...result, };
 
-                $("#title").text("Pregunta " + (current + 1) + " de " + questions.length);
-                $("#text").text(questions[current].question);
+              Object.keys(data).forEach(category => {
+                $("#categories").append($("<option>", {
+                  value: category,
+                  text: category
+                }));
+              });
+            };
 
-                $("#answers").empty();
+            reader.readAsText(file);
+          });
+          enableForm();
+        } else {
+          disableForm();
+        }
+      });
 
-                questions[current].answers.
-                    forEach(function (answer) {
-                        var button = $("<button>", {
-                            type: "button",
-                            class: "list-group-item list-group-item-action answer-btn",
-                            text: answer[0]
-                        }).click(function () {
-                            userAnswers[current] = $(this).text();
-                            $(".answer-btn").removeClass("active");
-                            $(this).addClass("active");
-                        })
+      /**
+       * Botón de generar
+       */
+      $("#generateButton").click(function () {
+        var category = $("#categories").val();
+        var quantity = $("#quantity").val();
 
-                        if (userAnswers[current] === answer[0]) {
-                            button.addClass("active");
-                        }
+        current = 0;
+        userAnswers = [];
 
-                        $("#answers").append(button);
-                    });
-
-                $("#prevBtn").prop("disabled", current <= 0);
-                $("#nextBtn").prop("disabled", current > questions.length - 1);
-            }
+        // Se barajan las preguntas y se seleccionan las n primeras
+        questions = shuffle(data[category]).slice(0, quantity);
+        questions.forEach(question => {
+          if (question.answer instanceof Array) {
+            question.answer = shuffle(question.answer);
+          }
         });
-    </script>
+
+        // Se cambia el título de la tarjeta
+        $("#question-card-header").text($("#categories").text());
+
+        // Se cambia de pregunta
+        changeQuestion();
+      });
+
+      /**
+       * Siguiente pregunta
+       */
+      $("#next-button").click(function () {
+        current++;
+        changeQuestion();
+      });
+
+      /**
+       * Anterior pregunta
+       */
+      $("#prev-button").click(function () {
+        current--;
+        changeQuestion();
+      });
+
+      /**
+       * Botón de copiar
+       */
+      $("#clipboard-button").click(function () {
+        navigator.clipboard.writeText($("#question-card-text").text().trim()).then(() => {
+          showToast("Pregunta copiada al portapapeles.");
+        }, () => {
+          showToast("No se ha podido copiar la pregunta al portapapeles.");
+        });
+      });
+
+      /**
+       * Buscar en DuckDuckGo
+       */
+      $("#duck-button").click(function () {
+        window.open(`https://duckduckgo.com/?q=${$("#question-card-text").text().trim()}`, "_blank");
+      });
+
+      /**
+       * Buscar en Google
+       */
+      $("#google-button").click(function () {
+        window.open(`https://www.google.com/search?q=${$("#question-card-text").text().trim()}`, "_blank");
+      });
+
+      /**
+       * Buscar en Bing
+       */
+      $("#bing-button").click(function () {
+        window.open(`https://www.bing.com/search?q=${$("#question-card-text").text().trim()}`, "_blank");
+      });
+
+      /**
+       * Respueta simple
+       */
+      function createSingleAnswer(index, answer) {
+        return $("<li>", {
+          class: "answer-btn list-group-item d-flex",
+        }).append($("<input>", {
+          id: `answer-${current}-${index}`,
+          type: "radio",
+          name: `question-${current}`,
+          class: "form-check-input me-2 col-2",
+          checked: userAnswers[current] === answer,
+        })).append($("<label>", {
+          for: `answer-${current}-${index}`,
+          class: "form-check-label stretched-link",
+          text: answer,
+          click: function () {
+            userAnswers[current] = answer;
+          },
+        }));
+      }
+
+      /**
+       * Respueta múltiple
+       */
+      function createMultipleAnswer(index, answer) {
+        return $("<li>", {
+          class: "answer-btn list-group-item d-flex",
+        }).append($("<input>", {
+          id: `answer-${current}-${index}`,
+          type: "checkbox",
+          class: "form-check-input me-2 col-2",
+          checked:
+            userAnswers[current] instanceof Array &&
+            userAnswers[current].includes(answer),
+        })).append($("<label>", {
+          for: `answer-${current}-${index}`,
+          class: "form-check-label stretched-link",
+          text: answer,
+          click: function () {
+            if (userAnswers[current] instanceof Array) {
+              if (userAnswers[current].includes(answer)) {
+                userAnswers[current].splice(userAnswers[current].indexOf(answer), 1);
+              }
+              else {
+                userAnswers[current].push(answer);
+              }
+            }
+            else {
+              userAnswers[current] = [answer];
+            }
+          },
+        }));
+      }
+
+      /**
+       * Respueta abierta
+       */
+      function createOpenAnswer() {
+        return $("<div>", {
+          class: "form-floating",
+        }).append($("<textarea>", {
+          id: `answer-${current}`,
+          type: "text",
+          class: "form-control",
+          placeholder: "Respuesta",
+          keyup: e => userAnswers[current] = e.target.value,
+        }).text(
+          userAnswers[current]
+        )).append($("<label>", {
+          for: `answer-${current}`,
+          text: "Respuesta",
+        }));
+      }
+
+      function changeQuestion() {
+        if ($("#question-card").is(":hidden")) {
+          $("#question-card").show();
+        }
+
+        if ($("#results-card").is(":visible")) {
+          $("#results-card").hide();
+        }
+
+        if (current >= questions.length) {
+          showResults();
+        }
+        else {
+          if (current < questions.length - 1) {
+            $("#next-button").html($("<i>", {
+              class: "bi bi-arrow-right",
+            })).prop("title", "Siguiente");
+          }
+          else {
+            $("#next-button").html($("<i>", {
+              class: "bi bi-patch-check",
+            })).prop("title", "Finalizar");
+          }
+
+          $("#prev-button").prop("disabled", current == 0);
+          $("#question-card-title").text(`Pregunta ${current + 1} de ${questions.length}`);
+
+          let [question, answer] = questions[current];
+
+          $("#question-card-text").text(question);
+          $("#question-card-list").empty();
+          if (answer instanceof Array) {
+            // Multiple choice
+            if (answer.filter(answer => answer[1] === true).length > 1) {
+              answer.forEach((answer, index) => {
+                $("#question-card-list").append(createMultipleAnswer(index, answer[0]));
+              });
+            }
+            // Single choice
+            else {
+              answer.forEach((answer, index) => {
+                $("#question-card-list").append(createSingleAnswer(index, answer[0]));
+              });
+            }
+          }
+          else {
+            switch (typeof answer) {
+              case "boolean":
+                $("#question-card-list").append(createSingleAnswer(0, "Verdadero"));
+                $("#question-card-list").append(createSingleAnswer(1, "Falso"));
+                break;
+              case "string":
+                $("#question-card-list").append(createOpenAnswer());
+                break;
+            }
+          }
+        }
+      }
+
+      function showResults() {
+        $("#question-card").hide();
+
+        var correctAnswers = 0;
+
+        questions.forEach((question, index) => {
+          var answer = question.answer;
+          var userAnswer = userAnswers[index];
+
+          if (answer instanceof Array) {
+            if (answer.includes(userAnswer)) {
+              correctAnswers++;
+            }
+          }
+          else {
+            if (answer == userAnswer) {
+              correctAnswers++;
+            }
+          }
+        });
+
+        $("#results-card-title").text(`Resultado: ${correctAnswers}/${questions.length}`);
+
+        $("#results-card-cards").empty();
+
+        questions.forEach((question, index) => {
+          var answer = question.answer;
+          var userAnswer = userAnswers[index];
+
+          var answerResult = $("<div>", {
+            class: "card mb-3",
+          }).append($("<h6>", {
+            class: "card-header",
+            text: `Pregunta ${index + 1}`,
+          })).append($("<div>", {
+            class: "card-body",
+          }).append($("<p>", {
+            class: "card-title",
+            text: question.text,
+          })).append($("<p>", {
+            class: "card-text",
+            text: `Respuesta: ${userAnswer}`,
+          })));
+
+          if (answer instanceof Array) {
+            if (answer.includes(userAnswer)) {
+              answerResult.addClass("bg-success-subtle");
+            }
+            else {
+              answerResult.addClass("bg-danger-subtle");
+            }
+          }
+          else {
+            if (answer == userAnswer) {
+              answerResult.addClass("bg-success-subtle");
+            }
+            else {
+              answerResult.addClass("bg-danger-subtle");
+            }
+          }
+
+          $("#results-card-cards").append(answerResult);
+        });
+
+        $("#results-card").show();
+      }
+    });
+  </script>
 </body>
 
 </html>
