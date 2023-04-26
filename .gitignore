@@ -3,4 +3,5 @@
 /datasets
 *.txt
 *.pdf
-*json
+*.json
+*.yaml

@@ -20,47 +20,49 @@
       </h5>
 
       <div class="card-body">
-        <div class="d-flex justify-content-between">
-          <h6 class="card-title">
-            Configuración del cuestionario
-          </h6>
-          <div class="form-check form-switch form-check-reverse fw-semibold">
-            <input id="dark-switch" class="form-check-input" type="checkbox" role="switch" title="Dark">
-            <label for="dark-switch" class="form-check-label">Dark</label>
+        <div class="row">
+          <div class="d-flex justify-content-between">
+            <h6 class="card-title">
+              Configuración del cuestionario
+            </h6>
+            <div class="form-check form-switch form-check-reverse fw-semibold">
+              <input id="dark-switch" class="form-check-input" type="checkbox" role="switch" title="Dark">
+              <label for="dark-switch" class="form-check-label">Dark</label>
+            </div>
           </div>
         </div>
-        <p class="card-text text-muted">
-          Selecciona uno o varios archivos JSON con el formato correcto y elige la categoría y la cantidad
-          de preguntas.
-        </p>
+        <div class="row">
+          <p class="card-text text-muted">
+            Selecciona uno o varios archivos JSON con el formato correcto, elige la categoría, la cantidad
+            de preguntas y pulsa en <i>Generar</i>.
+          </p>
+        </div>
 
         <form class="mt-4">
-          <div class="row">
+          <div class="row mb-3">
             <div class="col">
-              <div class="input-group">
+              <div class="form-group">
                 <input id="file" class="form-control" type="file" accept=".json" title="Archivo" multiple>
               </div>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col">
+          <div class="row">
+            <div class="col-md-8 mb-3">
               <div class="form-group">
                 <select id="categories" class="form-select" title="Categoría" disabled></select>
               </div>
             </div>
-            <div class="col-2">
+            <div class="col">
               <div class="form-group">
-                <input id="quantity" class="form-control" type="number" min="1" value="10" placeholder="Preguntas"
+                <input id="quantity" class="form-control" type="number" min="1" value="2" placeholder="Preguntas"
                   title="Preguntas" disabled>
               </div>
             </div>
             <div class="col-auto">
               <div class="form-group">
-                <div class="input-group">
-                  <button id="generateButton" class="btn btn-dark" type="button" title="Generar" disabled>
-                    Generar
-                  </button>
-                </div>
+                <button id="generateButton" class="btn btn-dark" type="button" title="Generar" disabled>
+                  Generar
+                </button>
               </div>
             </div>
           </div>
@@ -69,7 +71,7 @@
       </div>
 
       <div class="card-footer">
-        <div class="float-end">
+        <div class="float-end text-muted">
           <a class="text-reset text-decoration-none me-2" title="Discord" target="_blank" rel="noopener noreferrer"
             href="https://discordapp.com/users/582980625112367104">
             <i class="bi bi-discord"></i>
@@ -120,11 +122,9 @@
         <p id="question-card-text" class="card-text text-muted">
           question-card-text
         </p>
-        <ul id="question-card-list" class="list-group">
-          <li class="list-group-item">
-            question-card-list-item
-          </li>
-        </ul>
+        <div id="question-card-answer">
+          question-card-answer
+        </div>
       </div>
     </div>
 
@@ -150,9 +150,7 @@
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div id="toast" class="toast align-items-center text-bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="d-flex">
-        <div id="toast-body" class="toast-body">
-          toast-body
-        </div>
+        <div id="toast-body" class="toast-body"></div>
         <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
           aria-label="Close"></button>
       </div>
@@ -168,24 +166,393 @@
     // The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     // THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+
+      return array;
+    }
+
+    class Dataset {
+      constructor() {
+        this.data = {};
+      }
+
+      add(data) {
+        this.data = { ...this.data, ...data };
+      }
+
+      forEachCategory(callback) {
+        return Object.keys(this.data).forEach(callback);
+      }
+
+      generate(category, quantity) {
+        return shuffle(this.data[category]).
+          slice(0, quantity).
+          map(([text, answer]) =>
+            new Question(text, answer instanceof Array ? shuffle(answer) : answer)
+          );
+      }
+    }
+
+    class Question {
+      /**
+       * @param {string} text
+       * @param {Answer} answer
+       */
+      constructor(text, answer) {
+        this.text = text;
+        this.answer = new Answer(answer);
+      }
+
+      /**
+       * @returns {string}
+       */
+      getText() {
+        return this.text;
+      }
+
+      /**
+       * @returns {Answer}
+       */
+      getAnswer() {
+        return this.answer;
+      }
+    }
+
+    class Answer {
+      /**
+       * @param {string|boolean|Array} data
+       */
+      constructor(data) {
+        this.data = data;
+      }
+
+      /**
+       * @returns {boolean}
+       */
+      isString() {
+        return typeof this.data === "string";
+      }
+
+      /**
+       * @returns {boolean}
+       */
+      isBoolean() {
+        return typeof this.data === "boolean";
+      }
+
+      /**
+       * @returns {boolean}
+       */
+      isMatching() {
+        return this.data instanceof Array &&
+          this.data.some(answer => answer.length === 3);
+      }
+
+      /**
+       * @returns {Array}
+       */
+      getOptions() {
+        return this.data.map(([, option]) => option);
+      }
+
+      /**
+       * @returns {boolean}
+       */
+      isSingle() {
+        return this.data instanceof Array &&
+          this.data.filter(([, truth]) => truth).length === 1;
+      }
+
+      check(userAnswer) {
+        // Si es un string o un booleano, se compara directamente
+        if (this.isSingle() || this.isBoolean()) {
+          return this.data === userAnswer;
+        }
+
+        // Si es un matching
+        // Suponiendo que el valor de la respuesta es:  [1, 2, 3, 4]
+        // Y el valor de la respuesta del usuario es:   [2, 1, 4, 3]
+        // Se compara cada elemento de la respuesta con el elemento
+        // de la respuesta del usuario que se encuentra en la misma posición
+        else if (this.isMatching()) {
+          return this.data.every(([, answer, truth], index) => truth && answer === userAnswer[index]);
+        }
+
+        // Si es una respuesta de tipo singular
+        else if (this.isSingle()) {
+          return this.data.find(([, truth]) => truth)[0] === userAnswer;
+        }
+
+        // Si es una respuesta de tipo múltiple
+        return this.data.every(([answer, truth]) => truth && userAnswer.includes(answer));
+      }
+
+      getRight() {
+        if (this.isString() || this.isBoolean()) {
+          return this.data;
+        }
+        else if (this.isMatching()) {
+          return this.data.map(([answer, truth]) => `${answer} -> ${truth}.`).join(", ");
+        }
+        else if (this.isSingle()) {
+          return this.data.find(([, truth]) => truth)[0];
+        }
+        return this.data.filter(([, truth]) => truth).map(([truth]) => `${truth}.`).join(", ");
+      }
+    }
+
     $(document).ready(function () {
       var data;
       var current;
       var questions;
       var userAnswers;
 
-      //$("#question-card").hide();
-      //$("#results-card").hide();
+      /**
+       * @type {Dataset}
+       */
+      let dataset;
 
       /**
-       * Baraja un array
+       * Cambio de fichero
        */
-      function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [array[i], array[j]] = [array[j], array[i]];
+      $("#file").change(function () {
+        dataset = new Dataset();
+        var files = $(this)[0].files;
+
+        if (files.length) {
+          Array.from(files).forEach(file => {
+            var reader = new FileReader();
+            reader.onload = event => {
+              $("#categories").empty();
+
+              dataset.add(JSON.parse(event.target.result));
+              dataset.forEachCategory(category => $("#categories").append($("<option>", { value: category, text: category })));
+            };
+            reader.readAsText(file);
+          });
+          enableForm();
+        } else {
+          disableForm();
         }
-        return array;
+      });
+
+      /**
+       * Botón de generar
+       */
+      $("#generateButton").click(function () {
+        current = 0;
+        userAnswers = [];
+
+        questions = dataset.generate(
+          $("#categories").val(),
+          $("#quantity").val()
+        );
+
+        $("#question-card-header").text($("#categories").val());
+
+        changeQuestion();
+      });
+
+      function getTextBox({
+        id, type, text, placeholder, keyup,
+      }) {
+        return $("<div>", {
+          class: "form-floating",
+        }).append($("<textarea>", {
+          id: `answer-${id}`,
+          type: type,
+          class: "form-control",
+          keyup: keyup,
+        }).text(
+          text || ""
+        )).append($("<label>", {
+          for: `answer-${id}`,
+          text: placeholder,
+        }))
+      }
+
+      function getListItem({
+        id, type, text, checked, click,
+      }) {
+        return $("<li>", {
+          class: "list-group-item d-flex",
+        }).append($("<input>", {
+          id: `${type}-${current}-${id}`,
+          type: type,
+          name: `${type}-${current}`,
+          class: "form-check-input me-2 col-2",
+          checked: checked,
+        })).append($("<label>", {
+          for: `${type}-${current}-${id}`,
+          class: "form-check-label stretched-link",
+          text: text,
+          click: click,
+        }));
+      }
+
+      function getItemList(...items) {
+        return $("<ul>", {
+          class: "list-group",
+        }).append(items.map(item => getListItem(item)));
+      }
+
+      function getSelect({
+        id, text, options
+      }) {
+        return $("<div>", {
+          class: "form-group",
+        }).append($("<label>", {
+          for: `select-${current}-${id}`,
+          class: "form-label form-label-sm small text-muted",
+          text: text,
+        })).append($("<select>", {
+          id: `select-${current}-${id}`,
+          class: "form-select form-select-sm",
+          change: function () {
+            if (!(userAnswers[current] instanceof Array)) {
+              userAnswers[current] = Array(options.length).fill(null);
+            }
+
+            userAnswers[current][id] = $(this).val();
+          },
+        }).append($("<option>", {
+          disabled: true,
+          selected: true,
+          text: "Selecciona una opción",
+        })).append(options.map(option => $("<option>", {
+          value: option,
+          text: option,
+          selected:
+            userAnswers[current] instanceof Array &&
+            userAnswers[current][id] === option,
+        }))));
+      }
+
+      function getSelectList(...selects) {
+        return $("<div>", {
+          class: "d-flex flex-column",
+        }).append(selects.map(select => getSelect(select)));
+      }
+
+      function getBootstrapIcon(name, title) {
+        return $("<i>", {
+          class: `bi bi-${name}`,
+          title: title,
+        });
+      }
+
+      /**
+       * Cambio de pregunta
+       */
+      function changeQuestion() {
+        if ($("#question-card").is(":hidden")) {
+          $("#question-card").show();
+        }
+
+        if ($("#results-card").is(":visible")) {
+          $("#results-card").hide();
+        }
+
+        if (current >= questions.length) {
+          showResults();
+        }
+        else {
+          if (current === questions.length - 1) {
+            $("#next-button").html(getBootstrapIcon("mortarboard", "Finalizar"));
+          }
+          else {
+            $("#next-button").html(getBootstrapIcon("arrow-right", "Siguiente"));
+          }
+
+          $("#prev-button").prop("disabled", current == 0);
+          $("#question-card-title").text(`Pregunta ${current + 1} de ${questions.length}`);
+
+          //let [question, answer] = questions[current];
+
+          let question = questions[current];
+
+          $("#question-card-text").text(question.getText());
+          $("#question-card-answer").empty();
+
+          let answer = question.getAnswer();
+
+          // Si la respuesta es un string
+          if (answer.isString()) {
+            $("#question-card-answer").append(getTextBox({
+              id: current,
+              type: "text",
+              text: userAnswers[current],
+              placeholder: "Respuesta",
+              keyup: e => userAnswers[current] = e.target.value,
+            }));
+          }
+
+          // Si la respuesta es true/false
+          else if (answer.isBoolean()) {
+            $("#question-card-answer").append(getItemList(
+              {
+                id: 0,
+                type: "radio",
+                text: "Verdadero",
+                checked: userAnswers[current] === true,
+                click: e => userAnswers[current] = true,
+              },
+              {
+                id: 1,
+                type: "radio",
+                text: "Falso",
+                checked: userAnswers[current] === false,
+                click: e => userAnswers[current] = false,
+              }));
+          }
+
+          // Si la respuesta es de emparejamiento
+          else if (answer.isMatching()) {
+            let options = answer.data.map(([, option]) => option).sort();
+            $("#question-card-answer").append(getSelectList(
+              ...answer.data.map(([answer], index) => ({
+                id: index,
+                text: answer,
+                options: options,
+              }))));
+          }
+
+          // Si la respuesta es de selección única
+          else if (answer.isSingle()) {
+            $("#question-card-answer").append(getItemList(
+              ...answer.data.map(([answer], index) => ({
+                id: index,
+                type: "radio",
+                text: answer,
+                checked: userAnswers[current] === index,
+                click: e => userAnswers[current] = index,
+              }))));
+          }
+
+          // Si la respuesta es de selección múltiple
+          else {
+            $("#question-card-answer").append(getItemList(
+              ...answer.data.map(([answer], index) => ({
+                id: index,
+                type: "checkbox",
+                text: answer,
+                checked:
+                  userAnswers[current] instanceof Array &&
+                  userAnswers[current][index] === true,
+                click: e => {
+                  if (!(userAnswers[current] instanceof Array)) {
+                    userAnswers[current] = Array(answer.data.length).fill(null);
+                  }
+                  userAnswers[current][index] = e.target.checked;
+                },
+              })),
+            ));
+          }
+        }
       }
 
       /**
@@ -221,65 +588,6 @@
         } else {
           $("html").removeAttr("data-bs-theme");
         }
-      });
-
-      /**
-       * Cambio de fichero
-       */
-      $("#file").change(function () {
-        var files = $(this)[0].files;
-
-        if (files.length) {
-          // Si se ha seleccionado algún fichero, se sobrescribe el objeto data
-          data = {};
-          Array.from(files).forEach(file => {
-            var reader = new FileReader();
-
-            reader.onload = event => {
-              result = JSON.parse(event.target.result);
-
-              // Por cada fichero, se añaden las categorías al objeto data
-              data = { ...data, ...result, };
-
-              Object.keys(data).forEach(category => {
-                $("#categories").append($("<option>", {
-                  value: category,
-                  text: category
-                }));
-              });
-            };
-
-            reader.readAsText(file);
-          });
-          enableForm();
-        } else {
-          disableForm();
-        }
-      });
-
-      /**
-       * Botón de generar
-       */
-      $("#generateButton").click(function () {
-        var category = $("#categories").val();
-        var quantity = $("#quantity").val();
-
-        current = 0;
-        userAnswers = [];
-
-        // Se barajan las preguntas y se seleccionan las n primeras
-        questions = shuffle(data[category]).slice(0, quantity);
-        questions.forEach(question => {
-          if (question.answer instanceof Array) {
-            question.answer = shuffle(question.answer);
-          }
-        });
-
-        // Se cambia el título de la tarjeta
-        $("#question-card-header").text($("#categories").text());
-
-        // Se cambia de pregunta
-        changeQuestion();
       });
 
       /**
@@ -330,208 +638,107 @@
         window.open(`https://www.bing.com/search?q=${$("#question-card-text").text().trim()}`, "_blank");
       });
 
-      /**
-       * Respueta simple
-       */
-      function createSingleAnswer(index, answer) {
-        return $("<li>", {
-          class: "answer-btn list-group-item d-flex",
-        }).append($("<input>", {
-          id: `answer-${current}-${index}`,
-          type: "radio",
-          name: `question-${current}`,
-          class: "form-check-input me-2 col-2",
-          checked: userAnswers[current] === answer,
-        })).append($("<label>", {
-          for: `answer-${current}-${index}`,
-          class: "form-check-label stretched-link",
-          text: answer,
-          click: function () {
-            userAnswers[current] = answer;
-          },
-        }));
-      }
-
-      /**
-       * Respueta múltiple
-       */
-      function createMultipleAnswer(index, answer) {
-        return $("<li>", {
-          class: "answer-btn list-group-item d-flex",
-        }).append($("<input>", {
-          id: `answer-${current}-${index}`,
-          type: "checkbox",
-          class: "form-check-input me-2 col-2",
-          checked:
-            userAnswers[current] instanceof Array &&
-            userAnswers[current].includes(answer),
-        })).append($("<label>", {
-          for: `answer-${current}-${index}`,
-          class: "form-check-label stretched-link",
-          text: answer,
-          click: function () {
-            if (userAnswers[current] instanceof Array) {
-              if (userAnswers[current].includes(answer)) {
-                userAnswers[current].splice(userAnswers[current].indexOf(answer), 1);
-              }
-              else {
-                userAnswers[current].push(answer);
-              }
-            }
-            else {
-              userAnswers[current] = [answer];
-            }
-          },
-        }));
-      }
-
-      /**
-       * Respueta abierta
-       */
-      function createOpenAnswer() {
+      function getCard({
+        index, type, question
+      }) {
         return $("<div>", {
-          class: "form-floating",
-        }).append($("<textarea>", {
-          id: `answer-${current}`,
-          type: "text",
-          class: "form-control",
-          placeholder: "Respuesta",
-          keyup: e => userAnswers[current] = e.target.value,
-        }).text(
-          userAnswers[current]
-        )).append($("<label>", {
-          for: `answer-${current}`,
-          text: "Respuesta",
-        }));
+          class: "card",
+        }).append($("<h6>", {
+          class: "card-header",
+          text: `Pregunta ${index + 1} de ${questions.length}`,
+        })).append($("<div>", {
+          class: "card-body",
+        }).append($("<h6>", {
+          class: "card-title",
+          text: question.getText(),
+        })).append($("<p>", {
+          class: "card-text",
+          text: a,
+        })));
+      }));
       }
 
-      function changeQuestion() {
-        if ($("#question-card").is(":hidden")) {
-          $("#question-card").show();
+    function showResults() {
+      let correctAnswers = 0;
+
+      $("#results-card-cards").empty();
+
+      questions.forEach((question, index) => {
+        var answer = question.getAnswer();
+        var userAnswer = userAnswers[index];
+
+        if (answer.isString() && answer.data.toLowerCase() === userAnswer.toLowerCase()) {
+          correctAnswers++;
         }
 
-        if ($("#results-card").is(":visible")) {
-          $("#results-card").hide();
+        else if (answer.isBoolean() && answer.data === userAnswer) {
+          correctAnswers++;
         }
 
-        if (current >= questions.length) {
-          showResults();
+        else if (answer.isMatching()) {
+          var correct = true;
+          answer.data.forEach(([answer, option]) => {
+            if (userAnswer[answer] !== option) {
+              correct = false;
+            }
+          });
+          if (correct) {
+            correctAnswers++;
+          }
+        } else
+
+          if (answer instanceof Array) {
+            if (answer.includes(userAnswer)) {
+              correctAnswers++;
+            }
+          } else if (answer === userAnswer) {
+            correctAnswers++;
+          }
+      });
+
+      $("#results-card-title").text(`Resultado: ${correctAnswers}/${questions.length}`);
+      $("#question-card").hide();
+      $("#results-card").show();
+
+      questions.forEach((question, index) => {
+        var answer = question.answer;
+        var userAnswer = userAnswers[index];
+
+        var answerResult = $("<div>", {
+          class: "card mb-3",
+        }).append($("<h6>", {
+          class: "card-header",
+          text: `Pregunta ${index + 1}`,
+        })).append($("<div>", {
+          class: "card-body",
+        }).append($("<p>", {
+          class: "card-title",
+          text: question.text,
+        })).append($("<p>", {
+          class: "card-text",
+          text: `Respuesta: ${userAnswer}`,
+        })));
+
+        if (answer instanceof Array) {
+          if (answer.includes(userAnswer)) {
+            answerResult.addClass("bg-success-subtle");
+          }
+          else {
+            answerResult.addClass("bg-danger-subtle");
+          }
         }
         else {
-          if (current < questions.length - 1) {
-            $("#next-button").html($("<i>", {
-              class: "bi bi-arrow-right",
-            })).prop("title", "Siguiente");
+          if (answer == userAnswer) {
+            answerResult.addClass("bg-success-subtle");
           }
           else {
-            $("#next-button").html($("<i>", {
-              class: "bi bi-patch-check",
-            })).prop("title", "Finalizar");
-          }
-
-          $("#prev-button").prop("disabled", current == 0);
-          $("#question-card-title").text(`Pregunta ${current + 1} de ${questions.length}`);
-
-          let [question, answer] = questions[current];
-
-          $("#question-card-text").text(question);
-          $("#question-card-list").empty();
-          if (answer instanceof Array) {
-            // Multiple choice
-            if (answer.filter(answer => answer[1] === true).length > 1) {
-              answer.forEach((answer, index) => {
-                $("#question-card-list").append(createMultipleAnswer(index, answer[0]));
-              });
-            }
-            // Single choice
-            else {
-              answer.forEach((answer, index) => {
-                $("#question-card-list").append(createSingleAnswer(index, answer[0]));
-              });
-            }
-          }
-          else {
-            switch (typeof answer) {
-              case "boolean":
-                $("#question-card-list").append(createSingleAnswer(0, "Verdadero"));
-                $("#question-card-list").append(createSingleAnswer(1, "Falso"));
-                break;
-              case "string":
-                $("#question-card-list").append(createOpenAnswer());
-                break;
-            }
+            answerResult.addClass("bg-danger-subtle");
           }
         }
-      }
 
-      function showResults() {
-        $("#question-card").hide();
+        $("#results-card-cards").append(answerResult);
+      });
 
-        var correctAnswers = 0;
-
-        questions.forEach((question, index) => {
-          var answer = question.answer;
-          var userAnswer = userAnswers[index];
-
-          if (answer instanceof Array) {
-            if (answer.includes(userAnswer)) {
-              correctAnswers++;
-            }
-          }
-          else {
-            if (answer == userAnswer) {
-              correctAnswers++;
-            }
-          }
-        });
-
-        $("#results-card-title").text(`Resultado: ${correctAnswers}/${questions.length}`);
-
-        $("#results-card-cards").empty();
-
-        questions.forEach((question, index) => {
-          var answer = question.answer;
-          var userAnswer = userAnswers[index];
-
-          var answerResult = $("<div>", {
-            class: "card mb-3",
-          }).append($("<h6>", {
-            class: "card-header",
-            text: `Pregunta ${index + 1}`,
-          })).append($("<div>", {
-            class: "card-body",
-          }).append($("<p>", {
-            class: "card-title",
-            text: question.text,
-          })).append($("<p>", {
-            class: "card-text",
-            text: `Respuesta: ${userAnswer}`,
-          })));
-
-          if (answer instanceof Array) {
-            if (answer.includes(userAnswer)) {
-              answerResult.addClass("bg-success-subtle");
-            }
-            else {
-              answerResult.addClass("bg-danger-subtle");
-            }
-          }
-          else {
-            if (answer == userAnswer) {
-              answerResult.addClass("bg-success-subtle");
-            }
-            else {
-              answerResult.addClass("bg-danger-subtle");
-            }
-          }
-
-          $("#results-card-cards").append(answerResult);
-        });
-
-        $("#results-card").show();
-      }
+      $("#results-card").show();
+    }
     });
-  </script>
-</body>
-
-</html>
