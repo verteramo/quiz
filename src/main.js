@@ -2,45 +2,67 @@ import * as Core from "./core.js";
 import * as Document from "./document.js";
 
 $(document).ready(function () {
-    var data;
     var current;
     var questions;
     var userAnswers;
+
+    let test;
+
+    let categories = new Document.Select("#select-category");
+    let quantity = new Document.Element("#input-text-quantity");
+    let darkSwitch = new Document.Element("#dark-switch");
+    let nextButton = new Document.Element("#next-button");
+    let prevButton = new Document.Element("#prev-button");
+    let toast = new Document.Toast("#toast");
+
+    let fields = new Document.ElementGroup(
+        "#input-text-quantity",
+        "#select-category",
+        "#generate-button",
+    );
 
     /**
      * @type {Core.Dataset}
      */
     let dataset;
 
-    let categories = new Document.CategorySelect();
+    darkSwitch.onChange(e => {
+        if ($(e.target).is(":checked")) {
+            $("html").attr("data-bs-theme", "dark");
+        } else {
+            $("html").removeAttr("data-bs-theme");
+        }
+    });
 
     /**
      * Cambio de fichero
      */
-    $("#file").change(e => {
+    $("#input-file").change(e => {
+        categories.clear();
         if (e.target.files.length) {
-            Document.enableForm();
+            fields.enable();
             dataset = new Core.Dataset(e.target.files, category => categories.add(category));
         }
         else {
-            Document.disableForm();
+            fields.enable(false);
         }
     });
 
     /**
      * Botón de generar
      */
-    $("#generateButton").click(function () {
-        current = 0;
-        userAnswers = [];
+    $("#generate-button").click(e => {
+        test = dataset.generate(categories.value(), quantity.value(),);
+        changeQuestion();
+    });
 
-        questions = dataset.generate(
-            categories.selected(),
-            $("#quantity").val()
-        );
+    $("#next-button").click(e => {
+        test.next();
+        changeQuestion();
+    });
 
-        $("#question-card-header").text($("#categories").val());
-
+    $("#prev-button").click(e => {
+        test.prev();
         changeQuestion();
     });
 
@@ -48,35 +70,32 @@ $(document).ready(function () {
      * Cambio de pregunta
      */
     function changeQuestion() {
-        if (current >= questions.length) {
+        if (test.isFinished()) {
             showResults();
         }
         else {
-            if (current === questions.length - 1) {
-                Document.setNextButtonIcon("mortarboard", "Finalizar");
-            }
-            else {
-                Document.setNextButtonIcon("arrow-right", "Siguiente");
-            }
+            nextButton.icon(...(test.isLast()
+                ? ["check2", "Finalizar"]
+                : ["arrow-right", "Siguiente"]
+            ));
 
-            Document.enablePrevButton(current === 0);
+            prevButton.enable(!test.isFirst());
 
-            //let [question, answer] = questions[current];
+            let questionCard = new Document.QuestionCard({
+                header: categories.value(),
+                title: `Pregunta ${test.current} de ${test.length}`,
+                text: test.question.getText(),
+            });
 
-            `Pregunta ${current + 1} de ${questions.length}`
-
-            let questionCard = new Document.QestionCard(questions[current]);
-            questionCard.clearAnswers();
-
-            let answer = questions[current].getAnswer();
+            let answer = test.question.getAnswer();
 
             // Si la respuesta es un string
             if (answer.isString()) {
                 questionCard.addTextBox({
                     id: current,
-                    text: userAnswers[current],
+                    text: test.userAnswer,
                     placeholder: "Respuesta",
-                    keyup: e => userAnswers[current] = e.target.value,
+                    keyup: e => test.userAnswer = e.target.value,
                 });
             }
 
@@ -85,13 +104,13 @@ $(document).ready(function () {
                 questionCard.addList("radio", {
                     id: 0,
                     text: "Verdadero",
-                    checked: userAnswers[current] === true,
-                    click: e => userAnswers[current] = true,
+                    checked: test.userAnswer === true,
+                    click: e => test.userAnswer = true,
                 }, {
                     id: 1,
                     text: "Falso",
-                    checked: userAnswers[current] === false,
-                    click: e => userAnswers[current] = false,
+                    checked: test.userAnswer === false,
+                    click: e => test.userAnswer = false,
                 });
             }
 
@@ -109,8 +128,8 @@ $(document).ready(function () {
                 questionCard.addList("radio", ...answer.getTexts().map((text, index) => ({
                     id: index,
                     text: text,
-                    checked: userAnswers[current] === index,
-                    click: e => userAnswers[current] = index,
+                    checked: test.userAnswer === index,
+                    click: e => test.userAnswer = index,
                 })));
             }
 
@@ -119,15 +138,15 @@ $(document).ready(function () {
                 questionCard.addList("checkbox", ...answer.getTexts().map((text, index) => ({
                     id: index,
                     text: text,
-                    checked: userAnswers[current] instanceof Array &&
-                        userAnswers[current][index] === true,
+                    checked: test.userAnswer instanceof Array &&
+                        test.userAnswer[index] === true,
                     click: e => {
-                        if (!(userAnswers[current] instanceof Array)) {
-                            userAnswers[current] = [];
-                            userAnswers[current].length = answer.data.length;
-                            userAnswers[current].fill(null);
+                        if (!(test.userAnswer instanceof Array)) {
+                            test.userAnswer = [];
+                            test.userAnswer.length = answer.data.length;
+                            test.userAnswer.fill(null);
                         }
-                        userAnswers[current][index] = e.target.checked;
+                        test.userAnswer[index] = e.target.checked;
                     },
                 })));
             }
@@ -135,40 +154,13 @@ $(document).ready(function () {
     }
 
     /**
-     * Switch dark mode
-     */
-    $("#dark-switch").change(function () {
-        if ($(this).is(":checked")) {
-            $("html").attr("data-bs-theme", "dark");
-        } else {
-            $("html").removeAttr("data-bs-theme");
-        }
-    });
-
-    /**
-     * Siguiente pregunta
-     */
-    $("#next-button").click(function () {
-        current++;
-        changeQuestion();
-    });
-
-    /**
-     * Anterior pregunta
-     */
-    $("#prev-button").click(function () {
-        current--;
-        changeQuestion();
-    });
-
-    /**
      * Botón de copiar
      */
     $("#clipboard-button").click(function () {
         navigator.clipboard.writeText($("#question-card-text").text().trim()).then(() => {
-            showToast("Pregunta copiada al portapapeles.");
+            toast.show("Pregunta copiada al portapapeles.");
         }, () => {
-            showToast("No se ha podido copiar la pregunta al portapapeles.");
+            toast.show("No se ha podido copiar la pregunta al portapapeles.");
         });
     });
 

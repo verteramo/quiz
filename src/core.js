@@ -1,8 +1,10 @@
 import { shuffle } from "./functions.js";
 
 class File {
+    #file;
+
     constructor(file) {
-        this.file = file;
+        this.#file = file;
     }
 
     read() {
@@ -10,12 +12,67 @@ class File {
             try {
                 let reader = new FileReader();
                 reader.onload = e => resolve(e.target.result);
-                reader.readAsText(this.file);
+                reader.readAsText(this.#file);
             }
             catch (error) {
                 reject(error);
             }
         });
+    }
+}
+
+class Test {
+    #current = 0;
+    #questions;
+    #userAnswers;
+
+    constructor(questions) {
+        this.#questions = questions;
+        this.#userAnswers = new Array(questions.length).fill(null);
+    }
+
+    get current() {
+        return this.#current + 1;
+    }
+
+    get length() {
+        return this.#questions.length;
+    }
+
+    get question() {
+        return this.#questions[this.#current];
+    }
+
+    get answer() {
+        return this.#questions[this.#current].getAnswer();
+    }
+
+    get userAnswer() {
+        return this.#userAnswers[this.#current];
+    }
+
+    set userAnswer(value) {
+        this.#userAnswers[this.#current] = value;
+    }
+
+    next() {
+        this.#current++;
+    }
+
+    prev() {
+        this.#current--;
+    }
+    
+    isFirst() {
+        return this.#current === 0;
+    }
+
+    isLast() {
+        return this.#current === this.#questions.length - 1;
+    }
+
+    isFinished() {
+        return this.#current === this.#questions.length;
     }
 }
 
@@ -36,11 +93,9 @@ class Dataset {
     }
 
     generate(category, quantity) {
-        return shuffle(this.data[category]).
-            slice(0, quantity).
-            map(([text, answer]) =>
-                new Question(text, answer instanceof Array ? shuffle(answer) : answer)
-            );
+        return new Test(shuffle(this.data[category]).slice(0, quantity).map(([text, answer]) =>
+            new Question(text, answer instanceof Array ? shuffle(answer) : answer)
+        ));
     }
 }
 

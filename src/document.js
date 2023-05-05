@@ -1,104 +1,112 @@
-/**
- * Habilita el formulario
- */
-function enableForm() {
-    $("#quantity").removeAttr("disabled");
-    $("#categories").removeAttr("disabled");
-    $("#generateButton").removeAttr("disabled");
-}
+class Toast {
+    #toast;
+    #body;
 
-/**
- * Deshabilita el formulario
- */
-function disableForm() {
-    $("#categories").empty();
-    $("#quantity").attr("disabled", "disabled");
-    $("#categories").attr("disabled", "disabled");
-    $("#generateButton").attr("disabled", "disabled");
-}
-
-function showQuestionCard() {
-    if ($("#question-card").is(":hidden")) {
-        $("#question-card").show();
+    constructor(id) {
+        let [toast] = $(id);
+        this.#toast = toast;
+        this.#body = $(`${id}-body`);
     }
 
-    if ($("#results-card").is(":visible")) {
-        $("#results-card").hide();
+    show(message) {
+        this.#body.text(message);
+        new bootstrap.Toast(this.#toast).show();
     }
 }
 
-function setNextButtonIcon(name, title) {
-    $("#next-button").html($("<i>", {
-        class: `bi bi-${name}`,
-        title: title,
-    }));
-}
+class Element {
+    _element;
 
-function enablePrevButton(enabled = true) {
-    $("#prev-button").prop("disabled", enabled);
-}
+    constructor(id) {
+        this._element = $(id);
+    }
 
-function showToast(message) {
-    $("#toast-body").text(message);
-    (new bootstrap.Toast($("#toast")[0])).show();
-}
+    show() {
+        this._element.show();
+    }
 
-class CategorySelect {
-    constructor() {
-        this.categories = $("#categories");
+    hide() {
+        this._element.hide();
     }
 
     clear() {
-        this.categories.empty();
+        this._element.empty();
     }
 
+    enable(value = true) {
+        this._element.prop("disabled", !value);
+    }
+
+    value() {
+        return this._element.val();
+    }
+
+    icon(name, title) {
+        this._element.html($("<i>", {
+            class: `bi bi-${name}`,
+            title: title,
+        }));
+    }
+
+    onClick(handler) {
+        this._element.click(handler);
+    }
+
+    onChange(handler) {
+        this._element.change(handler);
+    }
+}
+
+class ElementGroup {
+    _elements;
+
+    constructor(...ids) {
+        this._elements = ids.map(id => new Element(id));
+    }
+
+    enable(value = true) {
+        this._elements.forEach(element => element.enable(value));
+    }
+}
+
+class Select extends Element {
     add(name) {
-        this.categories.append($("<option>", {
+        this._element.append($("<option>", {
             value: name,
             text: name
         }));
     }
-
-    selected() {
-        return this.categories.val();
-    }
 }
 
 class QuestionCard {
-    #setHeader(header) {
-        $("#question-card-header").text(header);
-    }
+    #card = $("#question-card");
+    #header = $("#question-card-header");
+    #title = $("#question-card-title");
+    #text = $("#question-card-text");
+    #answer = $("#question-card-answer");
 
-    #setTitle(title) {
-        $("#question-card-title").text(title);
-    }
-
-    #setText(text) {
-        $("#question-card-text").text(text);
-    }
-
-    constructor({ category, title, question: text }) {
-        this.#setHeader(category);
-        this.#setTitle(title);
-        this.#setText(text);
+    constructor({ header, title, text }) {
+        this.#header.text(header);
+        this.#title.text(title);
+        this.#text.text(text);
     }
 
     show() {
-        $("#question-card").show();
+        this.#card.show();
     }
 
     hide() {
-        $("#question-card").hide();
+        this.#card.hide();
     }
 
     clear() {
-        $("#question-card-answer").empty();
+        this.#answer.empty();
     }
 
     addTextBox({
         id, text = "", placeholder, keyup,
     }) {
-        $("#question-card-answer").append($("<div>", {
+        this.#answer.html($("<div>", {
             class: "form-floating",
         }).append($("<textarea>", {
             id: `textarea-${id}`,
@@ -113,7 +121,7 @@ class QuestionCard {
     }
 
     addList(type, ...items) {
-        $("#question-card-answer").append($("<ul>", {
+        this.#answer.html($("<ul>", {
             class: "list-group list-group-flush",
         }).append(items.map(({
             id, text, checked, click
@@ -134,7 +142,7 @@ class QuestionCard {
     }
 
     addSelect(...options) {
-        $("#question-card-answer").append($("<div>", {
+        this.#answer.html($("<div>", {
             class: "d-flex flex-column",
         }).append($("<div>", {
             class: "form-group",
@@ -156,12 +164,9 @@ class QuestionCard {
 }
 
 export {
-    CategorySelect,
+    Element,
+    ElementGroup,
+    Select,
+    Toast,
     QuestionCard,
-    enableForm,
-    disableForm,
-    showToast,
-    showQuestionCard,
-    setNextButtonIcon,
-    enablePrevButton,
 };
