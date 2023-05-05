@@ -7,6 +7,20 @@ function shuffle(array) {
     return array;
 }
 
+function read(file) {
+    return new Promise((resolve, reject) => {
+        try {
+            let reader = new FileReader();
+            reader.onload = e => resolve(e.target.result);
+            reader.readAsText(file);
+        }
+        catch (error) {
+            reject(error);
+        }
+    });
+}
+
 export {
+    read,
     shuffle
 };

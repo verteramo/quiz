@@ -1,23 +1,23 @@
-import { shuffle } from "./functions.js";
+import { read, shuffle } from "./functions.js";
 
-class File {
-    #file;
+class Dataset {
+    #data;
 
-    constructor(file) {
-        this.#file = file;
+    constructor(files, keysHandler) {
+        this.#data = {};
+        (async () => {
+            for (let file of files) {
+                this.#data = { ...this.#data, ...JSON.parse(await read(file)) };
+            }
+
+            Object.keys(this.#data).forEach(keysHandler);
+        })();
     }
 
-    read() {
-        return new Promise((resolve, reject) => {
-            try {
-                let reader = new FileReader();
-                reader.onload = e => resolve(e.target.result);
-                reader.readAsText(this.#file);
-            }
-            catch (error) {
-                reject(error);
-            }
-        });
+    generate(key, quantity) {
+        return new Test(shuffle(this.#data[key]).slice(0, quantity).map(([text, answer]) =>
+            new Question(text, answer instanceof Array ? shuffle(answer) : answer)
+        ));
     }
 }
 
@@ -43,16 +43,25 @@ class Test {
         return this.#questions[this.#current];
     }
 
-    get answer() {
-        return this.#questions[this.#current].getAnswer();
-    }
-
     get userAnswer() {
         return this.#userAnswers[this.#current];
     }
 
     set userAnswer(value) {
         this.#userAnswers[this.#current] = value;
+    }
+
+    *[Symbol.iterator]() {
+        let current = 0;
+
+        while (current < this.#questions.length) {
+            yield [
+                this.#questions[current],
+                this.#userAnswers[current]
+            ];
+
+            current++;
+        }
     }
 
     next() {
@@ -76,35 +85,8 @@ class Test {
     }
 }
 
-class Dataset {
-    #data;
-
-    constructor(files, onLoaded) {
-        this.#data = {};
-        (async () => {
-            for (let file of files) {
-                this.#data = {
-                    ...this.#data,
-                    ...JSON.parse(await new File(file).read())
-                };
-            }
-
-            Object.keys(this.#data).forEach(onLoaded);
-        })();
-    }
-
-    generate(category, quantity) {
-        return new Test(shuffle(this.#data[category]).slice(0, quantity).map(([text, answer]) =>
-            new Question(text, answer instanceof Array ? shuffle(answer) : answer)
-        ));
-    }
-}
-
 class Question {
-    /** @type {string} */
     test;
-
-    /** @type {Answer} */
     answer;
 
     constructor(text, answer) {

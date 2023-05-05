@@ -102,12 +102,26 @@ class QuestionCard extends Card {
     #title = $("#question-card-title");
     #text = $("#question-card-text");
 
-    constructor({ header, title, text }) {
+    constructor() {
         super({
             card: "#question-card",
             body: "#question-card-body",
         });
+    }
 
+    set header(value) {
+        this.#header.text(value);
+    }
+
+    set title(value) {
+        this.#title.text(value);
+    }
+
+    set text(value) {
+        this.#text.text(value);
+    }
+
+    set({ header, title, text }) {
         this.#header.text(header);
         this.#title.text(title);
         this.#text.text(text);
@@ -130,25 +144,33 @@ class QuestionCard extends Card {
         })));
     }
 
-    addList(type, ...items) {
+    #addList(type, ...items) {
         this._body.html($("<ul>", {
             class: "list-group",
         }).append(items.map(({
-            index, text, checked, click
+            id, text, checked, click
         }) => $("<li>", {
             class: "list-group-item d-flex",
         }).append($("<input>", {
-            id: `${type}-${index}`,
+            id: `${type}-${id}`,
             type: type,
             name: type,
             class: "form-check-input me-2 col-2",
             click: click,
             checked: checked,
         })).append($("<label>", {
-            for: `${type}-${index}`,
+            for: `${type}-${id}`,
             class: "form-check-label stretched-link",
             text: text,
         })))));
+    }
+
+    addRadioList(...items) {
+        this.#addList("radio", ...items);
+    }
+
+    addCheckList(...items) {
+        this.#addList("checkbox", ...items);
     }
 
     addSelect(...options) {
@@ -176,13 +198,15 @@ class QuestionCard extends Card {
 class ResultsCard extends Card {
     #title = $("#results-card-title");
 
-    constructor({ title }) {
+    constructor() {
         super({
             card: "#results-card",
             body: "#results-card-body",
         });
+    }
 
-        this.#title.text(title);
+    set title(value) {
+        this.#title.text(value);
     }
 
     addCard({

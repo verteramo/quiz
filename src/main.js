@@ -2,11 +2,8 @@ import * as Core from "./core.js";
 import * as Document from "./document.js";
 
 $(document).ready(function () {
-    var current;
-    var questions;
-    var userAnswers;
-
-    let test;
+    let questionCard = new Document.QuestionCard();
+    let resultsCard = new Document.ResultsCard();
 
     let categories = new Document.Select("#select-category");
     let quantity = new Document.Element("#input-text-quantity");
@@ -21,10 +18,11 @@ $(document).ready(function () {
         "#generate-button",
     );
 
-    /**
-     * @type {Core.Dataset}
-     */
+    let test;
     let dataset;
+
+    questionCard.hide();
+    resultsCard.hide();
 
     darkSwitch.onChange(e => {
         if ($(e.target).is(":checked")) {
@@ -34,9 +32,6 @@ $(document).ready(function () {
         }
     });
 
-    /**
-     * Cambio de fichero
-     */
     $("#input-file").change(e => {
         categories.clear();
         if (e.target.files.length) {
@@ -48,9 +43,6 @@ $(document).ready(function () {
         }
     });
 
-    /**
-     * Botón de generar
-     */
     $("#generate-button").click(e => {
         test = dataset.generate(categories.value(), quantity.value(),);
         changeQuestion();
@@ -66,15 +58,11 @@ $(document).ready(function () {
         changeQuestion();
     });
 
-    /**
-     * Cambio de pregunta
-     */
     function changeQuestion() {
         if (test.isFinished()) {
             showResults();
         }
         else {
-            console.log(test);
 
             nextButton.icon(...(test.isLast()
                 ? ["check2", "Finalizar"]
@@ -83,11 +71,11 @@ $(document).ready(function () {
 
             prevButton.enable(!test.isFirst());
 
-            let questionCard = new Document.QuestionCard({
-                header: categories.value(),
-                title: `Pregunta ${test.current} de ${test.length}`,
-                text: test.question.text,
-            });
+            questionCard.header = categories.value();
+            questionCard.title = `Pregunta ${test.current} de ${test.length}`;
+            questionCard.text = test.question.text;
+            questionCard.show();
+            resultsCard.hide();
 
             let answer = test.question.answer;
 
@@ -128,8 +116,8 @@ $(document).ready(function () {
 
             // Si la respuesta es de selección única
             else if (answer.isSingle()) {
-                questionCard.addList("radio", ...answer.getTexts().map((text, index) => ({
-                    index: index,
+                questionCard.addRadioList(...answer.getTexts().map((text, index) => ({
+                    id: index,
                     text: text,
                     checked: test.userAnswer === index,
                     click: e => test.userAnswer = index,
@@ -138,7 +126,7 @@ $(document).ready(function () {
 
             // Si la respuesta es de selección múltiple
             else {
-                questionCard.addList("checkbox", ...answer.getTexts().map((text, index) => ({
+                questionCard.addCheckList(...answer.getTexts().map((text, index) => ({
                     id: index,
                     text: text,
                     checked: test.userAnswer instanceof Array &&
@@ -187,84 +175,9 @@ $(document).ready(function () {
     });
 
     function showResults() {
-        let resultsCard = new Document.ResultsCard();
-
-        resultsCard.clear();
-
-        questions.forEach((question, index) => {
-            var answer = question.getAnswer();
-            var userAnswer = userAnswers[index];
-
-            if (answer.isString() || answer.isBoolean()) {
-                let value = answer.data;
-                if (answer.isString()) {
-                    value = value.toLowerCase();
-                }
-
-                if (userAnswer === value) {
-                    correctAnswers++;
-                    $("#results-card-cards").append(getCard({
-                        index: index,
-                        question: question.getText(),
-                    }));
-                }
-                else {
-                    $("#results-card-cards").append(getCard({
-                        index: index,
-                        question: question.getText(),
-                        success: false,
-                    }));
-                }
-            }
-
-            else if (answer.isMatching()) {
-                var correct = true;
-                answer.data.forEach(([answer, option]) => {
-                    if (userAnswer[answer] !== option) {
-                        correct = false;
-                    }
-                });
-                if (correct) {
-                    correctAnswers++;
-                    $("#results-card-cards").append(getCard({
-                        index: index,
-                        question: question.getText(),
-                    }));
-                }
-                else {
-                    $("#results-card-cards").append(getCard({
-                        index: index,
-                        question: question.getText(),
-                        success: false,
-                    }));
-                }
-            }
-
-            else if (answer.isSingle()) {
-                let rightIndex = answer.data.findIndex(([, truth]) => truth);
-
-                if (userAnswer === rightIndex) {
-                    correctAnswers++;
-                    $("#results-card-cards").append(getCard({
-                        index: index,
-                        question: question.getText(),
-                    }));
-                }
-                else {
-                    $("#results-card-cards").append(getCard({
-                        index: index,
-                        question: question.getText(),
-                        success: false,
-                    }));
-                }
-            }
-            else {
-
-            }
-        });
-
-        $("#results-card-title").text(`Resultado: ${correctAnswers}/${questions.length}`);
-        $("#question-card").hide();
-        $("#results-card").show();
+        questionCard.hide();
+        resultsCard.show();
+        for (let [question, userAnswer] of test) {
+        }
     }
 });
