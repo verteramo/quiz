@@ -62,7 +62,7 @@ class Test {
     prev() {
         this.#current--;
     }
-    
+
     isFirst() {
         return this.#current === 0;
     }
@@ -77,106 +77,83 @@ class Test {
 }
 
 class Dataset {
+    #data;
 
     constructor(files, onLoaded) {
-        this.data = {};
+        this.#data = {};
         (async () => {
             for (let file of files) {
-                this.data = {
-                    ...this.data,
+                this.#data = {
+                    ...this.#data,
                     ...JSON.parse(await new File(file).read())
                 };
             }
 
-            Object.keys(this.data).forEach(onLoaded);
+            Object.keys(this.#data).forEach(onLoaded);
         })();
     }
 
     generate(category, quantity) {
-        return new Test(shuffle(this.data[category]).slice(0, quantity).map(([text, answer]) =>
+        return new Test(shuffle(this.#data[category]).slice(0, quantity).map(([text, answer]) =>
             new Question(text, answer instanceof Array ? shuffle(answer) : answer)
         ));
     }
 }
 
 class Question {
-    /**
-     * @param {string} text
-     * @param {Answer} answer
-     */
+    /** @type {string} */
+    test;
+
+    /** @type {Answer} */
+    answer;
+
     constructor(text, answer) {
         this.text = text;
         this.answer = new Answer(answer);
     }
-
-    /**
-     * @returns {string}
-     */
-    getText() {
-        return this.text;
-    }
-
-    /**
-     * @returns {Answer}
-     */
-    getAnswer() {
-        return this.answer;
-    }
 }
 
 class Answer {
-    /**
-     * @param {string|boolean|Array} data
-     */
+    #data;
+
     constructor(data) {
-        this.data = data;
+        this.#data = data;
     }
 
-    /**
-     * @returns {boolean}
-     */
+    get length() {
+        return this.#data instanceof Array ? this.#data.length : undefined;
+    }
+
     isString() {
-        return typeof this.data === "string";
+        return typeof this.#data === "string";
     }
 
-    /**
-     * @returns {boolean}
-     */
     isBoolean() {
-        return typeof this.data === "boolean";
+        return typeof this.#data === "boolean";
     }
 
-    /**
-     * @returns {boolean}
-     */
     isMatching() {
-        return this.data instanceof Array &&
-            this.data.some(answer => answer.length === 3);
+        return this.#data instanceof Array &&
+            this.#data.some(answer => answer.length === 3);
+    }
+
+    isSingle() {
+        return this.#data instanceof Array &&
+            this.#data.filter(([, truth]) => truth).length === 1;
     }
 
     getTexts() {
-        return this.data.map(([text]) => text);
+        return this.#data.map(([text]) => text);
     }
 
-    /**
-     * @returns {Array}
-     */
     getOptions() {
-        return this.data.map(([, option]) => option).sort();
-    }
-
-    /**
-     * @returns {boolean}
-     */
-    isSingle() {
-        return this.data instanceof Array &&
-            this.data.filter(([, truth]) => truth).length === 1;
+        return this.#data.map(([, option]) => option).sort();
     }
 
     check(userAnswer) {
         // Si es un string o un booleano, se compara directamente
         if (this.isSingle() || this.isBoolean()) {
-            return this.data === userAnswer;
+            return this.#data === userAnswer;
         }
 
         // Si es un matching
@@ -185,29 +162,29 @@ class Answer {
         // Se compara cada elemento de la respuesta con el elemento
         // de la respuesta del usuario que se encuentra en la misma posición
         else if (this.isMatching()) {
-            return this.data.every(([, answer, truth], index) => truth && answer === userAnswer[index]);
+            return this.#data.every(([, answer, truth], index) => truth && answer === userAnswer[index]);
         }
 
         // Si es una respuesta de tipo singular
         else if (this.isSingle()) {
-            return this.data.find(([, truth]) => truth)[0] === userAnswer;
+            return this.#data.find(([, truth]) => truth)[0] === userAnswer;
         }
 
         // Si es una respuesta de tipo múltiple
-        return this.data.every(([answer, truth]) => truth && userAnswer.includes(answer));
+        return this.#data.every(([answer, truth]) => truth && userAnswer.includes(answer));
     }
 
     getRight() {
         if (this.isString() || this.isBoolean()) {
-            return this.data;
+            return this.#data;
         }
         else if (this.isMatching()) {
-            return this.data.map(([answer, truth]) => `${answer} -> ${truth}.`).join(", ");
+            return this.#data.map(([answer, truth]) => `${answer} -> ${truth}.`).join(", ");
         }
         else if (this.isSingle()) {
-            return this.data.find(([, truth]) => truth)[0];
+            return this.#data.find(([, truth]) => truth)[0];
         }
-        return this.data.filter(([, truth]) => truth).map(([truth]) => `${truth}.`).join(", ");
+        return this.#data.filter(([, truth]) => truth).map(([truth]) => `${truth}.`).join(", ");
     }
 }
 

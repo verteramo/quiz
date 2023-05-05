@@ -78,35 +78,45 @@ class Select extends Element {
     }
 }
 
-class QuestionCard {
-    #card = $("#question-card");
+class Card {
+    constructor({ card, body }) {
+        this._card = $(card);
+        this._body = $(body);
+    }
+
+    show() {
+        this._card.show();
+    }
+
+    hide() {
+        this._card.hide();
+    }
+
+    clear() {
+        this._body.empty();
+    }
+}
+
+class QuestionCard extends Card {
     #header = $("#question-card-header");
     #title = $("#question-card-title");
     #text = $("#question-card-text");
-    #answer = $("#question-card-answer");
 
     constructor({ header, title, text }) {
+        super({
+            card: "#question-card",
+            body: "#question-card-body",
+        });
+
         this.#header.text(header);
         this.#title.text(title);
         this.#text.text(text);
     }
 
-    show() {
-        this.#card.show();
-    }
-
-    hide() {
-        this.#card.hide();
-    }
-
-    clear() {
-        this.#answer.empty();
-    }
-
     addTextBox({
         id, text = "", placeholder, keyup,
     }) {
-        this.#answer.html($("<div>", {
+        this._body.html($("<div>", {
             class: "form-floating",
         }).append($("<textarea>", {
             id: `textarea-${id}`,
@@ -121,28 +131,28 @@ class QuestionCard {
     }
 
     addList(type, ...items) {
-        this.#answer.html($("<ul>", {
-            class: "list-group list-group-flush",
+        this._body.html($("<ul>", {
+            class: "list-group",
         }).append(items.map(({
-            id, text, checked, click
+            index, text, checked, click
         }) => $("<li>", {
             class: "list-group-item d-flex",
         }).append($("<input>", {
-            id: `${type}-${id}`,
+            id: `${type}-${index}`,
             type: type,
             name: type,
             class: "form-check-input me-2 col-2",
+            click: click,
             checked: checked,
         })).append($("<label>", {
-            for: `${type}-${id}`,
+            for: `${type}-${index}`,
             class: "form-check-label stretched-link",
             text: text,
-            click: click,
         })))));
     }
 
     addSelect(...options) {
-        this.#answer.html($("<div>", {
+        this._body.html($("<div>", {
             class: "d-flex flex-column",
         }).append($("<div>", {
             class: "form-group",
@@ -154,12 +164,44 @@ class QuestionCard {
             selected: true,
             text: "Selecciona una opción",
         })).append(options.map(({
-            id, text, onSelectedHandler
+            id, text, selected
         }) => $("<option>", {
             value: id,
             text: text,
-            selected: onSelectedHandler,
+            selected: selected,
         }))))));
+    }
+}
+
+class ResultsCard extends Card {
+    #title = $("#results-card-title");
+
+    constructor({ title }) {
+        super({
+            card: "#results-card",
+            body: "#results-card-body",
+        });
+
+        this.#title.text(title);
+    }
+
+    addCard({
+        header, title, text, success = true
+    }) {
+        this._body.append($("<div>", {
+            class: `card text-bg-${success ? "success" : "danger"}-subtle`,
+        }).append($("<h6>", {
+            class: "card-header",
+            text: header,
+        })).append($("<div>", {
+            class: "card-body",
+        }).append($("<h6>", {
+            class: "card-title",
+            text: title,
+        })).append($("<p>", {
+            class: "card-text",
+            text: text,
+        }))));
     }
 }
 
@@ -169,4 +211,5 @@ export {
     Select,
     Toast,
     QuestionCard,
+    ResultsCard,
 };

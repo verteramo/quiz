@@ -74,6 +74,8 @@ $(document).ready(function () {
             showResults();
         }
         else {
+            console.log(test);
+
             nextButton.icon(...(test.isLast()
                 ? ["check2", "Finalizar"]
                 : ["arrow-right", "Siguiente"]
@@ -84,15 +86,15 @@ $(document).ready(function () {
             let questionCard = new Document.QuestionCard({
                 header: categories.value(),
                 title: `Pregunta ${test.current} de ${test.length}`,
-                text: test.question.getText(),
+                text: test.question.text,
             });
 
-            let answer = test.question.getAnswer();
+            let answer = test.question.answer;
 
             // Si la respuesta es un string
             if (answer.isString()) {
                 questionCard.addTextBox({
-                    id: current,
+                    id: test.current,
                     text: test.userAnswer,
                     placeholder: "Respuesta",
                     keyup: e => test.userAnswer = e.target.value,
@@ -100,6 +102,7 @@ $(document).ready(function () {
             }
 
             // Si la respuesta es true/false
+            // Actualmente no se extraen de esta forma
             else if (answer.isBoolean()) {
                 questionCard.addList("radio", {
                     id: 0,
@@ -126,7 +129,7 @@ $(document).ready(function () {
             // Si la respuesta es de selección única
             else if (answer.isSingle()) {
                 questionCard.addList("radio", ...answer.getTexts().map((text, index) => ({
-                    id: index,
+                    index: index,
                     text: text,
                     checked: test.userAnswer === index,
                     click: e => test.userAnswer = index,
@@ -142,9 +145,7 @@ $(document).ready(function () {
                         test.userAnswer[index] === true,
                     click: e => {
                         if (!(test.userAnswer instanceof Array)) {
-                            test.userAnswer = [];
-                            test.userAnswer.length = answer.data.length;
-                            test.userAnswer.fill(null);
+                            test.userAnswer = new Array(answer.length).fill(null);
                         }
                         test.userAnswer[index] = e.target.checked;
                     },
@@ -156,8 +157,8 @@ $(document).ready(function () {
     /**
      * Botón de copiar
      */
-    $("#clipboard-button").click(function () {
-        navigator.clipboard.writeText($("#question-card-text").text().trim()).then(() => {
+    $("#clipboard-button").click(e => {
+        navigator.clipboard.writeText(test.question.text.trim()).then(() => {
             toast.show("Pregunta copiada al portapapeles.");
         }, () => {
             toast.show("No se ha podido copiar la pregunta al portapapeles.");
@@ -167,47 +168,28 @@ $(document).ready(function () {
     /**
      * Buscar en DuckDuckGo
      */
-    $("#duck-button").click(function () {
-        window.open(`https://duckduckgo.com/?q=${$("#question-card-text").text().trim()}`, "_blank");
+    $("#duck-button").click(e => {
+        window.open(`https://duckduckgo.com/?q=${test.question.text.trim()}`, "_blank");
     });
 
     /**
      * Buscar en Google
      */
-    $("#google-button").click(function () {
-        window.open(`https://www.google.com/search?q=${$("#question-card-text").text().trim()}`, "_blank");
+    $("#google-button").click(e => {
+        window.open(`https://www.google.com/search?q=${test.question.text.trim()}`, "_blank");
     });
 
     /**
      * Buscar en Bing
      */
-    $("#bing-button").click(function () {
-        window.open(`https://www.bing.com/search?q=${$("#question-card-text").text().trim()}`, "_blank");
+    $("#bing-button").click(e => {
+        window.open(`https://www.bing.com/search?q=${test.question.text.trim()}`, "_blank");
     });
 
-    function getCard({
-        index, text, success = true
-    }) {
-        return $("<div>", {
-            class: `card text-bg-${success ? "success" : "danger"}-subtle`,
-        }).append($("<h6>", {
-            class: "card-header",
-            text: `Pregunta ${index + 1} de ${questions.length}`,
-        })).append($("<div>", {
-            class: "card-body",
-        }).append($("<h6>", {
-            class: "card-title",
-            text: text,
-        })).append($("<p>", {
-            class: "card-text",
-            text: a,
-        })));
-    }
-
     function showResults() {
-        let correctAnswers = 0;
+        let resultsCard = new Document.ResultsCard();
 
-        $("#results-card-cards").empty();
+        resultsCard.clear();
 
         questions.forEach((question, index) => {
             var answer = question.getAnswer();
