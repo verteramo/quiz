@@ -5,6 +5,7 @@ $(document).ready(function () {
     let questionCard = new Document.QuestionCard();
     let resultsCard = new Document.ResultsCard();
 
+    let html = $("html");
     let categories = new Document.Select("#select-category");
     let quantity = new Document.Element("#input-text-quantity");
     let darkSwitch = new Document.Element("#dark-switch");
@@ -25,10 +26,10 @@ $(document).ready(function () {
     resultsCard.hide();
 
     darkSwitch.onChange(e => {
-        if ($(e.target).is(":checked")) {
-            $("html").attr("data-bs-theme", "dark");
+        if (e.target.checked) {
+            html.attr("data-bs-theme", "dark");
         } else {
-            $("html").removeAttr("data-bs-theme");
+            html.removeAttr("data-bs-theme");
         }
     });
 
