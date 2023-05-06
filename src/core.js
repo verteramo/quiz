@@ -130,11 +130,24 @@ class Answer {
     }
 
     getValue(userAnswer) {
-        if (typeof userAnswer === "string" || userAnswer === "boolean") {
+        if (typeof userAnswer === "string") {
             return String(userAnswer);
         }
 
+        else if (typeof userAnswer === "boolean") {
+            return userAnswer ? "Verdadero" : "Falso";
+        }
+
+        else if (Number.isInteger(userAnswer)) {
+            return this.#data[userAnswer][0];
+        }
+
         else if (userAnswer instanceof Array) {
+            if (this.isMatching()) {
+                return userAnswer.map((answer, index) => `${this.#data[index][0]} -> ${answer}`).join("., ");
+            }
+
+            return userAnswer.map((answer, index) => answer ? this.#data[index][0] : null).filter(answer => answer).join("., ");
         }
 
         return null;
