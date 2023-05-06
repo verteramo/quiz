@@ -3,8 +3,7 @@ class Toast {
     #body;
 
     constructor(id) {
-        let [toast] = $(id);
-        this.#toast = toast;
+        this.#toast = $(id);
         this.#body = $(`${id}-body`);
     }
 
@@ -14,67 +13,15 @@ class Toast {
     }
 }
 
-class Element {
-    _element;
-
-    constructor(id) {
-        this._element = $(id);
-    }
-
-    show() {
-        this._element.show();
-    }
-
-    hide() {
-        this._element.hide();
-    }
-
-    clear() {
-        this._element.empty();
-    }
-
-    enable(value = true) {
-        this._element.prop("disabled", !value);
-    }
-
-    value() {
-        return this._element.val();
-    }
-
-    icon(name, title) {
-        this._element.html($("<i>", {
-            class: `bi bi-${name}`,
-            title: title,
-        }));
-    }
-
-    onClick(handler) {
-        this._element.click(handler);
-    }
-
-    onChange(handler) {
-        this._element.change(handler);
-    }
-}
-
-class ElementGroup {
-    _elements;
+class Group {
+    #elements;
 
     constructor(...ids) {
-        this._elements = ids.map(id => new Element(id));
+        this.#elements = ids.map(id => $(id));
     }
 
     enable(value = true) {
-        this._elements.forEach(element => element.enable(value));
-    }
-}
-
-class Select extends Element {
-    add(name) {
-        this._element.append($("<option>", {
-            value: name,
-            text: name
-        }));
+        this.#elements.forEach(e => e.prop("disabled", !value));
     }
 }
 
@@ -121,25 +68,19 @@ class QuestionCard extends Card {
         this.#text.text(value);
     }
 
-    set({ header, title, text }) {
-        this.#header.text(header);
-        this.#title.text(title);
-        this.#text.text(text);
-    }
-
     addTextBox({
-        id, text = "", placeholder, keyup,
+        text = "", placeholder, keyup,
     }) {
         this._body.html($("<div>", {
             class: "form-floating",
         }).append($("<textarea>", {
-            id: `textarea-${id}`,
+            id: "textarea",
             class: "form-control",
             keyup: keyup,
         }).text(
             text
         )).append($("<label>", {
-            for: `textarea-${id}`,
+            for: "textarea",
             text: placeholder,
         })));
     }
@@ -148,18 +89,18 @@ class QuestionCard extends Card {
         this._body.html($("<ul>", {
             class: "list-group",
         }).append(items.map(({
-            id, text, checked, click
-        }) => $("<li>", {
+            text, checked, click
+        }, index) => $("<li>", {
             class: "list-group-item d-flex",
         }).append($("<input>", {
-            id: `${type}-${id}`,
+            id: `${type}-${index}`,
             type: type,
             name: type,
             class: "form-check-input me-2 col-2",
             click: click,
             checked: checked,
         })).append($("<label>", {
-            for: `${type}-${id}`,
+            for: `${type}-${index}`,
             class: "form-check-label stretched-link",
             text: text,
         })))));
@@ -173,25 +114,32 @@ class QuestionCard extends Card {
         this.#addList("checkbox", ...items);
     }
 
-    addSelect(...options) {
-        this._body.html($("<div>", {
-            class: "d-flex flex-column",
-        }).append($("<div>", {
-            class: "form-group",
-        }).append($("<select>", {
-            id: "select",
-            class: "form-select",
-        }).append($("<option>", {
-            disabled: true,
-            selected: true,
-            text: "Selecciona una opción",
-        })).append(options.map(({
-            id, text, selected
-        }) => $("<option>", {
-            value: id,
-            text: text,
-            selected: selected,
-        }))))));
+    addSelectList(...items) {
+        this._body.html(items.map(({
+            text, options, change
+        }, index) => {
+            return $("<div>", {
+                class: "form-group mt-3",
+            }).append($("<label>", {
+                for: `select-${index}`,
+                text: text,
+                class: "form-label text-muted small",
+            })).append($("<select>", {
+                id: `select-${index}`,
+                class: "form-select",
+                change: change,
+            }).append($("<option>", {
+                selected: true,
+                text: "Selecciona una opción",
+            })).append(options.map(({
+                text, selected
+            }, index) => $("<option>", {
+                id: `option-${index}`,
+                text: text,
+                value: text,
+                selected: selected,
+            }))));
+        }));
     }
 }
 
@@ -210,29 +158,38 @@ class ResultsCard extends Card {
     }
 
     addCard({
-        header, title, text, success = true
+        title, text, answer, success, userAnswer
     }) {
-        this._body.append($("<div>", {
-            class: `card text-bg-${success ? "success" : "danger"}-subtle`,
-        }).append($("<h6>", {
-            class: "card-header",
-            text: header,
-        })).append($("<div>", {
+        let body = $("<div>", {
             class: "card-body",
-        }).append($("<h6>", {
+        });
+
+        let card = $("<div>", {
+            class: `card mt-3 bg-${success ? "success" : "danger"}-subtle`,
+        }).append(body.append($("<h6>", {
             class: "card-title",
             text: title,
         })).append($("<p>", {
             class: "card-text",
             text: text,
-        }))));
+        })).append($("<p>", {
+            class: "card-text text-success small",
+            text: answer,
+        })));
+
+        if (!success) {
+            body.append($("<p>", {
+                class: "card-text text-danger small",
+                text: userAnswer ? `Tu respuesta: ${userAnswer}` : "Sin respuesta",
+            }));
+        }
+
+        this._body.append(card.append(body));
     }
 }
 
 export {
-    Element,
-    ElementGroup,
-    Select,
+    Group,
     Toast,
     QuestionCard,
     ResultsCard,

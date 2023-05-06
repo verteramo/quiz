@@ -1,20 +1,29 @@
 import * as Core from "./core.js";
-import * as Document from "./document.js";
+import { Toast, Group, QuestionCard, ResultsCard } from "./document.js";
 
 $(document).ready(function () {
-    let questionCard = new Document.QuestionCard();
-    let resultsCard = new Document.ResultsCard();
+
+    let questionCard = new QuestionCard();
+    let resultsCard = new ResultsCard();
 
     let html = $("html");
-    let categories = new Document.Select("#select-category");
-    let quantity = new Document.Element("#input-text-quantity");
-    let darkSwitch = new Document.Element("#dark-switch");
-    let nextButton = new Document.Element("#next-button");
-    let prevButton = new Document.Element("#prev-button");
-    let toast = new Document.Toast("#toast");
+    let toast = new Toast("#toast");
 
-    let fields = new Document.ElementGroup(
-        "#input-text-quantity",
+    let darkSwitch = $("#dark-switch");
+    let nextButton = $("#next-button");
+    let prevButton = $("#prev-button");
+    let duckButton = $("#duck-button");
+    let bingButton = $("#bing-button");
+    let googleButton = $("#google-button");
+    let clipboardButton = $("#clipboard-button");
+
+    let inputFile = $("#input-file");
+    let quantity = $("#input-quantity");
+    let categories = $("#select-category");
+    let generateButton = $("#generate-button");
+
+    let fields = new Group(
+        "#input-quantity",
         "#select-category",
         "#generate-button",
     );
@@ -25,7 +34,7 @@ $(document).ready(function () {
     questionCard.hide();
     resultsCard.hide();
 
-    darkSwitch.onChange(e => {
+    darkSwitch.change(e => {
         if (e.target.checked) {
             html.attr("data-bs-theme", "dark");
         } else {
@@ -33,30 +42,53 @@ $(document).ready(function () {
         }
     });
 
-    $("#input-file").change(e => {
-        categories.clear();
+    inputFile.change(e => {
+        categories.empty();
         if (e.target.files.length) {
             fields.enable();
-            dataset = new Core.Dataset(e.target.files, category => categories.add(category));
+            dataset = new Core.Dataset(e.target.files, category => categories.append($("<option>", {
+                value: category,
+                text: category,
+            })));
         }
         else {
             fields.enable(false);
         }
     });
 
-    $("#generate-button").click(e => {
-        test = dataset.generate(categories.value(), quantity.value(),);
+    generateButton.click(e => {
+        test = dataset.generate(categories.val(), quantity.val(),);
         changeQuestion();
     });
 
-    $("#next-button").click(e => {
+    nextButton.click(e => {
         test.next();
         changeQuestion();
     });
 
-    $("#prev-button").click(e => {
+    prevButton.click(e => {
         test.prev();
         changeQuestion();
+    });
+
+    duckButton.click(e => {
+        window.open(`https://duckduckgo.com/?q=${test.question.text.trim()}`, "_blank");
+    });
+
+    bingButton.click(e => {
+        window.open(`https://www.bing.com/search?q=${test.question.text.trim()}`, "_blank");
+    });
+
+    googleButton.click(e => {
+        window.open(`https://www.google.com/search?q=${test.question.text.trim()}`, "_blank");
+    });
+
+    clipboardButton.click(e => {
+        navigator.clipboard.writeText(test.question.text.trim()).then(() => {
+            toast.show("Pregunta copiada al portapapeles.");
+        }, () => {
+            toast.show("No se ha podido copiar la pregunta al portapapeles.");
+        });
     });
 
     function changeQuestion() {
@@ -65,14 +97,14 @@ $(document).ready(function () {
         }
         else {
 
-            nextButton.icon(...(test.isLast()
-                ? ["check2", "Finalizar"]
-                : ["arrow-right", "Siguiente"]
-            ));
+            nextButton.html($("<i>", {
+                title: test.isLast() ? "Finalizar" : "Siguiente",
+                class: `bi bi-${test.isLast() ? "check2" : "arrow-right"}`,
+            }));
 
-            prevButton.enable(!test.isFirst());
+            prevButton.prop("disabled", test.isFirst());
 
-            questionCard.header = categories.value();
+            questionCard.header = categories.val();
             questionCard.title = `Pregunta ${test.current} de ${test.length}`;
             questionCard.text = test.question.text;
             questionCard.show();
@@ -83,7 +115,6 @@ $(document).ready(function () {
             // Si la respuesta es un string
             if (answer.isString()) {
                 questionCard.addTextBox({
-                    id: test.current,
                     text: test.userAnswer,
                     placeholder: "Respuesta",
                     keyup: e => test.userAnswer = e.target.value,
@@ -93,32 +124,44 @@ $(document).ready(function () {
             // Si la respuesta es true/false
             // Actualmente no se extraen de esta forma
             else if (answer.isBoolean()) {
-                questionCard.addList("radio", {
-                    id: 0,
+                questionCard.addRadioList({
                     text: "Verdadero",
                     checked: test.userAnswer === true,
-                    click: e => test.userAnswer = true,
+                    click: e => {
+                        test.userAnswer = true;
+                    },
                 }, {
-                    id: 1,
                     text: "Falso",
                     checked: test.userAnswer === false,
-                    click: e => test.userAnswer = false,
+                    click: e => {
+                        test.userAnswer = false;
+                    },
                 });
             }
 
             // Si la respuesta es de emparejamiento
             else if (answer.isMatching()) {
-                questionCard.addSelect(...answer.getMatchings((match, index) => ({
-                    id: index,
-                    text: match,
-                    options: answer.getOptions(),
+                questionCard.addSelectList(...answer.texts.map((text, index) => ({
+                    text: text,
+                    change: e => {
+                        if (!(test.userAnswer instanceof Array)) {
+                            test.userAnswer = new Array(answer.length).fill(null);
+                        }
+
+                        test.userAnswer[index] = e.target.value;
+                    },
+                    options: answer.options.map(option => ({
+                        text: option,
+                        selected:
+                            test.userAnswer instanceof Array &&
+                            test.userAnswer[index] === option,
+                    })),
                 })));
             }
 
             // Si la respuesta es de selección única
             else if (answer.isSingle()) {
-                questionCard.addRadioList(...answer.getTexts().map((text, index) => ({
-                    id: index,
+                questionCard.addRadioList(...answer.texts.map((text, index) => ({
                     text: text,
                     checked: test.userAnswer === index,
                     click: e => test.userAnswer = index,
@@ -127,14 +170,13 @@ $(document).ready(function () {
 
             // Si la respuesta es de selección múltiple
             else {
-                questionCard.addCheckList(...answer.getTexts().map((text, index) => ({
-                    id: index,
+                questionCard.addCheckList(...answer.texts.map((text, index) => ({
                     text: text,
                     checked: test.userAnswer instanceof Array &&
                         test.userAnswer[index] === true,
                     click: e => {
                         if (!(test.userAnswer instanceof Array)) {
-                            test.userAnswer = new Array(answer.length).fill(null);
+                            test.userAnswer = new Array(answer.length).fill(false);
                         }
                         test.userAnswer[index] = e.target.checked;
                     },
@@ -143,42 +185,27 @@ $(document).ready(function () {
         }
     }
 
-    /**
-     * Botón de copiar
-     */
-    $("#clipboard-button").click(e => {
-        navigator.clipboard.writeText(test.question.text.trim()).then(() => {
-            toast.show("Pregunta copiada al portapapeles.");
-        }, () => {
-            toast.show("No se ha podido copiar la pregunta al portapapeles.");
-        });
-    });
-
-    /**
-     * Buscar en DuckDuckGo
-     */
-    $("#duck-button").click(e => {
-        window.open(`https://duckduckgo.com/?q=${test.question.text.trim()}`, "_blank");
-    });
-
-    /**
-     * Buscar en Google
-     */
-    $("#google-button").click(e => {
-        window.open(`https://www.google.com/search?q=${test.question.text.trim()}`, "_blank");
-    });
-
-    /**
-     * Buscar en Bing
-     */
-    $("#bing-button").click(e => {
-        window.open(`https://www.bing.com/search?q=${test.question.text.trim()}`, "_blank");
-    });
-
     function showResults() {
         questionCard.hide();
-        resultsCard.show();
-        for (let [question, userAnswer] of test) {
+        resultsCard.clear();
+
+        let score = 0;
+
+        for (let { current, text, answer, success, userAnswer } of test) {
+            resultsCard.addCard({
+                title: `Pregunta ${current} de ${test.length}`,
+                text: text,
+                answer: answer,
+                success: success,
+                userAnswer: userAnswer,
+            });
+
+            if (success) {
+                score++;
+            }
         }
+
+        resultsCard.title = `Puntuación: ${score} de ${test.length}`;
+        resultsCard.show();
     }
 });

@@ -21,6 +21,129 @@ class Dataset {
     }
 }
 
+class Question {
+    #text;
+    #answer;
+
+    constructor(text, answer) {
+        this.#text = text;
+        this.#answer = new Answer(answer);
+    }
+
+    get text() {
+        return this.#text;
+    }
+
+    get answer() {
+        return this.#answer;
+    }
+}
+
+class Answer {
+    #data;
+
+    constructor(data) {
+        this.#data = data;
+    }
+
+    get length() {
+        return this.#data instanceof Array
+            ? this.#data.length
+            : undefined;
+    }
+
+    get texts() {
+        return this.#data instanceof Array
+            ? this.#data.map(([text]) => text)
+            : undefined;
+    }
+
+    get options() {
+        return this.#data instanceof Array
+            ? this.#data.map(([, option]) => option).sort()
+            : undefined;
+    }
+
+    isString() {
+        return typeof this.#data === "string";
+    }
+
+    isBoolean() {
+        return typeof this.#data === "boolean";
+    }
+
+    isMatching() {
+        return this.#data instanceof Array &&
+            this.#data.some(answer => answer.length === 3);
+    }
+
+    isSingle() {
+        return this.#data instanceof Array &&
+            this.#data.filter(([, truth]) => truth).length === 1;
+    }
+
+    check(userAnswer) {
+
+        // Si es un string la comparación es case insensitive
+        if (this.isString()) {
+            return typeof userAnswer === "string" &&
+                this.#data.toLowerCase() === userAnswer.toLowerCase();
+        }
+
+        // Si es un booleano la comparación es directa
+        else if (this.isBoolean()) {
+            return this.#data === userAnswer;
+        }
+
+        // Si es un matching
+        // Suponiendo que la respuesta correcta es:     ["A", "B", "C", "D"]
+        // Y el valor de la respuesta del usuario es:   ["D", "B", "A", "C"]
+        // Se comparan ambos arrays posición por posición
+        else if (this.isMatching()) {
+            return userAnswer instanceof Array &&
+                this.#data.every(([, answer], index) => answer === userAnswer[index]);
+        }
+
+        // Si es una selección única
+        // Se obtiene y compara el índice
+        else if (this.isSingle()) {
+            return Number.isInteger(userAnswer) &&
+                this.#data.findIndex(([, truth]) => truth) === userAnswer;
+        }
+
+        // Si es una selección múltiple
+        return userAnswer instanceof Array &&
+            this.#data.every(([, truth], index) => truth === userAnswer[index]);
+    }
+
+    getValue(userAnswer) {
+        if (typeof userAnswer === "string" || userAnswer === "boolean") {
+            return String(userAnswer);
+        }
+
+        else if (userAnswer instanceof Array) {
+        }
+
+        return null;
+    }
+
+    get rightAnswer() {
+        if (this.isString() || this.isBoolean()) {
+            return String(this.#data);
+        }
+
+        else if (this.isMatching()) {
+            return this.#data.map(([answer, option]) => `${answer} -> ${option}`).join("., ");
+        }
+
+        else if (this.isSingle()) {
+            return this.#data.find(([, truth]) => truth)[0];
+        }
+
+        return this.#data.filter(([, truth]) => truth).map(([answer]) => answer).join("., ");
+    }
+}
+
 class Test {
     #current = 0;
     #questions;
@@ -29,6 +152,20 @@ class Test {
     constructor(questions) {
         this.#questions = questions;
         this.#userAnswers = new Array(questions.length).fill(null);
+    }
+
+    *[Symbol.iterator]() {
+        for (let current = 0; current < this.#questions.length; current++) {
+            let answer = this.#questions[current].answer;
+
+            yield {
+                current: current + 1,
+                text: this.#questions[current].text,
+                answer: answer.rightAnswer,
+                success: answer.check(this.#userAnswers[current]),
+                userAnswer: answer.getValue(this.#userAnswers[current]),
+            };
+        }
     }
 
     get current() {
@@ -51,19 +188,6 @@ class Test {
         this.#userAnswers[this.#current] = value;
     }
 
-    *[Symbol.iterator]() {
-        let current = 0;
-
-        while (current < this.#questions.length) {
-            yield [
-                this.#questions[current],
-                this.#userAnswers[current]
-            ];
-
-            current++;
-        }
-    }
-
     next() {
         this.#current++;
     }
@@ -82,91 +206,6 @@ class Test {
 
     isFinished() {
         return this.#current === this.#questions.length;
-    }
-}
-
-class Question {
-    test;
-    answer;
-
-    constructor(text, answer) {
-        this.text = text;
-        this.answer = new Answer(answer);
-    }
-}
-
-class Answer {
-    #data;
-
-    constructor(data) {
-        this.#data = data;
-    }
-
-    get length() {
-        return this.#data instanceof Array ? this.#data.length : undefined;
-    }
-
-    isString() {
-        return typeof this.#data === "string";
-    }
-
-    isBoolean() {
-        return typeof this.#data === "boolean";
-    }
-
-    isMatching() {
-        return this.#data instanceof Array &&
-            this.#data.some(answer => answer.length === 3);
-    }
-
-    isSingle() {
-        return this.#data instanceof Array &&
-            this.#data.filter(([, truth]) => truth).length === 1;
-    }
-
-    getTexts() {
-        return this.#data.map(([text]) => text);
-    }
-
-    getOptions() {
-        return this.#data.map(([, option]) => option).sort();
-    }
-
-    check(userAnswer) {
-        // Si es un string o un booleano, se compara directamente
-        if (this.isSingle() || this.isBoolean()) {
-            return this.#data === userAnswer;
-        }
-
-        // Si es un matching
-        // Suponiendo que el valor de la respuesta es:  [1, 2, 3, 4]
-        // Y el valor de la respuesta del usuario es:   [2, 1, 4, 3]
-        // Se compara cada elemento de la respuesta con el elemento
-        // de la respuesta del usuario que se encuentra en la misma posición
-        else if (this.isMatching()) {
-            return this.#data.every(([, answer, truth], index) => truth && answer === userAnswer[index]);
-        }
-
-        // Si es una respuesta de tipo singular
-        else if (this.isSingle()) {
-            return this.#data.find(([, truth]) => truth)[0] === userAnswer;
-        }
-
-        // Si es una respuesta de tipo múltiple
-        return this.#data.every(([answer, truth]) => truth && userAnswer.includes(answer));
-    }
-
-    getRight() {
-        if (this.isString() || this.isBoolean()) {
-            return this.#data;
-        }
-        else if (this.isMatching()) {
-            return this.#data.map(([answer, truth]) => `${answer} -> ${truth}.`).join(", ");
-        }
-        else if (this.isSingle()) {
-            return this.#data.find(([, truth]) => truth)[0];
-        }
-        return this.#data.filter(([, truth]) => truth).map(([truth]) => `${truth}.`).join(", ");
     }
 }
 

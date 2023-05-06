@@ -1,0 +1,84 @@
+{
+    "Examen de prueba": [
+        [
+            "Pregunta de caja de texto (Respuesta correcta: \"Hola\").",
+            "Hola"
+        ],
+        [
+            "Pregunta con respuesta booleana (Respuesta correcta: \"true\").",
+            true
+        ],
+        [
+            "Pregunta de opción múltiple con 1 respuesta correcta.",
+            [
+                [
+                    "Falso",
+                    false
+                ],
+                [
+                    "Verdadero",
+                    true
+                ],
+                [
+                    "Falso",
+                    false
+                ],
+                [
+                    "Falso",
+                    false
+                ]
+            ]
+        ],
+        [
+            "Pregunta de opción múltiple con 2 o más respuestas correctas.",
+            [
+                [
+                    "Falso",
+                    false
+                ],
+                [
+                    "Verdadero",
+                    true
+                ],
+                [
+                    "Verdadero",
+                    true
+                ],
+                [
+                    "Falso",
+                    false
+                ]
+            ]
+        ],
+        [
+            "Pregunta de emparejamiento.",
+            [
+                [
+                    "Uno",
+                    "1",
+                    true
+                ],
+                [
+                    "Dos",
+                    "2",
+                    true
+                ],
+                [
+                    "Tres",
+                    "3",
+                    true
+                ],
+                [
+                    "Cuatro",
+                    "4",
+                    true
+                ],
+                [
+                    "Cinco",
+                    "5",
+                    true
+                ]
+            ]
+        ]
+    ]
+}
