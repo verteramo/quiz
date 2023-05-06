@@ -10,6 +10,18 @@ class Dataset {
                 this.#data = { ...this.#data, ...JSON.parse(await read(file)) };
             }
 
+            for (let key in this.#data) {
+                let priorCount = this.#data[key].length;
+
+                this.#data[key] = this.#data[key].filter(([, answer]) => answer);
+
+                let postCount = this.#data[key].length;
+                
+                if (priorCount !== postCount) {
+                    console.warn(`Se eliminaron ${priorCount - postCount} preguntas con respuestas vacías de la categoría ${key}`);
+                }
+            }
+
             Object.keys(this.#data).forEach(keysHandler);
         })();
     }
